@@ -188,6 +188,14 @@ CameraServer::Result CameraServerImpl::set_information(CameraServer::Information
     return CameraServer::Result::Success;
 }
 
+CameraServer::Result CameraServerImpl::set_video_stream_info(
+    std::vector<CameraServer::VideoStreamInfo> video_stream_infos)
+{
+    _is_video_stream_info_set = true;
+    _video_stream_infos = video_stream_infos;
+    return CameraServer::Result::Success;
+}
+
 CameraServer::TakePhotoHandle
 CameraServerImpl::subscribe_take_photo(const CameraServer::TakePhotoCallback& callback)
 {
@@ -214,33 +222,6 @@ CameraServer::Result CameraServerImpl::respond_take_photo(
         }
 
         _image_capture_count = capture_info.index;
-    }
-
-    switch (take_photo_feedback) {
-        default:
-            // Fallthrough
-        case CameraServer::TakePhotoFeedback::Unknown:
-            return CameraServer::Result::Error;
-        case CameraServer::TakePhotoFeedback::Ok: {
-            // Check for error above
-            auto ack_msg = _server_component_impl->make_command_ack_message(
-                _last_take_photo_command, MAV_RESULT_ACCEPTED);
-            _server_component_impl->send_message(ack_msg);
-            // Only break and send the captured below.
-            break;
-        }
-        case CameraServer::TakePhotoFeedback::Busy: {
-            auto ack_msg = _server_component_impl->make_command_ack_message(
-                _last_take_photo_command, MAV_RESULT_TEMPORARILY_REJECTED);
-            _server_component_impl->send_message(ack_msg);
-            return CameraServer::Result::Success;
-        }
-        case CameraServer::TakePhotoFeedback::Failed: {
-            auto ack_msg = _server_component_impl->make_command_ack_message(
-                _last_take_photo_command, MAV_RESULT_TEMPORARILY_REJECTED);
-            _server_component_impl->send_message(ack_msg);
-            return CameraServer::Result::Success;
-        }
     }
 
     // REVISIT: Should we cache all CaptureInfo in memory for single image
@@ -281,29 +262,6 @@ CameraServer::Result CameraServerImpl::respond_take_photo(
     LogDebug() << "sent camera image captured msg - index: " << +capture_info.index;
 
     return CameraServer::Result::Success;
-}
-
-CameraServer::StartPhotoIntervalHandle CameraServerImpl::subscribe_start_photo_interval(
-    const CameraServer::StartPhotoIntervalCallback& callback)
-{
-    return _start_photo_interval_callbacks.subscribe(callback);
-}
-
-void CameraServerImpl::unsubscribe_start_photo_interval(
-    CameraServer::StartPhotoIntervalHandle handle)
-{
-    _start_photo_interval_callbacks.unsubscribe(handle);
-}
-
-CameraServer::StopPhotoIntervalHandle CameraServerImpl::subscribe_stop_photo_interval(
-    const CameraServer::StopPhotoIntervalCallback& callback)
-{
-    return _stop_photo_interval_callbacks.subscribe(callback);
-}
-
-void CameraServerImpl::unsubscribe_stop_photo_interval(CameraServer::StopPhotoIntervalHandle handle)
-{
-    _stop_photo_interval_callbacks.unsubscribe(handle);
 }
 
 CameraServer::StartVideoHandle
@@ -474,7 +432,8 @@ CameraServerImpl::respond_capture_status(CameraServer::CaptureStatus capture_sta
 
     if (capture_status.image_status == CameraServer::CaptureStatus::ImageStatus::IntervalIdle ||
         capture_status.image_status ==
-            CameraServer::CaptureStatus::ImageStatus::IntervalInProgress) {
+            CameraServer::CaptureStatus::ImageStatus::IntervalInProgress ||
+        _is_image_capture_interval_set) {
         image_status |= StatusFlags::INTERVAL_SET;
     }
 
@@ -533,20 +492,21 @@ void CameraServerImpl::unsubscribe_reset_settings(CameraServer::ResetSettingsHan
  * Starts capturing images with the given interval.
  * @param [in]  interval_s      The interval between captures in seconds.
  * @param [in]  count           The number of images to capture or 0 for "forever".
- * @param [in]  index           The index/sequence number pass to the user callback (always
- *                              @c INT32_MIN).
+ * @param [in]  index           The index/sequence number pass to the user callback.
  */
 void CameraServerImpl::start_image_capture_interval(float interval_s, int32_t count, int32_t index)
 {
     // If count == 0, it means capture "forever" until a stop command is received.
     auto remaining = std::make_shared<int32_t>(count == 0 ? INT32_MAX : count);
+    auto take_photo_count = std::make_shared<int32_t>(0);
 
     _server_component_impl->add_call_every(
-        [this, remaining, index]() {
+        [this, remaining, index, take_photo_count]() {
             LogDebug() << "capture image timer triggered";
 
             if (!_take_photo_callbacks.empty()) {
-                _take_photo_callbacks(index);
+                _take_photo_callbacks(index + *take_photo_count);
+                (*take_photo_count)++;
                 (*remaining)--;
             }
 
@@ -595,10 +555,6 @@ std::optional<mavlink_message_t> CameraServerImpl::process_camera_information_re
     auto ack_msg =
         _server_component_impl->make_command_ack_message(command, MAV_RESULT::MAV_RESULT_ACCEPTED);
     _server_component_impl->send_message(ack_msg);
-    LogDebug() << "sent info ack";
-
-    // FIXME: why is this needed to prevent dropping messages?
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     // It is safe to ignore the return value of parse_version_string() here
     // since the string was already validated in set_information().
@@ -653,10 +609,6 @@ std::optional<mavlink_message_t> CameraServerImpl::process_camera_settings_reque
     auto ack_msg =
         _server_component_impl->make_command_ack_message(command, MAV_RESULT::MAV_RESULT_ACCEPTED);
     _server_component_impl->send_message(ack_msg);
-    LogDebug() << "sent settings ack";
-
-    // FIXME: why is this needed to prevent dropping messages?
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     // unsupported
     const auto mode_id = CAMERA_MODE::CAMERA_MODE_IMAGE;
@@ -875,7 +827,8 @@ CameraServerImpl::process_image_start_capture(const MavlinkCommandReceiver::Comm
     // single image capture
     if (total_images == 1) {
         if (seq_number <= _image_capture_count) {
-            LogDebug() << "received duplicate single image capture request";
+            LogDebug() << "received invalid single image capture request seq number : "
+                       << seq_number << " image capture count " << _image_capture_count;
             // We know we already captured this request, so we can just ack it.
             return _server_component_impl->make_command_ack_message(
                 command, MAV_RESULT::MAV_RESULT_ACCEPTED);
@@ -887,9 +840,6 @@ CameraServerImpl::process_image_start_capture(const MavlinkCommandReceiver::Comm
         _server_component_impl->send_message(ack_msg);
 
         _last_take_photo_command = command;
-
-        // FIXME: why is this needed to prevent dropping messages?
-        // std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
         _take_photo_callbacks(seq_number);
 
@@ -1003,13 +953,48 @@ std::optional<mavlink_message_t> CameraServerImpl::process_video_stream_informat
     const MavlinkCommandReceiver::CommandLong& command)
 {
     auto stream_id = static_cast<uint8_t>(command.params.param1);
-
     UNUSED(stream_id);
 
-    LogDebug() << "unsupported video stream information request";
+    if (!_is_video_stream_info_set) {
+        return _server_component_impl->make_command_ack_message(
+            command, MAV_RESULT::MAV_RESULT_TEMPORARILY_REJECTED);
+    }
+
+    // loop send video stream info
+    for (auto& video_stream_info : _video_stream_infos) {
+        uint16_t flags = 0;
+        if (video_stream_info.status ==
+            CameraServer::VideoStreamInfo::VideoStreamStatus::InProgress) {
+            flags &= VIDEO_STREAM_STATUS_FLAGS_RUNNING;
+        }
+        if (video_stream_info.spectrum ==
+            CameraServer::VideoStreamInfo::VideoStreamSpectrum::Infrared) {
+            flags &= VIDEO_STREAM_STATUS_FLAGS_THERMAL;
+        }
+
+        mavlink_message_t msg{};
+        mavlink_msg_video_stream_information_pack(
+            _server_component_impl->get_own_system_id(),
+            _server_component_impl->get_own_component_id(),
+            &msg,
+            video_stream_info.stream_id,
+            1,
+            0,
+            flags,
+            video_stream_info.settings.frame_rate_hz,
+            video_stream_info.settings.horizontal_resolution_pix,
+            video_stream_info.settings.vertical_resolution_pix,
+            video_stream_info.settings.bit_rate_b_s,
+            video_stream_info.settings.rotation_deg,
+            video_stream_info.settings.horizontal_fov_deg,
+            "",
+            video_stream_info.settings.uri.c_str());
+
+        _server_component_impl->send_message(msg);
+    }
 
     return _server_component_impl->make_command_ack_message(
-        command, MAV_RESULT::MAV_RESULT_UNSUPPORTED);
+        command, MAV_RESULT::MAV_RESULT_ACCEPTED);
 }
 
 std::optional<mavlink_message_t> CameraServerImpl::process_video_stream_status_request(

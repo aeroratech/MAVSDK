@@ -11,6 +11,7 @@
 
 static void SubscribeCameraOperation(mavsdk::CameraServer& camera_server);
 static void SubscribeParamOperation(mavsdk::ParamServer& param_server);
+static void FillVideoStreamInfos(mavsdk::CameraServer& camera_server);
 
 int main(int argc, char** argv)
 {
@@ -39,14 +40,14 @@ int main(int argc, char** argv)
     auto ret = camera_server.set_information({
         .vendor_name = "MAVSDK",
         .model_name = "Example Camera Server",
-        .firmware_version = "1.0.0",
+        .firmware_version = "1.0.0.4",
         .focal_length_mm = 3.0,
         .horizontal_sensor_size_mm = 3.68,
         .vertical_sensor_size_mm = 2.76,
         .horizontal_resolution_px = 3280,
         .vertical_resolution_px = 2464,
         .lens_id = 0,
-        .definition_file_version = 1,
+        .definition_file_version = 2,
         .definition_file_uri = "ftp://C10.xml", // for mavlink ftp test
     });
 
@@ -54,6 +55,8 @@ int main(int argc, char** argv)
         std::cerr << "Failed to set camera info, exiting" << std::endl;
         return 2;
     }
+
+    FillVideoStreamInfos(camera_server);
 
     // works as a server and never quit
     while (true) {
@@ -86,6 +89,7 @@ static void SubscribeCameraOperation(mavsdk::CameraServer& camera_server)
                              std::chrono::system_clock::now().time_since_epoch())
                              .count();
         auto success = true;
+        image_count++;
         camera_server.respond_take_photo(
             mavsdk::CameraServer::TakePhotoFeedback::Ok,
             mavsdk::CameraServer::CaptureInfo{
@@ -97,7 +101,6 @@ static void SubscribeCameraOperation(mavsdk::CameraServer& camera_server)
                 .file_url = {},
             });
         is_capture_in_progress = false;
-        image_count++;
     });
     camera_server.subscribe_start_video([](int32_t stream_id) {
         std::cout << "Start video record" << std::endl;
@@ -177,4 +180,39 @@ static void SubscribeParamOperation(mavsdk::ParamServer& param_server)
     param_server.provide_param_int("CAM_VIDFMT", 1);
     param_server.provide_param_int("CAM_VIDRES", 0);
     param_server.provide_param_int("CAM_PHOTORATIO", 1);
+}
+
+static void FillVideoStreamInfos(mavsdk::CameraServer& camera_server)
+{
+    mavsdk::CameraServer::VideoStreamInfo normal_video_stream;
+    normal_video_stream.stream_id = 1;
+
+    normal_video_stream.settings.frame_rate_hz = 60.0;
+    normal_video_stream.settings.horizontal_resolution_pix = 1920;
+    normal_video_stream.settings.vertical_resolution_pix = 1080;
+    normal_video_stream.settings.bit_rate_b_s = 4 * 1024 * 1024;
+    normal_video_stream.settings.rotation_deg = 0;
+    normal_video_stream.settings.uri = "rtsp://10.0.0.11/live";
+    normal_video_stream.settings.horizontal_fov_deg = 0;
+    normal_video_stream.status =
+        mavsdk::CameraServer::VideoStreamInfo::VideoStreamStatus::InProgress;
+    normal_video_stream.spectrum =
+        mavsdk::CameraServer::VideoStreamInfo::VideoStreamSpectrum::VisibleLight;
+
+    mavsdk::CameraServer::VideoStreamInfo infrared_video_stream;
+    infrared_video_stream.stream_id = 2;
+
+    infrared_video_stream.settings.frame_rate_hz = 24.0;
+    infrared_video_stream.settings.horizontal_resolution_pix = 1280;
+    infrared_video_stream.settings.vertical_resolution_pix = 720;
+    infrared_video_stream.settings.bit_rate_b_s = 4 * 1024;
+    infrared_video_stream.settings.rotation_deg = 0;
+    infrared_video_stream.settings.uri = "rtsp://10.0.0.11/live2";
+    infrared_video_stream.settings.horizontal_fov_deg = 0;
+    infrared_video_stream.status =
+        mavsdk::CameraServer::VideoStreamInfo::VideoStreamStatus::InProgress;
+    infrared_video_stream.spectrum =
+        mavsdk::CameraServer::VideoStreamInfo::VideoStreamSpectrum::Infrared;
+
+    auto ret = camera_server.set_video_stream_info({normal_video_stream, infrared_video_stream});
 }
