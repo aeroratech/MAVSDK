@@ -90,8 +90,6 @@ private:
     int32_t _image_capture_count{};
 
     CallbackList<int32_t> _take_photo_callbacks{};
-    CallbackList<float> _start_photo_interval_callbacks{};
-    CallbackList<int32_t> _stop_photo_interval_callbacks{};
     CallbackList<int32_t> _start_video_callbacks{};
     CallbackList<int32_t> _stop_video_callbacks{};
     CallbackList<int32_t> _start_video_streaming_callbacks{};

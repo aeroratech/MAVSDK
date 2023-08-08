@@ -460,7 +460,7 @@ CameraServerImpl::respond_capture_status(CameraServer::CaptureStatus capture_sta
         _image_capture_timer_interval_s,
         recording_time_ms,
         available_capacity,
-        _image_capture_count);
+        capture_status.image_count);
 
     _server_component_impl->send_message(msg);
     LogDebug() << "send capture status";
@@ -561,11 +561,49 @@ std::optional<mavlink_message_t> CameraServerImpl::process_camera_information_re
     uint32_t firmware_version;
     parse_version_string(_information.firmware_version, firmware_version);
 
-    // capability flags are determined by subscriptions
+    // build capability from _information.camera_cap_flags
     uint32_t capability_flags{};
-
-    if (!_take_photo_callbacks.empty()) {
-        capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_CAPTURE_IMAGE;
+    for (auto capability_flag : _information.camera_cap_flags) {
+        switch (capability_flag) {
+            case CameraServer::Information::CameraCapFlags::CaptureVideo:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_CAPTURE_VIDEO;
+                break;
+            case CameraServer::Information::CameraCapFlags::CaptureImage:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_CAPTURE_IMAGE;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasModes:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_MODES;
+                break;
+            case CameraServer::Information::CameraCapFlags::CanCaptureImageInVideoMode:
+                capability_flags |=
+                    CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_CAN_CAPTURE_IMAGE_IN_VIDEO_MODE;
+                break;
+            case CameraServer::Information::CameraCapFlags::CanCaptureVideoInImageMode:
+                capability_flags |=
+                    CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_CAN_CAPTURE_VIDEO_IN_IMAGE_MODE;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasImageSurveyMode:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_IMAGE_SURVEY_MODE;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasBasicZoom:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_BASIC_ZOOM;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasBasicFocus:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_BASIC_FOCUS;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasVideoStream:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_VIDEO_STREAM;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasTrackingPoint:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_TRACKING_POINT;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasTrackingRectangle:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_TRACKING_RECTANGLE;
+                break;
+            case CameraServer::Information::CameraCapFlags::HasTrackingGeoStatus:
+                capability_flags |= CAMERA_CAP_FLAGS::CAMERA_CAP_FLAGS_HAS_TRACKING_GEO_STATUS;
+                break;
+        }
     }
 
     mavlink_message_t msg{};
@@ -826,7 +864,7 @@ CameraServerImpl::process_image_start_capture(const MavlinkCommandReceiver::Comm
 
     // single image capture
     if (total_images == 1) {
-        if (seq_number <= _image_capture_count) {
+        if (seq_number < _image_capture_count) {
             LogDebug() << "received invalid single image capture request seq number : "
                        << seq_number << " image capture count " << _image_capture_count;
             // We know we already captured this request, so we can just ack it.
@@ -836,7 +874,7 @@ CameraServerImpl::process_image_start_capture(const MavlinkCommandReceiver::Comm
 
         // MAV_RESULT_ACCEPTED must be sent before CAMERA_IMAGE_CAPTURED
         auto ack_msg = _server_component_impl->make_command_ack_message(
-            command, MAV_RESULT::MAV_RESULT_IN_PROGRESS);
+            command, MAV_RESULT::MAV_RESULT_ACCEPTED);
         _server_component_impl->send_message(ack_msg);
 
         _last_take_photo_command = command;
