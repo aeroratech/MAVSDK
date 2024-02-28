@@ -812,7 +812,7 @@ public:
 
         for (const auto& elem : information.camera_cap_flags()) {
             obj.camera_cap_flags.push_back(translateFromRpcCameraCapFlags(
-                static_cast<mavsdk::rpc::camera::Information::CameraCapFlags>(elem)));
+                static_cast<mavsdk::rpc::camera::CameraCapFlags>(elem)));
         }
 
         return obj;
@@ -1506,6 +1506,34 @@ public:
         }
 
         auto result = _lazy_plugin.maybe_plugin()->reset_settings();
+
+        if (response != nullptr) {
+            fillResponseWithResult(response, result);
+        }
+
+        return grpc::Status::OK;
+    }
+
+    grpc::Status SetDefinitionData(
+        grpc::ServerContext* /* context */,
+        const rpc::camera::SetDefinitionDataRequest* request,
+        rpc::camera::SetDefinitionDataResponse* response) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            if (response != nullptr) {
+                auto result = mavsdk::Camera::Result::NoSystem;
+                fillResponseWithResult(response, result);
+            }
+
+            return grpc::Status::OK;
+        }
+
+        if (request == nullptr) {
+            LogWarn() << "SetDefinitionData sent with a null request! Ignoring...";
+            return grpc::Status::OK;
+        }
+
+        auto result = _lazy_plugin.maybe_plugin()->set_definition_data(request->definition_data());
 
         if (response != nullptr) {
             fillResponseWithResult(response, result);

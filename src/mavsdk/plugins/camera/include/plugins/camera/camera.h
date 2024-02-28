@@ -475,8 +475,7 @@ public:
         enum class CameraCapFlags {
             CaptureVideo, /**< @brief Camera is able to record video. */
             CaptureImage, /**< @brief Camera is able to capture images. */
-            HasModes, /**< @brief Camera has separate Video and Image/Photo modes
-                         (MAV_CMD_SET_CAMERA_MODE). */
+            HasModes, /**< @brief Camera has separate Video and Image/Photo modes. */
             CanCaptureImageInVideoMode, /**< @brief Camera can capture images while in video mode.
                                          */
             CanCaptureVideoInImageMode, /**< @brief Camera can capture videos while in Photo/Image
@@ -485,15 +484,12 @@ public:
                                  */
             HasBasicZoom, /**< @brief Camera has basic zoom control (MAV_CMD_SET_CAMERA_ZOOM). */
             HasBasicFocus, /**< @brief Camera has basic focus control (MAV_CMD_SET_CAMERA_FOCUS). */
-            HasVideoStream, /**< @brief Camera has video streaming capabilities (request
-                               VIDEO_STREAM_INFORMATION with MAV_CMD_REQUEST_MESSAGE for video
-                               streaming info). */
+            HasVideoStream, /**< @brief Camera has video streaming capabilities (request. */
             HasTrackingPoint, /**< @brief Camera supports tracking of a point on the camera view..
                                */
             HasTrackingRectangle, /**< @brief Camera supports tracking of a selection rectangle on
-                                     the camera view.. */
-            HasTrackingGeoStatus, /**< @brief Camera supports tracking geo status
-                                     (CAMERA_TRACKING_GEO_STATUS).. */
+                                     the. */
+            HasTrackingGeoStatus, /**< @brief Camera supports tracking geo status. */
         };
 
         /**
@@ -963,6 +959,16 @@ public:
      * @return Result of request.
      */
     Result reset_settings() const;
+
+    /**
+     * @brief Manual set the definition data
+     * e.g. use mavlink ftp download definition file and set to camera
+     *
+     * This function is blocking.
+     *
+     * @return Result of request.
+     */
+    Result set_definition_data(std::string definition_data) const;
 
     /**
      * @brief Copy constructor.

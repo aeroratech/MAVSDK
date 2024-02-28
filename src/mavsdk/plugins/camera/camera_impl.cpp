@@ -2078,6 +2078,21 @@ void CameraImpl::reset_settings_async(const Camera::ResultCallback callback)
         });
 }
 
+Camera::Result CameraImpl::set_definition_data(std::string definition_data)
+{
+    std::lock_guard<std::mutex> lock(_information.mutex);
+    if (_camera_definition || _is_fetching_camera_definition) {
+        return Camera::Result::Denied;
+    }
+
+    _camera_definition.reset(new CameraDefinition());
+    if (!_camera_definition->load_string(definition_data)) {
+        return Camera::Result::WrongArgument;
+    }
+    refresh_params();
+    return Camera::Result::Success;
+}
+
 void CameraImpl::reset_following_format_storage()
 {
     {
