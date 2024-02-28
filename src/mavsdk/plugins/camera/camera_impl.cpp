@@ -1284,8 +1284,9 @@ void CameraImpl::process_camera_information(const mavlink_message_t& message)
 
 bool CameraImpl::should_fetch_camera_definition(const std::string& uri) const
 {
-    return !uri.empty() && !_camera_definition && !_is_fetching_camera_definition &&
-           !_has_camera_definition_timed_out;
+    // only suppor uri start with http prefix
+    return !uri.empty() && uri.find("http") == 0 && !_camera_definition &&
+           !_is_fetching_camera_definition && !_has_camera_definition_timed_out;
 }
 
 Camera::Result CameraImpl::fetch_camera_definition(
