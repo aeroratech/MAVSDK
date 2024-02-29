@@ -1715,6 +1715,8 @@ void CameraImpl::get_setting_async(
         setting.setting_id,
         [this, setting, callback](Camera::Result result, const Camera::Option& option) {
             Camera::Setting new_setting{};
+            new_setting.setting_id = setting.setting_id;
+            new_setting.setting_description = setting.setting_description;
             new_setting.option = option;
             if (callback) {
                 const auto temp_callback = callback;
