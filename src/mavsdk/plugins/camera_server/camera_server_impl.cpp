@@ -760,13 +760,13 @@ void CameraServerImpl::start_image_capture_interval(float interval_s, int32_t co
 {
     // If count == 0, it means capture "forever" until a stop command is received.
     auto remaining = std::make_shared<int32_t>(count == 0 ? INT32_MAX : count);
-
+    auto current_index = std::make_shared<int32_t>(index);
     _server_component_impl->add_call_every(
-        [this, remaining, index]() {
+        [this, remaining, count, current_index]() {
             LogDebug() << "capture image timer triggered";
 
             if (!_take_photo_callbacks.empty()) {
-                _take_photo_callbacks(index);
+                _take_photo_callbacks((*current_index)++);
                 (*remaining)--;
             }
 
