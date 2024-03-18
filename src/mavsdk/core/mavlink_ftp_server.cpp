@@ -45,16 +45,16 @@ void MavlinkFtpServer::process_mavlink_ftp_message(const mavlink_message_t& msg)
 
     if (ftp_req.target_system != 0 &&
         ftp_req.target_system != _server_component_impl.get_own_system_id()) {
-        LogWarn() << "wrong sysid, target system id " << std::to_string(ftp_req.target_system)
-                  << " own system id "
+        LogWarn() << "wrong sysid, target system id : " << std::to_string(ftp_req.target_system)
+                  << ", own system id : "
                   << std::to_string(_server_component_impl.get_own_system_id());
         return;
     }
 
     if (ftp_req.target_component != 0 &&
         ftp_req.target_component != _server_component_impl.get_own_component_id()) {
-        LogWarn() << "wrong compid! target component " << std::to_string(ftp_req.target_component)
-                  << " own component "
+        LogWarn() << "wrong compid! target component : " << std::to_string(ftp_req.target_component)
+                  << ", own component : "
                   << std::to_string(_server_component_impl.get_own_component_id());
         return;
     }
