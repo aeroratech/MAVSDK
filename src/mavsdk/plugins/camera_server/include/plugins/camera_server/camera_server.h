@@ -478,6 +478,29 @@ public:
     operator<<(std::ostream& str, CameraServer::CaptureStatus const& capture_status);
 
     /**
+     * @brief
+     */
+    struct Settings {
+        Mode mode{}; /**< @brief current camera mode */
+        float zoom_level{}; /**< @brief current zoom level */
+        float focus_level{}; /**< @brief current focus level */
+    };
+
+    /**
+     * @brief Equal operator to compare two `CameraServer::Settings` objects.
+     *
+     * @return `true` if items are equal.
+     */
+    friend bool operator==(const CameraServer::Settings& lhs, const CameraServer::Settings& rhs);
+
+    /**
+     * @brief Stream operator to print information about a `CameraServer::Settings`.
+     *
+     * @return A reference to the stream.
+     */
+    friend std::ostream& operator<<(std::ostream& str, CameraServer::Settings const& settings);
+
+    /**
      * @brief Callback type for asynchronous CameraServer calls.
      */
     using ResultCallback = std::function<void(Result)>;
@@ -816,6 +839,36 @@ public:
      * @return Result of request.
      */
     Result respond_reset_settings(CameraFeedback reset_settings_feedback) const;
+
+    /**
+     * @brief Callback type for subscribe_settings.
+     */
+    using SettingsCallback = std::function<void(int32_t)>;
+
+    /**
+     * @brief Handle type for subscribe_settings.
+     */
+    using SettingsHandle = Handle<int32_t>;
+
+    /**
+     * @brief Subscribe to camera settings requests. Each request received should response to using
+     * RespondSettings.
+     */
+    SettingsHandle subscribe_settings(const SettingsCallback& callback);
+
+    /**
+     * @brief Unsubscribe from subscribe_settings
+     */
+    void unsubscribe_settings(SettingsHandle handle);
+
+    /**
+     * @brief Respond to camera settings from SubscribeSettings.
+     *
+     * This function is blocking.
+     *
+     * @return Result of request.
+     */
+    Result respond_settings(Settings settings) const;
 
     /**
      * @brief Copy constructor.

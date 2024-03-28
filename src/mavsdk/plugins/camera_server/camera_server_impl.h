@@ -77,6 +77,10 @@ public:
     CameraServer::Result
     respond_reset_settings(CameraServer::CameraFeedback reset_settings_feedback);
 
+    CameraServer::SettingsHandle subscribe_settings(const CameraServer::SettingsCallback& callback);
+    void unsubscribe_settings(CameraServer::SettingsHandle handle);
+    CameraServer::Result respond_settings(CameraServer::Settings settings);
+
 private:
     enum StatusFlags {
         IN_PROGRESS = 1 << 0,
@@ -114,6 +118,7 @@ private:
     CallbackList<int32_t> _capture_status_callbacks{};
     CallbackList<int32_t> _format_storage_callbacks{};
     CallbackList<int32_t> _reset_settings_callbacks{};
+    CallbackList<int32_t> _settings_callbacks{};
 
     MavlinkCommandReceiver::CommandLong _last_take_photo_command;
     MavlinkCommandReceiver::CommandLong _last_start_video_command;

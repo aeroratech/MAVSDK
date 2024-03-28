@@ -756,6 +756,45 @@ CameraServerImpl::respond_reset_settings(CameraServer::CameraFeedback reset_sett
     return CameraServer::Result::Success;
 }
 
+CameraServer::SettingsHandle
+CameraServerImpl::subscribe_settings(const CameraServer::SettingsCallback& callback)
+{
+    return _settings_callbacks.subscribe(callback);
+}
+
+void CameraServerImpl::unsubscribe_settings(CameraServer::SettingsHandle handle)
+{
+    return _settings_callbacks.unsubscribe(handle);
+}
+
+CameraServer::Result CameraServerImpl::respond_settings(CameraServer::Settings settings)
+{
+    auto mode_id = CAMERA_MODE::CAMERA_MODE_IMAGE;
+    if (settings.mode == CameraServer::Mode::Photo) {
+        mode_id = CAMERA_MODE::CAMERA_MODE_IMAGE;
+    } else if (settings.mode == CameraServer::Mode::Video) {
+        mode_id = CAMERA_MODE::CAMERA_MODE_VIDEO;
+    }
+    const float zoom_level = settings.zoom_level;
+    const float focus_level = settings.focus_level;
+
+    _server_component_impl->queue_message([&](MavlinkAddress mavlink_address, uint8_t channel) {
+        mavlink_message_t message{};
+        mavlink_msg_camera_settings_pack_chan(
+            mavlink_address.system_id,
+            mavlink_address.component_id,
+            channel,
+            &message,
+            static_cast<uint32_t>(_server_component_impl->get_time().elapsed_s() * 1e3),
+            mode_id,
+            zoom_level,
+            focus_level);
+        return message;
+    });
+    LogDebug() << "sent settings msg";
+    return CameraServer::Result::Success;
+}
+
 void CameraServerImpl::start_image_capture_interval(float interval_s, int32_t count, int32_t index)
 {
     // If count == 0, it means capture "forever" until a stop command is received.
@@ -910,33 +949,20 @@ std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_settings_r
             command, MAV_RESULT::MAV_RESULT_ACCEPTED);
     }
 
-    // ack needs to be sent before camera information message
+    if (_settings_callbacks.empty()) {
+        LogDebug() << "camera settings with no settings subscriber";
+        return _server_component_impl->make_command_ack_message(
+            command, MAV_RESULT::MAV_RESULT_UNSUPPORTED);
+    }
+
+    // ack needs to be sent before storage information message
     auto command_ack =
         _server_component_impl->make_command_ack_message(command, MAV_RESULT::MAV_RESULT_ACCEPTED);
     _server_component_impl->send_command_ack(command_ack);
-    LogDebug() << "sent settings ack";
 
-    // unsupported
-    const auto mode_id = CAMERA_MODE::CAMERA_MODE_IMAGE;
-    const float zoom_level = 0;
-    const float focus_level = 0;
+    _settings_callbacks(0);
 
-    _server_component_impl->queue_message([&](MavlinkAddress mavlink_address, uint8_t channel) {
-        mavlink_message_t message{};
-        mavlink_msg_camera_settings_pack_chan(
-            mavlink_address.system_id,
-            mavlink_address.component_id,
-            channel,
-            &message,
-            static_cast<uint32_t>(_server_component_impl->get_time().elapsed_s() * 1e3),
-            mode_id,
-            zoom_level,
-            focus_level);
-        return message;
-    });
-    LogDebug() << "sent settings msg";
-
-    // ack was already sent
+    // result will send in respond_settings
     return std::nullopt;
 }
 

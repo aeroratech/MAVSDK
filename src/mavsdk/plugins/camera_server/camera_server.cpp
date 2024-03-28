@@ -19,6 +19,7 @@ using CaptureInfo = CameraServer::CaptureInfo;
 
 using StorageInformation = CameraServer::StorageInformation;
 using CaptureStatus = CameraServer::CaptureStatus;
+using Settings = CameraServer::Settings;
 
 CameraServer::CameraServer(std::shared_ptr<ServerComponent> server_component) :
     ServerPluginBase(),
@@ -205,6 +206,21 @@ CameraServer::Result
 CameraServer::respond_reset_settings(CameraFeedback reset_settings_feedback) const
 {
     return _impl->respond_reset_settings(reset_settings_feedback);
+}
+
+CameraServer::SettingsHandle CameraServer::subscribe_settings(const SettingsCallback& callback)
+{
+    return _impl->subscribe_settings(callback);
+}
+
+void CameraServer::unsubscribe_settings(SettingsHandle handle)
+{
+    _impl->unsubscribe_settings(handle);
+}
+
+CameraServer::Result CameraServer::respond_settings(Settings settings) const
+{
+    return _impl->respond_settings(settings);
 }
 
 std::ostream&
@@ -572,6 +588,26 @@ std::ostream& operator<<(std::ostream& str, CameraServer::CaptureStatus const& c
     str << "    image_status: " << capture_status.image_status << '\n';
     str << "    video_status: " << capture_status.video_status << '\n';
     str << "    image_count: " << capture_status.image_count << '\n';
+    str << '}';
+    return str;
+}
+
+bool operator==(const CameraServer::Settings& lhs, const CameraServer::Settings& rhs)
+{
+    return (rhs.mode == lhs.mode) &&
+           ((std::isnan(rhs.zoom_level) && std::isnan(lhs.zoom_level)) ||
+            rhs.zoom_level == lhs.zoom_level) &&
+           ((std::isnan(rhs.focus_level) && std::isnan(lhs.focus_level)) ||
+            rhs.focus_level == lhs.focus_level);
+}
+
+std::ostream& operator<<(std::ostream& str, CameraServer::Settings const& settings)
+{
+    str << std::setprecision(15);
+    str << "settings:" << '\n' << "{\n";
+    str << "    mode: " << settings.mode << '\n';
+    str << "    zoom_level: " << settings.zoom_level << '\n';
+    str << "    focus_level: " << settings.focus_level << '\n';
     str << '}';
     return str;
 }
