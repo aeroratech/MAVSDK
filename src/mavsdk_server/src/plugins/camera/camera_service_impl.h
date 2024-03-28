@@ -812,7 +812,7 @@ public:
 
         for (const auto& elem : information.camera_cap_flags()) {
             obj.camera_cap_flags.push_back(translateFromRpcCameraCapFlags(
-                static_cast<mavsdk::rpc::camera::CameraCapFlags>(elem)));
+                static_cast<mavsdk::rpc::camera::Information::CameraCapFlags>(elem)));
         }
 
         return obj;
