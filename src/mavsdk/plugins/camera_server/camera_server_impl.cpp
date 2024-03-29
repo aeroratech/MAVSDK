@@ -219,20 +219,6 @@ void CameraServerImpl::unsubscribe_take_photo(CameraServer::TakePhotoHandle hand
 CameraServer::Result CameraServerImpl::respond_take_photo(
     CameraServer::CameraFeedback take_photo_feedback, CameraServer::CaptureInfo capture_info)
 {
-    // If capture_info.index == INT32_MIN, it means this was an interval
-    // capture rather than a single image capture.
-    if (capture_info.index != INT32_MIN) {
-        // We expect each capture to be the next sequential number.
-        // If _image_capture_count == 0, we ignore since it means that this is
-        // the first photo since the plugin was initialized.
-        if (_image_capture_count != 0 && capture_info.index != _image_capture_count + 1) {
-            LogErr() << "unexpected image index, expecting " << +(_image_capture_count + 1)
-                     << " but was " << +capture_info.index;
-        }
-
-        _image_capture_count = capture_info.index;
-    }
-
     switch (take_photo_feedback) {
         default:
             // Fallthrough
@@ -1082,6 +1068,7 @@ void CameraServerImpl::send_capture_status()
     const uint32_t recording_time_ms =
         static_cast<uint32_t>(static_cast<double>(_capture_status.recording_time_s) * 1e3);
     const float available_capacity = _capture_status.available_capacity_mib;
+    const auto image_count = _capture_status.image_count;
 
     _server_component_impl->queue_message([&](MavlinkAddress mavlink_address, uint8_t channel) {
         mavlink_message_t message{};
@@ -1096,7 +1083,7 @@ void CameraServerImpl::send_capture_status()
             _image_capture_timer_interval_s,
             recording_time_ms,
             available_capacity,
-            _image_capture_count);
+            image_count);
         return message;
     });
 }
