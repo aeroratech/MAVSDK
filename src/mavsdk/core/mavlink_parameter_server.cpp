@@ -82,12 +82,15 @@ MavlinkParameterServer::provide_server_param(const std::string& name, const Para
         }
     }
     std::lock_guard<std::mutex> lock(_all_params_mutex);
+    auto result = Result::Unknown;
     // first we try to add it as a new parameter
     switch (_param_cache.add_new_param(name, param_value)) {
         case MavlinkParameterCache::AddNewParamResult::Ok:
             return Result::Success;
+        // when param already exists try to update exit param
         case MavlinkParameterCache::AddNewParamResult::AlreadyExists:
-            return Result::ParamExistsAlready;
+            result = Result::ParamExistsAlready;
+            break;
         case MavlinkParameterCache::AddNewParamResult::TooManyParams:
             return Result::TooManyParams;
         default:
@@ -108,7 +111,7 @@ MavlinkParameterServer::provide_server_param(const std::string& name, const Para
             assert(false);
     }
 
-    return Result::Unknown;
+    return result;
 }
 
 MavlinkParameterServer::Result
