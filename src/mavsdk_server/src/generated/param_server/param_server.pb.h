@@ -155,6 +155,8 @@ enum ParamServerResult_Result : int {
   ParamServerResult_Result_RESULT_PARAM_NAME_TOO_LONG = 4,
   ParamServerResult_Result_RESULT_NO_SYSTEM = 5,
   ParamServerResult_Result_RESULT_PARAM_VALUE_TOO_LONG = 6,
+  ParamServerResult_Result_RESULT_PARAM_EXISTS_ALREADY = 7,
+  ParamServerResult_Result_RESULT_TOO_MANY_PARAMS = 8,
   ParamServerResult_Result_ParamServerResult_Result_INT_MIN_SENTINEL_DO_NOT_USE_ =
       std::numeric_limits<::int32_t>::min(),
   ParamServerResult_Result_ParamServerResult_Result_INT_MAX_SENTINEL_DO_NOT_USE_ =
@@ -164,8 +166,8 @@ enum ParamServerResult_Result : int {
 bool ParamServerResult_Result_IsValid(int value);
 extern const uint32_t ParamServerResult_Result_internal_data_[];
 constexpr ParamServerResult_Result ParamServerResult_Result_Result_MIN = static_cast<ParamServerResult_Result>(0);
-constexpr ParamServerResult_Result ParamServerResult_Result_Result_MAX = static_cast<ParamServerResult_Result>(6);
-constexpr int ParamServerResult_Result_Result_ARRAYSIZE = 6 + 1;
+constexpr ParamServerResult_Result ParamServerResult_Result_Result_MAX = static_cast<ParamServerResult_Result>(8);
+constexpr int ParamServerResult_Result_Result_ARRAYSIZE = 8 + 1;
 const ::google::protobuf::EnumDescriptor*
 ParamServerResult_Result_descriptor();
 template <typename T>
@@ -178,7 +180,7 @@ const std::string& ParamServerResult_Result_Name(T value) {
 template <>
 inline const std::string& ParamServerResult_Result_Name(ParamServerResult_Result value) {
   return ::google::protobuf::internal::NameOfDenseEnum<ParamServerResult_Result_descriptor,
-                                                 0, 6>(
+                                                 0, 8>(
       static_cast<int>(value));
 }
 inline bool ParamServerResult_Result_Parse(absl::string_view name, ParamServerResult_Result* value) {
@@ -2000,6 +2002,8 @@ class ParamServerResult final :
   static constexpr Result RESULT_PARAM_NAME_TOO_LONG = ParamServerResult_Result_RESULT_PARAM_NAME_TOO_LONG;
   static constexpr Result RESULT_NO_SYSTEM = ParamServerResult_Result_RESULT_NO_SYSTEM;
   static constexpr Result RESULT_PARAM_VALUE_TOO_LONG = ParamServerResult_Result_RESULT_PARAM_VALUE_TOO_LONG;
+  static constexpr Result RESULT_PARAM_EXISTS_ALREADY = ParamServerResult_Result_RESULT_PARAM_EXISTS_ALREADY;
+  static constexpr Result RESULT_TOO_MANY_PARAMS = ParamServerResult_Result_RESULT_TOO_MANY_PARAMS;
   static inline bool Result_IsValid(int value) {
     return ParamServerResult_Result_IsValid(value);
   }

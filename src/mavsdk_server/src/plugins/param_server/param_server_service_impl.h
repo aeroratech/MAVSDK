@@ -182,6 +182,10 @@ public:
                 return rpc::param_server::ParamServerResult_Result_RESULT_NO_SYSTEM;
             case mavsdk::ParamServer::Result::ParamValueTooLong:
                 return rpc::param_server::ParamServerResult_Result_RESULT_PARAM_VALUE_TOO_LONG;
+            case mavsdk::ParamServer::Result::ParamExistsAlready:
+                return rpc::param_server::ParamServerResult_Result_RESULT_PARAM_EXISTS_ALREADY;
+            case mavsdk::ParamServer::Result::TooManyParams:
+                return rpc::param_server::ParamServerResult_Result_RESULT_TOO_MANY_PARAMS;
         }
     }
 
@@ -206,6 +210,10 @@ public:
                 return mavsdk::ParamServer::Result::NoSystem;
             case rpc::param_server::ParamServerResult_Result_RESULT_PARAM_VALUE_TOO_LONG:
                 return mavsdk::ParamServer::Result::ParamValueTooLong;
+            case rpc::param_server::ParamServerResult_Result_RESULT_PARAM_EXISTS_ALREADY:
+                return mavsdk::ParamServer::Result::ParamExistsAlready;
+            case rpc::param_server::ParamServerResult_Result_RESULT_TOO_MANY_PARAMS:
+                return mavsdk::ParamServer::Result::TooManyParams;
         }
     }
 

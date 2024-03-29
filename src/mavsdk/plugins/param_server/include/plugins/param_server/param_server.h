@@ -150,6 +150,8 @@ public:
         ParamNameTooLong, /**< @brief Parameter name too long (> 16). */
         NoSystem, /**< @brief No system available. */
         ParamValueTooLong, /**< @brief Parameter name too long (> 128). */
+        ParamExistsAlready, /**< @brief Parameter already exists. */
+        TooManyParams, /**< @brief Too many params. */
     };
 
     /**

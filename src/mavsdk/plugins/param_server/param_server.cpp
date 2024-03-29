@@ -182,6 +182,10 @@ std::ostream& operator<<(std::ostream& str, ParamServer::Result const& result)
             return str << "No System";
         case ParamServer::Result::ParamValueTooLong:
             return str << "Param Value Too Long";
+        case ParamServer::Result::ParamExistsAlready:
+            return str << "Param Exists Already";
+        case ParamServer::Result::TooManyParams:
+            return str << "Too Many Params";
         default:
             return str << "Unknown";
     }
