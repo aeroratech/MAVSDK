@@ -40,17 +40,19 @@ std::pair<ParamServer::Result, int32_t> ParamServerImpl::retrieve_param_int(std:
 
 ParamServer::Result ParamServerImpl::provide_param_int(std::string name, int32_t value)
 {
-    if (name.size() > 16) {
-        return ParamServer::Result::ParamNameTooLong;
+    auto result =
+        _server_component_impl->mavlink_parameter_server().provide_server_param_int(name, value);
+    auto convert_result = result_from_mavlink_parameter_server_result(result);
+    // only need subscribe param change on success
+    if (convert_result == ParamServer::Result::Success) {
+        _server_component_impl->mavlink_parameter_server().subscribe_param_int_changed(
+            name,
+            [name, this](int32_t new_value) {
+                _changed_param_int_callbacks({name, new_value});
+            },
+            this);
     }
-    _server_component_impl->mavlink_parameter_server().provide_server_param_int(name, value);
-    _server_component_impl->mavlink_parameter_server().subscribe_param_int_changed(
-        name,
-        [name, this](int32_t new_value) {
-            _changed_param_int_callbacks({name, new_value});
-        },
-        this);
-    return ParamServer::Result::Success;
+    return convert_result;
 }
 
 std::pair<ParamServer::Result, float> ParamServerImpl::retrieve_param_float(std::string name) const
@@ -67,17 +69,19 @@ std::pair<ParamServer::Result, float> ParamServerImpl::retrieve_param_float(std:
 
 ParamServer::Result ParamServerImpl::provide_param_float(std::string name, float value)
 {
-    if (name.size() > 16) {
-        return ParamServer::Result::ParamNameTooLong;
+    auto result =
+        _server_component_impl->mavlink_parameter_server().provide_server_param_float(name, value);
+    auto convert_result = result_from_mavlink_parameter_server_result(result);
+    // only need subscribe param change on success
+    if (convert_result == ParamServer::Result::Success) {
+        _server_component_impl->mavlink_parameter_server().subscribe_param_float_changed(
+            name,
+            [name, this](float new_value) {
+                _changed_param_float_callbacks({name, new_value});
+            },
+            this);
     }
-    _server_component_impl->mavlink_parameter_server().provide_server_param_float(name, value);
-    _server_component_impl->mavlink_parameter_server().subscribe_param_float_changed(
-        name,
-        [name, this](float new_value) {
-            _changed_param_float_callbacks({name, new_value});
-        },
-        this);
-    return ParamServer::Result::Success;
+    return convert_result;
 }
 
 std::pair<ParamServer::Result, std::string>
@@ -96,17 +100,19 @@ ParamServerImpl::retrieve_param_custom(std::string name) const
 ParamServer::Result
 ParamServerImpl::provide_param_custom(std::string name, const std::string& value)
 {
-    if (name.size() > 16) {
-        return ParamServer::Result::ParamNameTooLong;
+    auto result =
+        _server_component_impl->mavlink_parameter_server().provide_server_param_custom(name, value);
+    auto convert_result = result_from_mavlink_parameter_server_result(result);
+    // only need subscribe param change on success
+    if (convert_result == ParamServer::Result::Success) {
+        _server_component_impl->mavlink_parameter_server().subscribe_param_custom_changed(
+            name,
+            [name, this](std::string new_value) {
+                _changed_param_custom_callbacks({name, new_value});
+            },
+            this);
     }
-    _server_component_impl->mavlink_parameter_server().provide_server_param_custom(name, value);
-    _server_component_impl->mavlink_parameter_server().subscribe_param_custom_changed(
-        name,
-        [name, this](std::string new_value) {
-            _changed_param_custom_callbacks({name, new_value});
-        },
-        this);
-    return ParamServer::Result::Success;
+    return convert_result;
 }
 
 ParamServer::AllParams ParamServerImpl::retrieve_all_params() const
@@ -179,6 +185,10 @@ ParamServerImpl::result_from_mavlink_parameter_server_result(MavlinkParameterSer
             return ParamServer::Result::WrongType;
         case MavlinkParameterServer::Result::ParamValueTooLong:
             return ParamServer::Result::ParamValueTooLong;
+        case MavlinkParameterServer::Result::ParamExistsAlready:
+            return ParamServer::Result::ParamExistsAlready;
+        case MavlinkParameterServer::Result::TooManyParams:
+            return ParamServer::Result::TooManyParams;
         default:
             LogErr() << "Unknown param error";
             return ParamServer::Result::Unknown;
