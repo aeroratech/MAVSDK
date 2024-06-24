@@ -1,3 +1,4 @@
+set(jsoncpp_DIR ${CMAKE_PREFIX_PATH}/lib/cmake/jsoncpp)
 find_package(jsoncpp CONFIG QUIET)
 
 if(NOT TARGET JsonCpp::JsonCpp)

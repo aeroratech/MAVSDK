@@ -1,6 +1,7 @@
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
+set(MAVLink_DIR ${CMAKE_PREFIX_PATH}/lib/cmake/MAVLink)
 find_package(MAVLink REQUIRED)
 
 get_target_property(

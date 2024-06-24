@@ -20,7 +20,7 @@ target_link_libraries(mavsdk
 if (NOT APPLE AND NOT ANDROID AND NOT MSVC)
     target_link_libraries(mavsdk
         PRIVATE
-        stdc++fs
+        # stdc++fs
     )
 endif()
 

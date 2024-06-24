@@ -38,7 +38,7 @@ This module defines the following variables:
 ``CURL_VERSION_STRING``
   The version of ``curl`` found.
 #]=======================================================================]
-
+set(CURL_DIR ${CMAKE_PREFIX_PATH}/lib/cmake/CURL)
 find_package(CURL CONFIG QUIET)
 
 if(CURL_FOUND)

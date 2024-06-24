@@ -1,3 +1,4 @@
+set(TINYXML2_DIR ${CMAKE_PREFIX_PATH}/lib/cmake/tinyxml2)
 find_package(TINYXML2 CONFIG QUIET)
 
 if(NOT TARGET tinyxml2::tinyxml2)
