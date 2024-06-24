@@ -28,6 +28,8 @@ if (NOT GITVER EQUAL "0")
     set(VERSION_STR "0.0.0")
 endif()
 
+set(VERSION_STR "v1.5.2")
+
 message(STATUS "Version: ${VERSION_STR}")
 STRING(REGEX REPLACE v\([0-9]+\).[0-9]+.[0-9]+.*$ \\1 MAVSDK_VERSION_MAJOR "${VERSION_STR}")
 STRING(REGEX REPLACE v[0-9]+.\([0-9]+\).[0-9]+.*$ \\1 MAVSDK_VERSION_MINOR "${VERSION_STR}")
