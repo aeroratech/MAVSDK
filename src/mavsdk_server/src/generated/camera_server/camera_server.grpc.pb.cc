@@ -49,6 +49,8 @@ static const char* CameraServerService_method_names[] = {
   "/mavsdk.rpc.camera_server.CameraServerService/RespondResetSettings",
   "/mavsdk.rpc.camera_server.CameraServerService/SubscribeSettings",
   "/mavsdk.rpc.camera_server.CameraServerService/RespondSettings",
+  "/mavsdk.rpc.camera_server.CameraServerService/SubscribeSystemTime",
+  "/mavsdk.rpc.camera_server.CameraServerService/RespondSystemTime",
 };
 
 std::unique_ptr< CameraServerService::Stub> CameraServerService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -83,6 +85,8 @@ CameraServerService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>
   , rpcmethod_RespondResetSettings_(CameraServerService_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_SubscribeSettings_(CameraServerService_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   , rpcmethod_RespondSettings_(CameraServerService_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SubscribeSystemTime_(CameraServerService_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_RespondSystemTime_(CameraServerService_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status CameraServerService::Stub::SetInformation(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SetInformationRequest& request, ::mavsdk::rpc::camera_server::SetInformationResponse* response) {
@@ -583,6 +587,45 @@ void CameraServerService::Stub::async::RespondSettings(::grpc::ClientContext* co
   return result;
 }
 
+::grpc::ClientReader< ::mavsdk::rpc::camera_server::SystemTimeResponse>* CameraServerService::Stub::SubscribeSystemTimeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::mavsdk::rpc::camera_server::SystemTimeResponse>::Create(channel_.get(), rpcmethod_SubscribeSystemTime_, context, request);
+}
+
+void CameraServerService::Stub::async::SubscribeSystemTime(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::camera_server::SystemTimeResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::mavsdk::rpc::camera_server::SystemTimeResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_SubscribeSystemTime_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::mavsdk::rpc::camera_server::SystemTimeResponse>* CameraServerService::Stub::AsyncSubscribeSystemTimeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::camera_server::SystemTimeResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeSystemTime_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::mavsdk::rpc::camera_server::SystemTimeResponse>* CameraServerService::Stub::PrepareAsyncSubscribeSystemTimeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::camera_server::SystemTimeResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeSystemTime_, context, request, false, nullptr);
+}
+
+::grpc::Status CameraServerService::Stub::RespondSystemTime(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest& request, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::camera_server::RespondSystemTimeRequest, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RespondSystemTime_, context, request, response);
+}
+
+void CameraServerService::Stub::async::RespondSystemTime(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest* request, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::camera_server::RespondSystemTimeRequest, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RespondSystemTime_, context, request, response, std::move(f));
+}
+
+void CameraServerService::Stub::async::RespondSystemTime(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest* request, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RespondSystemTime_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera_server::RespondSystemTimeResponse>* CameraServerService::Stub::PrepareAsyncRespondSystemTimeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::camera_server::RespondSystemTimeResponse, ::mavsdk::rpc::camera_server::RespondSystemTimeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RespondSystemTime_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera_server::RespondSystemTimeResponse>* CameraServerService::Stub::AsyncRespondSystemTimeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncRespondSystemTimeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 CameraServerService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraServerService_method_names[0],
@@ -834,6 +877,26 @@ CameraServerService::Service::Service() {
              ::mavsdk::rpc::camera_server::RespondSettingsResponse* resp) {
                return service->RespondSettings(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      CameraServerService_method_names[25],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< CameraServerService::Service, ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest, ::mavsdk::rpc::camera_server::SystemTimeResponse>(
+          [](CameraServerService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest* req,
+             ::grpc::ServerWriter<::mavsdk::rpc::camera_server::SystemTimeResponse>* writer) {
+               return service->SubscribeSystemTime(ctx, req, writer);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      CameraServerService_method_names[26],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< CameraServerService::Service, ::mavsdk::rpc::camera_server::RespondSystemTimeRequest, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](CameraServerService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest* req,
+             ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* resp) {
+               return service->RespondSystemTime(ctx, req, resp);
+             }, this)));
 }
 
 CameraServerService::Service::~Service() {
@@ -1008,6 +1071,20 @@ CameraServerService::Service::~Service() {
 }
 
 ::grpc::Status CameraServerService::Service::RespondSettings(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::RespondSettingsRequest* request, ::mavsdk::rpc::camera_server::RespondSettingsResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status CameraServerService::Service::SubscribeSystemTime(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::SubscribeSystemTimeRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::camera_server::SystemTimeResponse>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status CameraServerService::Service::RespondSystemTime(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest* request, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* response) {
   (void) context;
   (void) request;
   (void) response;

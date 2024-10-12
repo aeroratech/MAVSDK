@@ -223,6 +223,22 @@ CameraServer::Result CameraServer::respond_settings(Settings settings) const
     return _impl->respond_settings(settings);
 }
 
+CameraServer::SystemTimeHandle
+CameraServer::subscribe_system_time(const SystemTimeCallback& callback)
+{
+    return _impl->subscribe_system_time(callback);
+}
+
+void CameraServer::unsubscribe_system_time(SystemTimeHandle handle)
+{
+    _impl->unsubscribe_system_time(handle);
+}
+
+CameraServer::Result CameraServer::respond_system_time(CameraFeedback system_time_feedback) const
+{
+    return _impl->respond_system_time(system_time_feedback);
+}
+
 std::ostream&
 operator<<(std::ostream& str, CameraServer::Information::CameraCapFlags const& camera_cap_flags)
 {

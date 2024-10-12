@@ -1746,6 +1746,78 @@ public:
         return grpc::Status::OK;
     }
 
+    grpc::Status SubscribeSystemTime(
+        grpc::ServerContext* /* context */,
+        const mavsdk::rpc::camera_server::SubscribeSystemTimeRequest* /* request */,
+        grpc::ServerWriter<rpc::camera_server::SystemTimeResponse>* writer) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            return grpc::Status::OK;
+        }
+
+        auto stream_closed_promise = std::make_shared<std::promise<void>>();
+        auto stream_closed_future = stream_closed_promise->get_future();
+        register_stream_stop_promise(stream_closed_promise);
+
+        auto is_finished = std::make_shared<bool>(false);
+        auto subscribe_mutex = std::make_shared<std::mutex>();
+
+        const mavsdk::CameraServer::SystemTimeHandle handle =
+            _lazy_plugin.maybe_plugin()->subscribe_system_time(
+                [this, &writer, &stream_closed_promise, is_finished, subscribe_mutex, &handle](
+                    const int64_t system_time) {
+                    rpc::camera_server::SystemTimeResponse rpc_response;
+
+                    rpc_response.set_utc_time_in_ms(system_time);
+
+                    std::unique_lock<std::mutex> lock(*subscribe_mutex);
+                    if (!*is_finished && !writer->Write(rpc_response)) {
+                        _lazy_plugin.maybe_plugin()->unsubscribe_system_time(handle);
+
+                        *is_finished = true;
+                        unregister_stream_stop_promise(stream_closed_promise);
+                        stream_closed_promise->set_value();
+                    }
+                });
+
+        stream_closed_future.wait();
+        std::unique_lock<std::mutex> lock(*subscribe_mutex);
+        *is_finished = true;
+
+        return grpc::Status::OK;
+    }
+
+    grpc::Status RespondSystemTime(
+        grpc::ServerContext* /* context */,
+        const rpc::camera_server::RespondSystemTimeRequest* request,
+        rpc::camera_server::RespondSystemTimeResponse* response) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            if (response != nullptr) {
+                // For server plugins, this should never happen, they should always be
+                // constructible.
+                auto result = mavsdk::CameraServer::Result::Unknown;
+                fillResponseWithResult(response, result);
+            }
+
+            return grpc::Status::OK;
+        }
+
+        if (request == nullptr) {
+            LogWarn() << "RespondSystemTime sent with a null request! Ignoring...";
+            return grpc::Status::OK;
+        }
+
+        auto result = _lazy_plugin.maybe_plugin()->respond_system_time(
+            translateFromRpcCameraFeedback(request->system_time_feedback()));
+
+        if (response != nullptr) {
+            fillResponseWithResult(response, result);
+        }
+
+        return grpc::Status::OK;
+    }
+
     void stop()
     {
         _stopped.store(true);

@@ -81,6 +81,12 @@ public:
     void unsubscribe_settings(CameraServer::SettingsHandle handle);
     CameraServer::Result respond_settings(CameraServer::Settings settings);
 
+    CameraServer::SystemTimeHandle
+    subscribe_system_time(const CameraServer::SystemTimeCallback& callback);
+    void unsubscribe_system_time(CameraServer::SystemTimeHandle handle);
+    CameraServer::Result
+    respond_system_time(CameraServer::CameraFeedback system_time_feedback) const;
+
 private:
     enum StatusFlags {
         IN_PROGRESS = 1 << 0,
@@ -118,6 +124,7 @@ private:
     CallbackList<int32_t> _format_storage_callbacks{};
     CallbackList<int32_t> _reset_settings_callbacks{};
     CallbackList<int32_t> _settings_callbacks{};
+    CallbackList<int64_t> _system_time_callbacks{};
 
     MavlinkCommandReceiver::CommandLong _last_take_photo_command;
     MavlinkCommandReceiver::CommandLong _last_start_video_command;
@@ -177,6 +184,8 @@ private:
     process_video_stream_status_request(const MavlinkCommandReceiver::CommandLong& command);
 
     void send_capture_status();
+
+    void process_system_time(const mavlink_message_t& message);
 };
 
 } // namespace mavsdk

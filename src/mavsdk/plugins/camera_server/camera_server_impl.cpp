@@ -132,6 +132,11 @@ void CameraServerImpl::init()
             return process_video_stream_status_request(command);
         },
         this);
+
+    _server_component_impl->register_mavlink_message_handler(
+        MAVLINK_MSG_ID_SYSTEM_TIME,
+        [this](const mavlink_message_t& message) { process_system_time(message); },
+        this);
 }
 
 void CameraServerImpl::deinit()
@@ -781,6 +786,24 @@ CameraServer::Result CameraServerImpl::respond_settings(CameraServer::Settings s
     return CameraServer::Result::Success;
 }
 
+CameraServer::SystemTimeHandle
+CameraServerImpl::subscribe_system_time(const CameraServer::SystemTimeCallback& callback)
+{
+    return _system_time_callbacks.subscribe(callback);
+}
+
+void CameraServerImpl::unsubscribe_system_time(CameraServer::SystemTimeHandle handle)
+{
+    return _system_time_callbacks.unsubscribe(handle);
+}
+
+CameraServer::Result
+CameraServerImpl::respond_system_time(CameraServer::CameraFeedback system_time_feedback) const
+{
+    UNUSED(system_time_feedback);
+    return CameraServer::Result::Success;
+}
+
 void CameraServerImpl::start_image_capture_interval(float interval_s, int32_t count, int32_t index)
 {
     // If count == 0, it means capture "forever" until a stop command is received.
@@ -1086,6 +1109,31 @@ void CameraServerImpl::send_capture_status()
             image_count);
         return message;
     });
+}
+
+void CameraServerImpl::process_system_time(const mavlink_message_t& message)
+{
+    mavlink_system_time_t system_time;
+    mavlink_msg_system_time_decode(&message, &system_time);
+
+    // Convert to time_point using milliseconds
+    int64_t time_unix_msec = system_time.time_unix_usec / 1000;
+    std::chrono::milliseconds ms(time_unix_msec);
+    std::chrono::time_point<std::chrono::system_clock> time_point(ms);
+
+    // Convert to std::time_t for printing
+    std::time_t time = std::chrono::system_clock::to_time_t(time_point);
+
+    // Convert to human-readable format
+    LogDebug() << "Change current system time to : " << std::ctime(&time);
+
+    if (_system_time_callbacks.empty()) {
+        // just ignore this method
+        LogDebug() << "No system time callback, just ignore";
+        return;
+    }
+
+    _system_time_callbacks(time_unix_msec);
 }
 
 std::optional<mavlink_command_ack_t>

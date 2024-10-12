@@ -871,6 +871,36 @@ public:
     Result respond_settings(Settings settings) const;
 
     /**
+     * @brief Callback type for subscribe_system_time.
+     */
+    using SystemTimeCallback = std::function<void(int64_t)>;
+
+    /**
+     * @brief Handle type for subscribe_system_time.
+     */
+    using SystemTimeHandle = Handle<int64_t>;
+
+    /**
+     * @brief Subscribe system time requests. Each request received should response to using
+     * RespondSystemTime.
+     */
+    SystemTimeHandle subscribe_system_time(const SystemTimeCallback& callback);
+
+    /**
+     * @brief Unsubscribe from subscribe_system_time
+     */
+    void unsubscribe_system_time(SystemTimeHandle handle);
+
+    /**
+     * @brief Respond to system time from SubscribeSystemTime.
+     *
+     * This function is blocking.
+     *
+     * @return Result of request.
+     */
+    Result respond_system_time(CameraFeedback system_time_feedback) const;
+
+    /**
      * @brief Copy constructor.
      */
     CameraServer(const CameraServer& other);
