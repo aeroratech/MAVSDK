@@ -26,10 +26,7 @@
 #include <grpcpp/support/sync_stream.h>
 
 namespace mavsdk {
-namespace options {
+namespace options {} // namespace options
+} // namespace mavsdk
 
-}  // namespace options
-}  // namespace mavsdk
-
-
-#endif  // GRPC_mavsdk_5foptions_2eproto__INCLUDED
+#endif // GRPC_mavsdk_5foptions_2eproto__INCLUDED

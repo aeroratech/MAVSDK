@@ -87,6 +87,11 @@ public:
     CameraServer::Result
     respond_system_time(CameraServer::CameraFeedback system_time_feedback) const;
 
+    CameraServer::ZoomRangeHandle
+    subscribe_zoom_range(const CameraServer::ZoomRangeCallback& callback);
+    void unsubscribe_zoom_range(CameraServer::ZoomRangeHandle handle);
+    CameraServer::Result respond_zoom_range(CameraServer::CameraFeedback zoom_range_feedback);
+
 private:
     enum StatusFlags {
         IN_PROGRESS = 1 << 0,
@@ -125,6 +130,7 @@ private:
     CallbackList<int32_t> _reset_settings_callbacks{};
     CallbackList<int32_t> _settings_callbacks{};
     CallbackList<int64_t> _system_time_callbacks{};
+    CallbackList<float> _zoom_range_callbacks{};
 
     MavlinkCommandReceiver::CommandLong _last_take_photo_command;
     MavlinkCommandReceiver::CommandLong _last_start_video_command;
@@ -136,6 +142,7 @@ private:
     MavlinkCommandReceiver::CommandLong _last_capture_status_command;
     MavlinkCommandReceiver::CommandLong _last_format_storage_command;
     MavlinkCommandReceiver::CommandLong _last_reset_settings_command;
+    MavlinkCommandReceiver::CommandLong _last_zoom_range_command;
 
     uint8_t _last_storage_id;
 

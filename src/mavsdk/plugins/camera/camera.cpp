@@ -269,6 +269,16 @@ Camera::Result Camera::set_definition_data(std::string definition_data) const
     return _impl->set_definition_data(definition_data);
 }
 
+void Camera::set_zoom_range_async(float range, const ResultCallback callback)
+{
+    _impl->set_zoom_range_async(range, callback);
+}
+
+Camera::Result Camera::set_zoom_range(float range) const
+{
+    return _impl->set_zoom_range(range);
+}
+
 std::ostream& operator<<(std::ostream& str, Camera::Result const& result)
 {
     switch (result) {

@@ -901,6 +901,35 @@ public:
     Result respond_system_time(CameraFeedback system_time_feedback) const;
 
     /**
+     * @brief Callback type for subscribe_zoom_range.
+     */
+    using ZoomRangeCallback = std::function<void(float)>;
+
+    /**
+     * @brief Handle type for subscribe_zoom_range.
+     */
+    using ZoomRangeHandle = Handle<float>;
+
+    /**
+     * @brief Subscribe to zoom range command
+     */
+    ZoomRangeHandle subscribe_zoom_range(const ZoomRangeCallback& callback);
+
+    /**
+     * @brief Unsubscribe from subscribe_zoom_range
+     */
+    void unsubscribe_zoom_range(ZoomRangeHandle handle);
+
+    /**
+     * @brief Respond to zoom range.
+     *
+     * This function is blocking.
+     *
+     * @return Result of request.
+     */
+    Result respond_zoom_range(CameraFeedback zoom_range_feedback) const;
+
+    /**
      * @brief Copy constructor.
      */
     CameraServer(const CameraServer& other);

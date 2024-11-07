@@ -457,6 +457,20 @@ MavlinkCommandSender::CommandLong CameraImpl::make_command_request_video_stream_
     return cmd_req_video_stream_status;
 }
 
+MavlinkCommandSender::CommandLong CameraImpl::make_command_zoom_range(float range)
+{
+    // Clip to safe range.
+    range = std::max(0.f, std::min(range, 100.f));
+
+    MavlinkCommandSender::CommandLong cmd{};
+    cmd.command = MAV_CMD_SET_CAMERA_ZOOM;
+    cmd.params.maybe_param1 = (float)ZOOM_TYPE_RANGE;
+    cmd.params.maybe_param2 = range;
+    cmd.target_component_id = _camera_id + MAV_COMP_ID_CAMERA;
+
+    return cmd;
+}
+
 Camera::Result CameraImpl::take_photo()
 {
     // TODO: check whether we are in photo mode.
@@ -2093,6 +2107,23 @@ Camera::Result CameraImpl::set_definition_data(std::string definition_data)
     }
     refresh_params();
     return Camera::Result::Success;
+}
+
+Camera::Result CameraImpl::set_zoom_range(float range)
+{
+    auto cmd = make_command_zoom_range(range);
+
+    return camera_result_from_command_result(_system_impl->send_command(cmd));
+}
+
+void CameraImpl::set_zoom_range_async(float range, const Camera::ResultCallback callback)
+{
+    auto cmd = make_command_zoom_range(range);
+
+    _system_impl->send_command_async(
+        cmd, [this, callback](MavlinkCommandSender::Result result, float) {
+            receive_command_result(result, callback);
+        });
 }
 
 void CameraImpl::reset_following_format_storage()

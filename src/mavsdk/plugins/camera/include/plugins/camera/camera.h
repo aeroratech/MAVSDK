@@ -971,6 +971,24 @@ public:
     Result set_definition_data(std::string definition_data) const;
 
     /**
+     * @brief Set zoom to value as proportion of full camera range (percentage between 0.0 and
+     * 100.0).
+     *
+     * This function is non-blocking. See 'set_zoom_range' for the blocking counterpart.
+     */
+    void set_zoom_range_async(float range, const ResultCallback callback);
+
+    /**
+     * @brief Set zoom to value as proportion of full camera range (percentage between 0.0 and
+     * 100.0).
+     *
+     * This function is blocking. See 'set_zoom_range_async' for the non-blocking counterpart.
+     *
+     * @return Result of request.
+     */
+    Result set_zoom_range(float range) const;
+
+    /**
      * @brief Copy constructor.
      */
     Camera(const Camera& other);

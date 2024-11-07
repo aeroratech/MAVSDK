@@ -94,6 +94,9 @@ public:
 
     Camera::Result set_definition_data(std::string definition_data);
 
+    Camera::Result set_zoom_range(float range);
+    void set_zoom_range_async(float range, const Camera::ResultCallback callback);
+
     std::pair<Camera::Result, std::vector<Camera::CaptureInfo>>
     list_photos(Camera::PhotosRange photos_range);
     void
@@ -206,6 +209,8 @@ private:
 
     MavlinkCommandSender::CommandLong make_command_request_video_stream_info();
     MavlinkCommandSender::CommandLong make_command_request_video_stream_status();
+
+    MavlinkCommandSender::CommandLong make_command_zoom_range(float range);
 
     void request_missing_capture_info();
 

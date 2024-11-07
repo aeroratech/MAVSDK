@@ -239,6 +239,21 @@ CameraServer::Result CameraServer::respond_system_time(CameraFeedback system_tim
     return _impl->respond_system_time(system_time_feedback);
 }
 
+CameraServer::ZoomRangeHandle CameraServer::subscribe_zoom_range(const ZoomRangeCallback& callback)
+{
+    return _impl->subscribe_zoom_range(callback);
+}
+
+void CameraServer::unsubscribe_zoom_range(ZoomRangeHandle handle)
+{
+    _impl->unsubscribe_zoom_range(handle);
+}
+
+CameraServer::Result CameraServer::respond_zoom_range(CameraFeedback zoom_range_feedback) const
+{
+    return _impl->respond_zoom_range(zoom_range_feedback);
+}
+
 std::ostream&
 operator<<(std::ostream& str, CameraServer::Information::CameraCapFlags const& camera_cap_flags)
 {

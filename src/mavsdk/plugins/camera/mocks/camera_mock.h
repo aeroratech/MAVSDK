@@ -50,6 +50,8 @@ public:
         std::pair<Camera::Result, std::vector<Camera::CaptureInfo>>(Camera::PhotosRange)){};
     MOCK_CONST_METHOD1(select_camera, Camera::Result(int32_t)){};
     MOCK_CONST_METHOD0(reset_settings, Camera::Result()){};
+    MOCK_CONST_METHOD1(set_definition_data, Camera::Result(std::string)){};
+    MOCK_CONST_METHOD1(set_zoom_range, Camera::Result(float)){};
 };
 
 } // namespace testing

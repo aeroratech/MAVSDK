@@ -47,6 +47,7 @@ static const char* CameraService_method_names[] = {
   "/mavsdk.rpc.camera.CameraService/SelectCamera",
   "/mavsdk.rpc.camera.CameraService/ResetSettings",
   "/mavsdk.rpc.camera.CameraService/SetDefinitionData",
+  "/mavsdk.rpc.camera.CameraService/SetZoomRange",
 };
 
 std::unique_ptr< CameraService::Stub> CameraService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -79,6 +80,7 @@ CameraService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chan
   , rpcmethod_SelectCamera_(CameraService_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ResetSettings_(CameraService_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_SetDefinitionData_(CameraService_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SetZoomRange_(CameraService_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status CameraService::Stub::Prepare(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::PrepareRequest& request, ::mavsdk::rpc::camera::PrepareResponse* response) {
@@ -561,6 +563,29 @@ void CameraService::Stub::async::SetDefinitionData(::grpc::ClientContext* contex
   return result;
 }
 
+::grpc::Status CameraService::Stub::SetZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest& request, ::mavsdk::rpc::camera::SetZoomRangeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::camera::SetZoomRangeRequest, ::mavsdk::rpc::camera::SetZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SetZoomRange_, context, request, response);
+}
+
+void CameraService::Stub::async::SetZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest* request, ::mavsdk::rpc::camera::SetZoomRangeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::camera::SetZoomRangeRequest, ::mavsdk::rpc::camera::SetZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetZoomRange_, context, request, response, std::move(f));
+}
+
+void CameraService::Stub::async::SetZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest* request, ::mavsdk::rpc::camera::SetZoomRangeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetZoomRange_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera::SetZoomRangeResponse>* CameraService::Stub::PrepareAsyncSetZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::camera::SetZoomRangeResponse, ::mavsdk::rpc::camera::SetZoomRangeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SetZoomRange_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera::SetZoomRangeResponse>* CameraService::Stub::AsyncSetZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncSetZoomRangeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 CameraService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[0],
@@ -792,6 +817,16 @@ CameraService::Service::Service() {
              ::mavsdk::rpc::camera::SetDefinitionDataResponse* resp) {
                return service->SetDefinitionData(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      CameraService_method_names[23],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mavsdk::rpc::camera::SetZoomRangeRequest, ::mavsdk::rpc::camera::SetZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](CameraService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::camera::SetZoomRangeRequest* req,
+             ::mavsdk::rpc::camera::SetZoomRangeResponse* resp) {
+               return service->SetZoomRange(ctx, req, resp);
+             }, this)));
 }
 
 CameraService::Service::~Service() {
@@ -952,6 +987,13 @@ CameraService::Service::~Service() {
 }
 
 ::grpc::Status CameraService::Service::SetDefinitionData(::grpc::ServerContext* context, const ::mavsdk::rpc::camera::SetDefinitionDataRequest* request, ::mavsdk::rpc::camera::SetDefinitionDataResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status CameraService::Service::SetZoomRange(::grpc::ServerContext* context, const ::mavsdk::rpc::camera::SetZoomRangeRequest* request, ::mavsdk::rpc::camera::SetZoomRangeResponse* response) {
   (void) context;
   (void) request;
   (void) response;

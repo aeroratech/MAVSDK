@@ -51,6 +51,8 @@ static const char* CameraServerService_method_names[] = {
   "/mavsdk.rpc.camera_server.CameraServerService/RespondSettings",
   "/mavsdk.rpc.camera_server.CameraServerService/SubscribeSystemTime",
   "/mavsdk.rpc.camera_server.CameraServerService/RespondSystemTime",
+  "/mavsdk.rpc.camera_server.CameraServerService/SubscribeZoomRange",
+  "/mavsdk.rpc.camera_server.CameraServerService/RespondZoomRange",
 };
 
 std::unique_ptr< CameraServerService::Stub> CameraServerService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -87,6 +89,8 @@ CameraServerService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>
   , rpcmethod_RespondSettings_(CameraServerService_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_SubscribeSystemTime_(CameraServerService_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   , rpcmethod_RespondSystemTime_(CameraServerService_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SubscribeZoomRange_(CameraServerService_method_names[27], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_RespondZoomRange_(CameraServerService_method_names[28], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status CameraServerService::Stub::SetInformation(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SetInformationRequest& request, ::mavsdk::rpc::camera_server::SetInformationResponse* response) {
@@ -626,6 +630,45 @@ void CameraServerService::Stub::async::RespondSystemTime(::grpc::ClientContext* 
   return result;
 }
 
+::grpc::ClientReader< ::mavsdk::rpc::camera_server::ZoomRangeResponse>* CameraServerService::Stub::SubscribeZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::mavsdk::rpc::camera_server::ZoomRangeResponse>::Create(channel_.get(), rpcmethod_SubscribeZoomRange_, context, request);
+}
+
+void CameraServerService::Stub::async::SubscribeZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::camera_server::ZoomRangeResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::mavsdk::rpc::camera_server::ZoomRangeResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_SubscribeZoomRange_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::mavsdk::rpc::camera_server::ZoomRangeResponse>* CameraServerService::Stub::AsyncSubscribeZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::camera_server::ZoomRangeResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeZoomRange_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::mavsdk::rpc::camera_server::ZoomRangeResponse>* CameraServerService::Stub::PrepareAsyncSubscribeZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::camera_server::ZoomRangeResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeZoomRange_, context, request, false, nullptr);
+}
+
+::grpc::Status CameraServerService::Stub::RespondZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest& request, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::camera_server::RespondZoomRangeRequest, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RespondZoomRange_, context, request, response);
+}
+
+void CameraServerService::Stub::async::RespondZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest* request, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::camera_server::RespondZoomRangeRequest, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RespondZoomRange_, context, request, response, std::move(f));
+}
+
+void CameraServerService::Stub::async::RespondZoomRange(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest* request, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RespondZoomRange_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera_server::RespondZoomRangeResponse>* CameraServerService::Stub::PrepareAsyncRespondZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::camera_server::RespondZoomRangeResponse, ::mavsdk::rpc::camera_server::RespondZoomRangeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RespondZoomRange_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::camera_server::RespondZoomRangeResponse>* CameraServerService::Stub::AsyncRespondZoomRangeRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncRespondZoomRangeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 CameraServerService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraServerService_method_names[0],
@@ -897,6 +940,26 @@ CameraServerService::Service::Service() {
              ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* resp) {
                return service->RespondSystemTime(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      CameraServerService_method_names[27],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< CameraServerService::Service, ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest, ::mavsdk::rpc::camera_server::ZoomRangeResponse>(
+          [](CameraServerService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest* req,
+             ::grpc::ServerWriter<::mavsdk::rpc::camera_server::ZoomRangeResponse>* writer) {
+               return service->SubscribeZoomRange(ctx, req, writer);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      CameraServerService_method_names[28],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< CameraServerService::Service, ::mavsdk::rpc::camera_server::RespondZoomRangeRequest, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](CameraServerService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest* req,
+             ::mavsdk::rpc::camera_server::RespondZoomRangeResponse* resp) {
+               return service->RespondZoomRange(ctx, req, resp);
+             }, this)));
 }
 
 CameraServerService::Service::~Service() {
@@ -1085,6 +1148,20 @@ CameraServerService::Service::~Service() {
 }
 
 ::grpc::Status CameraServerService::Service::RespondSystemTime(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::RespondSystemTimeRequest* request, ::mavsdk::rpc::camera_server::RespondSystemTimeResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status CameraServerService::Service::SubscribeZoomRange(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::SubscribeZoomRangeRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::camera_server::ZoomRangeResponse>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status CameraServerService::Service::RespondZoomRange(::grpc::ServerContext* context, const ::mavsdk::rpc::camera_server::RespondZoomRangeRequest* request, ::mavsdk::rpc::camera_server::RespondZoomRangeResponse* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -804,6 +804,46 @@ CameraServerImpl::respond_system_time(CameraServer::CameraFeedback system_time_f
     return CameraServer::Result::Success;
 }
 
+CameraServer::ZoomRangeHandle
+CameraServerImpl::subscribe_zoom_range(const CameraServer::ZoomRangeCallback& callback)
+{
+    return _zoom_range_callbacks.subscribe(callback);
+}
+
+void CameraServerImpl::unsubscribe_zoom_range(CameraServer::ZoomRangeHandle handle)
+{
+    _zoom_range_callbacks.unsubscribe(handle);
+}
+
+CameraServer::Result
+CameraServerImpl::respond_zoom_range(CameraServer::CameraFeedback zoom_range_feedback)
+{
+    switch (zoom_range_feedback) {
+        case CameraServer::CameraFeedback::Ok: {
+            auto command_ack = _server_component_impl->make_command_ack_message(
+                _last_zoom_range_command, MAV_RESULT_ACCEPTED);
+            _server_component_impl->send_command_ack(command_ack);
+            return CameraServer::Result::Success;
+        }
+        case CameraServer::CameraFeedback::Busy: {
+            auto command_ack = _server_component_impl->make_command_ack_message(
+                _last_zoom_range_command, MAV_RESULT_TEMPORARILY_REJECTED);
+            _server_component_impl->send_command_ack(command_ack);
+            return CameraServer::Result::Success;
+        }
+        case CameraServer::CameraFeedback::Failed: {
+            auto command_ack = _server_component_impl->make_command_ack_message(
+                _last_zoom_range_command, MAV_RESULT_FAILED);
+            _server_component_impl->send_command_ack(command_ack);
+            return CameraServer::Result::Success;
+        }
+        case CameraServer::CameraFeedback::Unknown:
+            // Fallthrough
+        default:
+            return CameraServer::Result::Error;
+    }
+}
+
 void CameraServerImpl::start_image_capture_interval(float interval_s, int32_t count, int32_t index)
 {
     // If count == 0, it means capture "forever" until a stop command is received.
@@ -1191,10 +1231,38 @@ CameraServerImpl::process_set_camera_zoom(const MavlinkCommandReceiver::CommandL
     auto zoom_type = static_cast<CAMERA_ZOOM_TYPE>(command.params.param1);
     auto zoom_value = command.params.param2;
 
-    UNUSED(zoom_type);
-    UNUSED(zoom_value);
+    auto unsupported = [&]() {
+        LogWarn() << "unsupported set camera zoom type (" << (int)zoom_type << ") request";
+    };
 
-    LogDebug() << "unsupported set camera zoom request";
+    switch (zoom_type) {
+        case ZOOM_TYPE_RANGE:
+            if (_zoom_range_callbacks.empty()) {
+                unsupported();
+                return _server_component_impl->make_command_ack_message(
+                    command, MAV_RESULT::MAV_RESULT_DENIED);
+
+            } else {
+                _last_zoom_range_command = command;
+                _zoom_range_callbacks(zoom_value);
+            }
+            break;
+        case ZOOM_TYPE_CONTINUOUS:
+        // Fallthrough
+        case ZOOM_TYPE_STEP:
+        // Fallthrough
+        case ZOOM_TYPE_FOCAL_LENGTH:
+        // Fallthrough
+        case ZOOM_TYPE_HORIZONTAL_FOV:
+        // Fallthrough
+        default:
+            unsupported();
+            return _server_component_impl->make_command_ack_message(
+                command, MAV_RESULT::MAV_RESULT_DENIED);
+            break;
+    }
+
+    LogDebug() << "unsupported set camera zoom request " << zoom_type << " value is " << zoom_value;
 
     return _server_component_impl->make_command_ack_message(
         command, MAV_RESULT::MAV_RESULT_UNSUPPORTED);
