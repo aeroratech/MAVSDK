@@ -2076,6 +2076,7 @@ Camera::Result CameraImpl::reset_settings()
 
     return ret.get();
 }
+
 void CameraImpl::reset_settings_async(const Camera::ResultCallback callback)
 {
     MavlinkCommandSender::CommandLong cmd_format{};
