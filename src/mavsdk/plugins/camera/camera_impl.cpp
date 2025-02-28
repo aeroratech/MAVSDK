@@ -459,9 +459,6 @@ MavlinkCommandSender::CommandLong CameraImpl::make_command_request_video_stream_
 
 MavlinkCommandSender::CommandLong CameraImpl::make_command_zoom_range(float range)
 {
-    // Clip to safe range.
-    range = std::max(0.f, std::min(range, 100.f));
-
     MavlinkCommandSender::CommandLong cmd{};
     cmd.command = MAV_CMD_SET_CAMERA_ZOOM;
     cmd.params.maybe_param1 = (float)ZOOM_TYPE_RANGE;
