@@ -12,7 +12,7 @@ if (SUPERBUILD AND HUNTER_ENABLED)
 endif()
 
 if (NOT MAVLINK_DIALECT)
-    set(MAVLINK_DIALECT "common")
+    set(MAVLINK_DIALECT "common_user")
 endif()
 
 execute_process(
