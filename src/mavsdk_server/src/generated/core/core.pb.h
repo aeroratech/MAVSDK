@@ -90,9 +90,8 @@ namespace core {
 // -------------------------------------------------------------------
 
 class SubscribeConnectionStateRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SubscribeConnectionStateRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SubscribeConnectionStateRequest)
+                                                           */
 {
 public:
     inline SubscribeConnectionStateRequest() : SubscribeConnectionStateRequest(nullptr) {}
@@ -249,10 +248,8 @@ private:
     friend struct ::TableStruct_core_2fcore_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetMavlinkTimeoutResponse final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SetMavlinkTimeoutResponse)
-                          */
+class SetMavlinkTimeoutResponse final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SetMavlinkTimeoutResponse)
+                                                                                             */
 {
 public:
     inline SetMavlinkTimeoutResponse() : SetMavlinkTimeoutResponse(nullptr) {}
@@ -405,10 +402,8 @@ private:
     friend struct ::TableStruct_core_2fcore_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetMavlinkTimeoutRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SetMavlinkTimeoutRequest)
-                   */
+class SetMavlinkTimeoutRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.SetMavlinkTimeoutRequest)
+                                                                           */
 {
 public:
     inline SetMavlinkTimeoutRequest() : SetMavlinkTimeoutRequest(nullptr) {}
@@ -781,10 +776,8 @@ private:
     friend struct ::TableStruct_core_2fcore_2eproto;
 }; // -------------------------------------------------------------------
 
-class ConnectionStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.ConnectionStateResponse)
-                   */
+class ConnectionStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.core.ConnectionStateResponse)
+                                                                          */
 {
 public:
     inline ConnectionStateResponse() : ConnectionStateResponse(nullptr) {}

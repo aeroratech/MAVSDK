@@ -520,10 +520,8 @@ private:
     friend struct ::TableStruct_rtk_2frtk_2eproto;
 }; // -------------------------------------------------------------------
 
-class SendRtcmDataResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.rtk.SendRtcmDataResponse)
-                   */
+class SendRtcmDataResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.rtk.SendRtcmDataResponse)
+                                                                       */
 {
 public:
     inline SendRtcmDataResponse() : SendRtcmDataResponse(nullptr) {}
@@ -715,10 +713,8 @@ private:
     friend struct ::TableStruct_rtk_2frtk_2eproto;
 }; // -------------------------------------------------------------------
 
-class SendRtcmDataRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.rtk.SendRtcmDataRequest)
-                   */
+class SendRtcmDataRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.rtk.SendRtcmDataRequest)
+                                                                      */
 {
 public:
     inline SendRtcmDataRequest() : SendRtcmDataRequest(nullptr) {}

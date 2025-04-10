@@ -49,6 +49,14 @@ public:
     Gimbal::ControlStatus control() override;
     void control_async(Gimbal::ControlCallback callback) override;
 
+    Gimbal::Result
+    set_debug_data(uint8_t system_id, uint8_t component_id, uint32_t msg_type) override;
+    void set_debug_data_async(
+        uint8_t system_id,
+        uint8_t component_id,
+        uint32_t msg_type,
+        Gimbal::ResultCallback callback) override;
+
 private:
     static float to_float_gimbal_mode(const Gimbal::GimbalMode gimbal_mode);
 

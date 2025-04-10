@@ -120,10 +120,8 @@ inline bool FtpServerResult_Result_Parse(absl::string_view name, FtpServerResult
 
 // -------------------------------------------------------------------
 
-class SetRootDirRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.SetRootDirRequest)
-                   */
+class SetRootDirRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.SetRootDirRequest)
+                                                                    */
 {
 public:
     inline SetRootDirRequest() : SetRootDirRequest(nullptr) {}
@@ -311,10 +309,8 @@ private:
     friend struct ::TableStruct_ftp_5fserver_2fftp_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class FtpServerResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.FtpServerResult)
-                   */
+class FtpServerResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.FtpServerResult)
+                                                                  */
 {
 public:
     inline FtpServerResult() : FtpServerResult(nullptr) {}
@@ -532,10 +528,8 @@ private:
     friend struct ::TableStruct_ftp_5fserver_2fftp_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRootDirResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.SetRootDirResponse)
-                   */
+class SetRootDirResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp_server.SetRootDirResponse)
+                                                                     */
 {
 public:
     inline SetRootDirResponse() : SetRootDirResponse(nullptr) {}

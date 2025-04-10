@@ -172,9 +172,8 @@ inline bool CalibrationResult_Result_Parse(absl::string_view name, CalibrationRe
 // -------------------------------------------------------------------
 
 class SubscribeCalibrateMagnetometerRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateMagnetometerRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateMagnetometerRequest)
+                                                           */
 {
 public:
     inline SubscribeCalibrateMagnetometerRequest() : SubscribeCalibrateMagnetometerRequest(nullptr)
@@ -337,9 +336,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCalibrateLevelHorizonRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateLevelHorizonRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateLevelHorizonRequest)
+                                                           */
 {
 public:
     inline SubscribeCalibrateLevelHorizonRequest() : SubscribeCalibrateLevelHorizonRequest(nullptr)
@@ -502,9 +500,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCalibrateGyroRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateGyroRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateGyroRequest)
+                                                           */
 {
 public:
     inline SubscribeCalibrateGyroRequest() : SubscribeCalibrateGyroRequest(nullptr) {}
@@ -661,9 +658,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCalibrateGimbalAccelerometerRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateGimbalAccelerometerRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateGimbalAccelerometerRequest)
+                                                           */
 {
 public:
     inline SubscribeCalibrateGimbalAccelerometerRequest() :
@@ -829,9 +825,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCalibrateAccelerometerRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateAccelerometerRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.SubscribeCalibrateAccelerometerRequest)
+                                                           */
 {
 public:
     inline SubscribeCalibrateAccelerometerRequest() :
@@ -994,10 +989,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class ProgressData final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.ProgressData)
-                   */
+class ProgressData final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.ProgressData)
+                                                               */
 {
 public:
     inline ProgressData() : ProgressData(nullptr) {}
@@ -1214,10 +1207,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CancelRequest)
-                          */
+class CancelRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CancelRequest)
+                                                                                 */
 {
 public:
     inline CancelRequest() : CancelRequest(nullptr) {}
@@ -1355,10 +1346,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrationResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrationResult)
-                   */
+class CalibrationResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrationResult)
+                                                                    */
 {
 public:
     inline CalibrationResult() : CalibrationResult(nullptr) {}
@@ -1589,10 +1578,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CancelResponse)
-                   */
+class CancelResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CancelResponse)
+                                                                 */
 {
 public:
     inline CancelResponse() : CancelResponse(nullptr) {}
@@ -1775,10 +1762,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrateMagnetometerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateMagnetometerResponse)
-                   */
+class CalibrateMagnetometerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateMagnetometerResponse)
+                                                                                */
 {
 public:
     inline CalibrateMagnetometerResponse() : CalibrateMagnetometerResponse(nullptr) {}
@@ -1999,10 +1984,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrateLevelHorizonResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateLevelHorizonResponse)
-                   */
+class CalibrateLevelHorizonResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateLevelHorizonResponse)
+                                                                                */
 {
 public:
     inline CalibrateLevelHorizonResponse() : CalibrateLevelHorizonResponse(nullptr) {}
@@ -2223,10 +2206,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrateGyroResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateGyroResponse)
-                   */
+class CalibrateGyroResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateGyroResponse)
+                                                                        */
 {
 public:
     inline CalibrateGyroResponse() : CalibrateGyroResponse(nullptr) {}
@@ -2439,10 +2420,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrateGimbalAccelerometerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateGimbalAccelerometerResponse)
-                   */
+class CalibrateGimbalAccelerometerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateGimbalAccelerometerResponse)
+                                                                                       */
 {
 public:
     inline CalibrateGimbalAccelerometerResponse() : CalibrateGimbalAccelerometerResponse(nullptr) {}
@@ -2667,10 +2646,8 @@ private:
     friend struct ::TableStruct_calibration_2fcalibration_2eproto;
 }; // -------------------------------------------------------------------
 
-class CalibrateAccelerometerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateAccelerometerResponse)
-                   */
+class CalibrateAccelerometerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.calibration.CalibrateAccelerometerResponse)
+                                                                                 */
 {
 public:
     inline CalibrateAccelerometerResponse() : CalibrateAccelerometerResponse(nullptr) {}

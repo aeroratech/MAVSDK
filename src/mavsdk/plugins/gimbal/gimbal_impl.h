@@ -52,6 +52,9 @@ public:
     Gimbal::ControlHandle subscribe_control(const Gimbal::ControlCallback& callback);
     void unsubscribe_control(Gimbal::ControlHandle handle);
 
+    void set_debug_data_async(uint32_t msg_type, const Gimbal::ResultCallback callback);
+    Gimbal::Result set_debug_data(uint32_t msg_type) const;
+
     static Gimbal::Result
     gimbal_result_from_command_result(MavlinkCommandSender::Result command_result);
 
@@ -67,10 +70,11 @@ private:
 
     void* _protocol_cookie{nullptr};
 
-    void wait_for_protocol();
+    void wait_for_protocol() const;
     void wait_for_protocol_async(std::function<void()> callback);
     void receive_protocol_timeout();
     void process_gimbal_manager_information(const mavlink_message_t& message);
+    void process_gimbal_debugdata(const mavlink_message_t& message);
 
     std::mutex _mutex{};
     CallbackList<Gimbal::ControlStatus> _control_subscriptions{};

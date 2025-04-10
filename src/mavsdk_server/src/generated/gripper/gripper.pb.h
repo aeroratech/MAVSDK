@@ -158,10 +158,8 @@ inline bool GripperAction_Parse(absl::string_view name, GripperAction* value)
 
 // -------------------------------------------------------------------
 
-class ReleaseRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseRequest)
-                   */
+class ReleaseRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseRequest)
+                                                                 */
 {
 public:
     inline ReleaseRequest() : ReleaseRequest(nullptr) {}
@@ -337,10 +335,8 @@ private:
     friend struct ::TableStruct_gripper_2fgripper_2eproto;
 }; // -------------------------------------------------------------------
 
-class GripperResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperResult)
-                   */
+class GripperResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperResult)
+                                                                */
 {
 public:
     inline GripperResult() : GripperResult(nullptr) {}
@@ -735,10 +731,8 @@ private:
     friend struct ::TableStruct_gripper_2fgripper_2eproto;
 }; // -------------------------------------------------------------------
 
-class ReleaseResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseResponse)
-                   */
+class ReleaseResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseResponse)
+                                                                  */
 {
 public:
     inline ReleaseResponse() : ReleaseResponse(nullptr) {}

@@ -419,6 +419,34 @@ public:
         return grpc::Status::OK;
     }
 
+    grpc::Status SetDebugData(
+        grpc::ServerContext* /* context */,
+        const rpc::gimbal::SetDebugDataRequest* request,
+        rpc::gimbal::SetDebugDataResponse* response) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            if (response != nullptr) {
+                auto result = mavsdk::Gimbal::Result::NoSystem;
+                fillResponseWithResult(response, result);
+            }
+
+            return grpc::Status::OK;
+        }
+
+        if (request == nullptr) {
+            LogWarn() << "SetDebugData sent with a null request! Ignoring...";
+            return grpc::Status::OK;
+        }
+
+        auto result = _lazy_plugin.maybe_plugin()->set_debug_data(request->msg_type());
+
+        if (response != nullptr) {
+            fillResponseWithResult(response, result);
+        }
+
+        return grpc::Status::OK;
+    }
+
     void stop()
     {
         _stopped.store(true);

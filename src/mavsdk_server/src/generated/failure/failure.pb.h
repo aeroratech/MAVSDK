@@ -198,10 +198,8 @@ inline bool FailureType_Parse(absl::string_view name, FailureType* value)
 
 // -------------------------------------------------------------------
 
-class InjectRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.InjectRequest)
-                   */
+class InjectRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.InjectRequest)
+                                                                */
 {
 public:
     inline InjectRequest() : InjectRequest(nullptr) {}
@@ -401,10 +399,8 @@ private:
     friend struct ::TableStruct_failure_2ffailure_2eproto;
 }; // -------------------------------------------------------------------
 
-class FailureResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.FailureResult)
-                   */
+class FailureResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.FailureResult)
+                                                                */
 {
 public:
     inline FailureResult() : FailureResult(nullptr) {}
@@ -623,10 +619,8 @@ private:
     friend struct ::TableStruct_failure_2ffailure_2eproto;
 }; // -------------------------------------------------------------------
 
-class InjectResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.InjectResponse)
-                   */
+class InjectResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.failure.InjectResponse)
+                                                                 */
 {
 public:
     inline InjectResponse() : InjectResponse(nullptr) {}

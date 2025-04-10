@@ -144,10 +144,8 @@ inline bool LogFilesResult_Result_Parse(absl::string_view name, LogFilesResult_R
 
 // -------------------------------------------------------------------
 
-class ProgressData final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.ProgressData)
-                   */
+class ProgressData final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.ProgressData)
+                                                               */
 {
 public:
     inline ProgressData() : ProgressData(nullptr) {}
@@ -323,10 +321,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class LogFilesResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.LogFilesResult)
-                   */
+class LogFilesResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.LogFilesResult)
+                                                                 */
 {
 public:
     inline LogFilesResult() : LogFilesResult(nullptr) {}
@@ -545,10 +541,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetEntriesRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.GetEntriesRequest)
-                          */
+class GetEntriesRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.GetEntriesRequest)
+                                                                                     */
 {
 public:
     inline GetEntriesRequest() : GetEntriesRequest(nullptr) {}
@@ -693,10 +687,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class EraseAllLogFilesRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.EraseAllLogFilesRequest)
-                          */
+class EraseAllLogFilesRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.EraseAllLogFilesRequest)
+                                                                                           */
 {
 public:
     inline EraseAllLogFilesRequest() : EraseAllLogFilesRequest(nullptr) {}
@@ -1053,10 +1045,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeDownloadLogFileRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.SubscribeDownloadLogFileRequest)
-                   */
+class SubscribeDownloadLogFileRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.SubscribeDownloadLogFileRequest)
+                                                                                  */
 {
 public:
     inline SubscribeDownloadLogFileRequest() : SubscribeDownloadLogFileRequest(nullptr) {}
@@ -1277,10 +1267,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetEntriesResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.GetEntriesResponse)
-                   */
+class GetEntriesResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.GetEntriesResponse)
+                                                                     */
 {
 public:
     inline GetEntriesResponse() : GetEntriesResponse(nullptr) {}
@@ -1493,10 +1481,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class EraseAllLogFilesResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.EraseAllLogFilesResponse)
-                   */
+class EraseAllLogFilesResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.EraseAllLogFilesResponse)
+                                                                           */
 {
 public:
     inline EraseAllLogFilesResponse() : EraseAllLogFilesResponse(nullptr) {}
@@ -1696,10 +1682,8 @@ private:
     friend struct ::TableStruct_log_5ffiles_2flog_5ffiles_2eproto;
 }; // -------------------------------------------------------------------
 
-class DownloadLogFileResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.DownloadLogFileResponse)
-                   */
+class DownloadLogFileResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.log_files.DownloadLogFileResponse)
+                                                                          */
 {
 public:
     inline DownloadLogFileResponse() : DownloadLogFileResponse(nullptr) {}

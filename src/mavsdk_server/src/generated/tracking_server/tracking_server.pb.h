@@ -227,10 +227,8 @@ inline bool CommandAnswer_Parse(absl::string_view name, CommandAnswer* value)
 
 // -------------------------------------------------------------------
 
-class TrackingServerResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingServerResult)
-                   */
+class TrackingServerResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingServerResult)
+                                                                       */
 {
 public:
     inline TrackingServerResult() : TrackingServerResult(nullptr) {}
@@ -462,10 +460,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TrackingOffCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingOffCommandResponse)
-                   */
+class TrackingOffCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingOffCommandResponse)
+                                                                             */
 {
 public:
     inline TrackingOffCommandResponse() : TrackingOffCommandResponse(nullptr) {}
@@ -659,10 +655,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TrackRectangle final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackRectangle)
-                   */
+class TrackRectangle final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackRectangle)
+                                                                 */
 {
 public:
     inline TrackRectangle() : TrackRectangle(nullptr) {}
@@ -877,10 +871,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TrackPoint final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackPoint)
-                   */
+class TrackPoint final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackPoint)
+                                                             */
 {
 public:
     inline TrackPoint() : TrackPoint(nullptr) {}
@@ -1081,9 +1073,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeTrackingRectangleCommandRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingRectangleCommandRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingRectangleCommandRequest)
+                                                           */
 {
 public:
     inline SubscribeTrackingRectangleCommandRequest() :
@@ -1248,9 +1239,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeTrackingPointCommandRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingPointCommandRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingPointCommandRequest)
+                                                           */
 {
 public:
     inline SubscribeTrackingPointCommandRequest() : SubscribeTrackingPointCommandRequest(nullptr) {}
@@ -1411,9 +1401,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeTrackingOffCommandRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingOffCommandRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SubscribeTrackingOffCommandRequest)
+                                                           */
 {
 public:
     inline SubscribeTrackingOffCommandRequest() : SubscribeTrackingOffCommandRequest(nullptr) {}
@@ -1572,9 +1561,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SetTrackingRectangleStatusResponse final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingRectangleStatusResponse)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingRectangleStatusResponse)
+                                                           */
 {
 public:
     inline SetTrackingRectangleStatusResponse() : SetTrackingRectangleStatusResponse(nullptr) {}
@@ -1733,9 +1721,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SetTrackingPointStatusResponse final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingPointStatusResponse)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingPointStatusResponse)
+                                                           */
 {
 public:
     inline SetTrackingPointStatusResponse() : SetTrackingPointStatusResponse(nullptr) {}
@@ -1891,10 +1878,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTrackingOffStatusResponse final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingOffStatusResponse)
-                          */
+class SetTrackingOffStatusResponse final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingOffStatusResponse)
+                                                                                                */
 {
 public:
     inline SetTrackingOffStatusResponse() : SetTrackingOffStatusResponse(nullptr) {}
@@ -2050,10 +2035,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTrackingOffStatusRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingOffStatusRequest)
-                          */
+class SetTrackingOffStatusRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingOffStatusRequest)
+                                                                                               */
 {
 public:
     inline SetTrackingOffStatusRequest() : SetTrackingOffStatusRequest(nullptr) {}
@@ -2206,10 +2189,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingRectangleCommandRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingRectangleCommandRequest)
-                   */
+class RespondTrackingRectangleCommandRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingRectangleCommandRequest)
+                                                                                         */
 {
 public:
     inline RespondTrackingRectangleCommandRequest() :
@@ -2413,10 +2394,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingPointCommandRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingPointCommandRequest)
-                   */
+class RespondTrackingPointCommandRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingPointCommandRequest)
+                                                                                     */
 {
 public:
     inline RespondTrackingPointCommandRequest() : RespondTrackingPointCommandRequest(nullptr) {}
@@ -2615,10 +2594,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingOffCommandRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingOffCommandRequest)
-                   */
+class RespondTrackingOffCommandRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingOffCommandRequest)
+                                                                                   */
 {
 public:
     inline RespondTrackingOffCommandRequest() : RespondTrackingOffCommandRequest(nullptr) {}
@@ -2816,10 +2793,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TrackingRectangleCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingRectangleCommandResponse)
-                   */
+class TrackingRectangleCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingRectangleCommandResponse)
+                                                                                   */
 {
 public:
     inline TrackingRectangleCommandResponse() : TrackingRectangleCommandResponse(nullptr) {}
@@ -3024,10 +2999,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TrackingPointCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingPointCommandResponse)
-                   */
+class TrackingPointCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.TrackingPointCommandResponse)
+                                                                               */
 {
 public:
     inline TrackingPointCommandResponse() : TrackingPointCommandResponse(nullptr) {}
@@ -3230,10 +3203,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTrackingRectangleStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingRectangleStatusRequest)
-                   */
+class SetTrackingRectangleStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingRectangleStatusRequest)
+                                                                                    */
 {
 public:
     inline SetTrackingRectangleStatusRequest() : SetTrackingRectangleStatusRequest(nullptr) {}
@@ -3439,10 +3410,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTrackingPointStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingPointStatusRequest)
-                   */
+class SetTrackingPointStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.SetTrackingPointStatusRequest)
+                                                                                */
 {
 public:
     inline SetTrackingPointStatusRequest() : SetTrackingPointStatusRequest(nullptr) {}
@@ -3646,10 +3615,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingRectangleCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingRectangleCommandResponse)
-                   */
+class RespondTrackingRectangleCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingRectangleCommandResponse)
+                                                                                          */
 {
 public:
     inline RespondTrackingRectangleCommandResponse() :
@@ -3866,10 +3833,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingPointCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingPointCommandResponse)
-                   */
+class RespondTrackingPointCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingPointCommandResponse)
+                                                                                      */
 {
 public:
     inline RespondTrackingPointCommandResponse() : RespondTrackingPointCommandResponse(nullptr) {}
@@ -4080,10 +4045,8 @@ private:
     friend struct ::TableStruct_tracking_5fserver_2ftracking_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RespondTrackingOffCommandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingOffCommandResponse)
-                   */
+class RespondTrackingOffCommandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tracking_server.RespondTrackingOffCommandResponse)
+                                                                                    */
 {
 public:
     inline RespondTrackingOffCommandResponse() : RespondTrackingOffCommandResponse(nullptr) {}

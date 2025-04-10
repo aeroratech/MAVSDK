@@ -204,10 +204,8 @@ inline bool FollowMeResult_Result_Parse(absl::string_view name, FollowMeResult_R
 
 // -------------------------------------------------------------------
 
-class TargetLocation final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.TargetLocation)
-                   */
+class TargetLocation final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.TargetLocation)
+                                                                 */
 {
 public:
     inline TargetLocation() : TargetLocation(nullptr) {}
@@ -443,10 +441,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StopRequest)
-                          */
+class StopRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StopRequest)
+                                                                               */
 {
 public:
     inline StopRequest() : StopRequest(nullptr) {}
@@ -584,10 +580,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StartRequest)
-                          */
+class StartRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StartRequest)
+                                                                                */
 {
 public:
     inline StartRequest() : StartRequest(nullptr) {}
@@ -725,10 +719,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class IsActiveResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.IsActiveResponse)
-                   */
+class IsActiveResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.IsActiveResponse)
+                                                                   */
 {
 public:
     inline IsActiveResponse() : IsActiveResponse(nullptr) {}
@@ -907,10 +899,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class IsActiveRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.IsActiveRequest)
-                          */
+class IsActiveRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.IsActiveRequest)
+                                                                                   */
 {
 public:
     inline IsActiveRequest() : IsActiveRequest(nullptr) {}
@@ -1051,10 +1041,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetLastLocationRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetLastLocationRequest)
-                          */
+class GetLastLocationRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetLastLocationRequest)
+                                                                                          */
 {
 public:
     inline GetLastLocationRequest() : GetLastLocationRequest(nullptr) {}
@@ -1202,10 +1190,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetConfigRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetConfigRequest)
-                          */
+class GetConfigRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetConfigRequest)
+                                                                                    */
 {
 public:
     inline GetConfigRequest() : GetConfigRequest(nullptr) {}
@@ -1346,10 +1332,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class FollowMeResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.FollowMeResult)
-                   */
+class FollowMeResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.FollowMeResult)
+                                                                 */
 {
 public:
     inline FollowMeResult() : FollowMeResult(nullptr) {}
@@ -1837,10 +1821,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StopResponse)
-                   */
+class StopResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StopResponse)
+                                                               */
 {
 public:
     inline StopResponse() : StopResponse(nullptr) {}
@@ -2023,10 +2005,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StartResponse)
-                   */
+class StartResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.StartResponse)
+                                                                */
 {
 public:
     inline StartResponse() : StartResponse(nullptr) {}
@@ -2209,10 +2189,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTargetLocationResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetTargetLocationResponse)
-                   */
+class SetTargetLocationResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetTargetLocationResponse)
+                                                                            */
 {
 public:
     inline SetTargetLocationResponse() : SetTargetLocationResponse(nullptr) {}
@@ -2413,10 +2391,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTargetLocationRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetTargetLocationRequest)
-                   */
+class SetTargetLocationRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetTargetLocationRequest)
+                                                                           */
 {
 public:
     inline SetTargetLocationRequest() : SetTargetLocationRequest(nullptr) {}
@@ -2615,10 +2591,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetConfigResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetConfigResponse)
-                   */
+class SetConfigResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetConfigResponse)
+                                                                    */
 {
 public:
     inline SetConfigResponse() : SetConfigResponse(nullptr) {}
@@ -2808,10 +2782,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetConfigRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetConfigRequest)
-                   */
+class SetConfigRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.SetConfigRequest)
+                                                                   */
 {
 public:
     inline SetConfigRequest() : SetConfigRequest(nullptr) {}
@@ -2996,10 +2968,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetLastLocationResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetLastLocationResponse)
-                   */
+class GetLastLocationResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetLastLocationResponse)
+                                                                          */
 {
 public:
     inline GetLastLocationResponse() : GetLastLocationResponse(nullptr) {}
@@ -3197,10 +3167,8 @@ private:
     friend struct ::TableStruct_follow_5fme_2ffollow_5fme_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetConfigResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetConfigResponse)
-                   */
+class GetConfigResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.follow_me.GetConfigResponse)
+                                                                    */
 {
 public:
     inline GetConfigResponse() : GetConfigResponse(nullptr) {}

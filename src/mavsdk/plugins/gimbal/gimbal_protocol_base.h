@@ -47,6 +47,14 @@ public:
     virtual Gimbal::ControlStatus control() = 0;
     virtual void control_async(Gimbal::ControlCallback callback) = 0;
 
+    virtual Gimbal::Result
+    set_debug_data(uint8_t system_id, uint8_t component_id, uint32_t msg_type) = 0;
+    virtual void set_debug_data_async(
+        uint8_t system_id,
+        uint8_t component_id,
+        uint32_t msg_type,
+        Gimbal::ResultCallback callback) = 0;
+
 protected:
     SystemImpl& _system_impl;
 };

@@ -211,10 +211,8 @@ inline bool AdsbAltitudeType_Parse(absl::string_view name, AdsbAltitudeType* val
 
 // -------------------------------------------------------------------
 
-class TransponderResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.TransponderResult)
-                   */
+class TransponderResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.TransponderResult)
+                                                                    */
 {
 public:
     inline TransponderResult() : TransponderResult(nullptr) {}
@@ -440,10 +438,8 @@ private:
     friend struct ::TableStruct_transponder_2ftransponder_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeTransponderRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SubscribeTransponderRequest)
-                          */
+class SubscribeTransponderRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SubscribeTransponderRequest)
+                                                                                               */
 {
 public:
     inline SubscribeTransponderRequest() : SubscribeTransponderRequest(nullptr) {}
@@ -596,10 +592,8 @@ private:
     friend struct ::TableStruct_transponder_2ftransponder_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateTransponderRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SetRateTransponderRequest)
-                   */
+class SetRateTransponderRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SetRateTransponderRequest)
+                                                                            */
 {
 public:
     inline SetRateTransponderRequest() : SetRateTransponderRequest(nullptr) {}
@@ -793,10 +787,8 @@ private:
     friend struct ::TableStruct_transponder_2ftransponder_2eproto;
 }; // -------------------------------------------------------------------
 
-class AdsbVehicle final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.AdsbVehicle)
-                   */
+class AdsbVehicle final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.AdsbVehicle)
+                                                              */
 {
 public:
     inline AdsbVehicle() : AdsbVehicle(nullptr) {}
@@ -1109,10 +1101,8 @@ private:
     friend struct ::TableStruct_transponder_2ftransponder_2eproto;
 }; // -------------------------------------------------------------------
 
-class TransponderResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.TransponderResponse)
-                   */
+class TransponderResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.TransponderResponse)
+                                                                      */
 {
 public:
     inline TransponderResponse() : TransponderResponse(nullptr) {}
@@ -1303,10 +1293,8 @@ private:
     friend struct ::TableStruct_transponder_2ftransponder_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateTransponderResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SetRateTransponderResponse)
-                   */
+class SetRateTransponderResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.transponder.SetRateTransponderResponse)
+                                                                             */
 {
 public:
     inline SetRateTransponderResponse() : SetRateTransponderResponse(nullptr) {}

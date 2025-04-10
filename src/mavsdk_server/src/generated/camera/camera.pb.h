@@ -560,10 +560,8 @@ inline bool PhotosRange_Parse(absl::string_view name, PhotosRange* value)
 
 // -------------------------------------------------------------------
 
-class VideoStreamSettings final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamSettings)
-                   */
+class VideoStreamSettings final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamSettings)
+                                                                      */
 {
 public:
     inline VideoStreamSettings() : VideoStreamSettings(nullptr) {}
@@ -822,10 +820,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class TakePhotoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.TakePhotoRequest)
-                          */
+class TakePhotoRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.TakePhotoRequest)
+                                                                                    */
 {
 public:
     inline TakePhotoRequest() : TakePhotoRequest(nullptr) {}
@@ -967,9 +963,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeVideoStreamInfoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeVideoStreamInfoRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeVideoStreamInfoRequest)
+                                                           */
 {
 public:
     inline SubscribeVideoStreamInfoRequest() : SubscribeVideoStreamInfoRequest(nullptr) {}
@@ -1126,10 +1121,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeStatusRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeStatusRequest)
-                          */
+class SubscribeStatusRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeStatusRequest)
+                                                                                          */
 {
 public:
     inline SubscribeStatusRequest() : SubscribeStatusRequest(nullptr) {}
@@ -1278,9 +1271,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribePossibleSettingOptionsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribePossibleSettingOptionsRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribePossibleSettingOptionsRequest)
+                                                           */
 {
 public:
     inline SubscribePossibleSettingOptionsRequest() :
@@ -1443,10 +1435,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeModeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeModeRequest)
-                          */
+class SubscribeModeRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeModeRequest)
+                                                                                        */
 {
 public:
     inline SubscribeModeRequest() : SubscribeModeRequest(nullptr) {}
@@ -1594,10 +1584,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeInformationRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeInformationRequest)
-                          */
+class SubscribeInformationRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeInformationRequest)
+                                                                                               */
 {
 public:
     inline SubscribeInformationRequest() : SubscribeInformationRequest(nullptr) {}
@@ -1751,9 +1739,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCurrentSettingsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeCurrentSettingsRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeCurrentSettingsRequest)
+                                                           */
 {
 public:
     inline SubscribeCurrentSettingsRequest() : SubscribeCurrentSettingsRequest(nullptr) {}
@@ -1910,10 +1897,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeCaptureInfoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeCaptureInfoRequest)
-                          */
+class SubscribeCaptureInfoRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SubscribeCaptureInfoRequest)
+                                                                                               */
 {
 public:
     inline SubscribeCaptureInfoRequest() : SubscribeCaptureInfoRequest(nullptr) {}
@@ -2066,10 +2051,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopVideoStreamingRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoStreamingRequest)
-                   */
+class StopVideoStreamingRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoStreamingRequest)
+                                                                            */
 {
 public:
     inline StopVideoStreamingRequest() : StopVideoStreamingRequest(nullptr) {}
@@ -2263,10 +2246,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopVideoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoRequest)
-                          */
+class StopVideoRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoRequest)
+                                                                                    */
 {
 public:
     inline StopVideoRequest() : StopVideoRequest(nullptr) {}
@@ -2407,10 +2388,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopPhotoIntervalRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopPhotoIntervalRequest)
-                          */
+class StopPhotoIntervalRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopPhotoIntervalRequest)
+                                                                                            */
 {
 public:
     inline StopPhotoIntervalRequest() : StopPhotoIntervalRequest(nullptr) {}
@@ -2905,10 +2884,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartVideoStreamingRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoStreamingRequest)
-                   */
+class StartVideoStreamingRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoStreamingRequest)
+                                                                             */
 {
 public:
     inline StartVideoStreamingRequest() : StartVideoStreamingRequest(nullptr) {}
@@ -3102,10 +3079,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartVideoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoRequest)
-                          */
+class StartVideoRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoRequest)
+                                                                                     */
 {
 public:
     inline StartVideoRequest() : StartVideoRequest(nullptr) {}
@@ -3247,10 +3222,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartPhotoIntervalRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartPhotoIntervalRequest)
-                   */
+class StartPhotoIntervalRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartPhotoIntervalRequest)
+                                                                            */
 {
 public:
     inline StartPhotoIntervalRequest() : StartPhotoIntervalRequest(nullptr) {}
@@ -3444,10 +3417,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetZoomRangeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetZoomRangeRequest)
-                   */
+class SetZoomRangeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetZoomRangeRequest)
+                                                                      */
 {
 public:
     inline SetZoomRangeRequest() : SetZoomRangeRequest(nullptr) {}
@@ -3629,10 +3600,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetModeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetModeRequest)
-                   */
+class SetModeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetModeRequest)
+                                                                 */
 {
 public:
     inline SetModeRequest() : SetModeRequest(nullptr) {}
@@ -3808,10 +3777,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetDefinitionDataRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetDefinitionDataRequest)
-                   */
+class SetDefinitionDataRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetDefinitionDataRequest)
+                                                                           */
 {
 public:
     inline SetDefinitionDataRequest() : SetDefinitionDataRequest(nullptr) {}
@@ -4009,10 +3976,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SelectCameraRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SelectCameraRequest)
-                   */
+class SelectCameraRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SelectCameraRequest)
+                                                                      */
 {
 public:
     inline SelectCameraRequest() : SelectCameraRequest(nullptr) {}
@@ -4194,10 +4159,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class ResetSettingsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ResetSettingsRequest)
-                          */
+class ResetSettingsRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ResetSettingsRequest)
+                                                                                        */
 {
 public:
     inline ResetSettingsRequest() : ResetSettingsRequest(nullptr) {}
@@ -4558,10 +4521,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class PrepareRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PrepareRequest)
-                          */
+class PrepareRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PrepareRequest)
+                                                                                  */
 {
 public:
     inline PrepareRequest() : PrepareRequest(nullptr) {}
@@ -5288,10 +5249,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class ListPhotosRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ListPhotosRequest)
-                   */
+class ListPhotosRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ListPhotosRequest)
+                                                                    */
 {
 public:
     inline ListPhotosRequest() : ListPhotosRequest(nullptr) {}
@@ -5860,10 +5819,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class FormatStorageRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.FormatStorageRequest)
-                   */
+class FormatStorageRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.FormatStorageRequest)
+                                                                       */
 {
 public:
     inline FormatStorageRequest() : FormatStorageRequest(nullptr) {}
@@ -6476,10 +6433,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class VideoStreamInfo final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamInfo)
-                   */
+class VideoStreamInfo final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamInfo)
+                                                                  */
 {
 public:
     inline VideoStreamInfo() : VideoStreamInfo(nullptr) {}
@@ -6758,10 +6713,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class TakePhotoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.TakePhotoResponse)
-                   */
+class TakePhotoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.TakePhotoResponse)
+                                                                    */
 {
 public:
     inline TakePhotoResponse() : TakePhotoResponse(nullptr) {}
@@ -6947,10 +6900,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopVideoStreamingResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoStreamingResponse)
-                   */
+class StopVideoStreamingResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoStreamingResponse)
+                                                                             */
 {
 public:
     inline StopVideoStreamingResponse() : StopVideoStreamingResponse(nullptr) {}
@@ -7150,10 +7101,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopVideoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoResponse)
-                   */
+class StopVideoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopVideoResponse)
+                                                                    */
 {
 public:
     inline StopVideoResponse() : StopVideoResponse(nullptr) {}
@@ -7339,10 +7288,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopPhotoIntervalResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopPhotoIntervalResponse)
-                   */
+class StopPhotoIntervalResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StopPhotoIntervalResponse)
+                                                                            */
 {
 public:
     inline StopPhotoIntervalResponse() : StopPhotoIntervalResponse(nullptr) {}
@@ -7542,10 +7489,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StatusResponse)
-                   */
+class StatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StatusResponse)
+                                                                 */
 {
 public:
     inline StatusResponse() : StatusResponse(nullptr) {}
@@ -7727,10 +7672,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartVideoStreamingResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoStreamingResponse)
-                   */
+class StartVideoStreamingResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoStreamingResponse)
+                                                                              */
 {
 public:
     inline StartVideoStreamingResponse() : StartVideoStreamingResponse(nullptr) {}
@@ -7930,10 +7873,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartVideoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoResponse)
-                   */
+class StartVideoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartVideoResponse)
+                                                                     */
 {
 public:
     inline StartVideoResponse() : StartVideoResponse(nullptr) {}
@@ -8119,10 +8060,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartPhotoIntervalResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartPhotoIntervalResponse)
-                   */
+class StartPhotoIntervalResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.StartPhotoIntervalResponse)
+                                                                             */
 {
 public:
     inline StartPhotoIntervalResponse() : StartPhotoIntervalResponse(nullptr) {}
@@ -8322,10 +8261,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SettingOptions final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SettingOptions)
-                   */
+class SettingOptions final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SettingOptions)
+                                                                 */
 {
 public:
     inline SettingOptions() : SettingOptions(nullptr) {}
@@ -8787,10 +8724,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetZoomRangeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetZoomRangeResponse)
-                   */
+class SetZoomRangeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetZoomRangeResponse)
+                                                                       */
 {
 public:
     inline SetZoomRangeResponse() : SetZoomRangeResponse(nullptr) {}
@@ -8985,10 +8920,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetSettingResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetSettingResponse)
-                   */
+class SetSettingResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetSettingResponse)
+                                                                     */
 {
 public:
     inline SetSettingResponse() : SetSettingResponse(nullptr) {}
@@ -9174,10 +9107,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetModeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetModeResponse)
-                   */
+class SetModeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetModeResponse)
+                                                                  */
 {
 public:
     inline SetModeResponse() : SetModeResponse(nullptr) {}
@@ -9362,10 +9293,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetDefinitionDataResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetDefinitionDataResponse)
-                   */
+class SetDefinitionDataResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetDefinitionDataResponse)
+                                                                            */
 {
 public:
     inline SetDefinitionDataResponse() : SetDefinitionDataResponse(nullptr) {}
@@ -9565,10 +9494,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SelectCameraResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SelectCameraResponse)
-                   */
+class SelectCameraResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SelectCameraResponse)
+                                                                       */
 {
 public:
     inline SelectCameraResponse() : SelectCameraResponse(nullptr) {}
@@ -9763,10 +9690,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class ResetSettingsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ResetSettingsResponse)
-                   */
+class ResetSettingsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ResetSettingsResponse)
+                                                                        */
 {
 public:
     inline ResetSettingsResponse() : ResetSettingsResponse(nullptr) {}
@@ -9961,10 +9886,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class PrepareResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PrepareResponse)
-                   */
+class PrepareResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PrepareResponse)
+                                                                  */
 {
 public:
     inline PrepareResponse() : PrepareResponse(nullptr) {}
@@ -10149,10 +10072,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class InformationResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.InformationResponse)
-                   */
+class InformationResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.InformationResponse)
+                                                                      */
 {
 public:
     inline InformationResponse() : InformationResponse(nullptr) {}
@@ -10340,10 +10261,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class FormatStorageResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.FormatStorageResponse)
-                   */
+class FormatStorageResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.FormatStorageResponse)
+                                                                        */
 {
 public:
     inline FormatStorageResponse() : FormatStorageResponse(nullptr) {}
@@ -10808,10 +10727,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class VideoStreamInfoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamInfoResponse)
-                   */
+class VideoStreamInfoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.VideoStreamInfoResponse)
+                                                                          */
 {
 public:
     inline VideoStreamInfoResponse() : VideoStreamInfoResponse(nullptr) {}
@@ -11017,10 +10934,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetSettingRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetSettingRequest)
-                   */
+class SetSettingRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.SetSettingRequest)
+                                                                    */
 {
 public:
     inline SetSettingRequest() : SetSettingRequest(nullptr) {}
@@ -11206,10 +11121,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class PossibleSettingOptionsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PossibleSettingOptionsResponse)
-                   */
+class PossibleSettingOptionsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.PossibleSettingOptionsResponse)
+                                                                                 */
 {
 public:
     inline PossibleSettingOptionsResponse() : PossibleSettingOptionsResponse(nullptr) {}
@@ -11420,10 +11333,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class ListPhotosResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ListPhotosResponse)
-                   */
+class ListPhotosResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.ListPhotosResponse)
+                                                                     */
 {
 public:
     inline ListPhotosResponse() : ListPhotosResponse(nullptr) {}
@@ -11634,10 +11545,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetSettingResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.GetSettingResponse)
-                   */
+class GetSettingResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.GetSettingResponse)
+                                                                     */
 {
 public:
     inline GetSettingResponse() : GetSettingResponse(nullptr) {}
@@ -11840,10 +11749,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetSettingRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.GetSettingRequest)
-                   */
+class GetSettingRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.GetSettingRequest)
+                                                                    */
 {
 public:
     inline GetSettingRequest() : GetSettingRequest(nullptr) {}
@@ -12029,10 +11936,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class CurrentSettingsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.CurrentSettingsResponse)
-                   */
+class CurrentSettingsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.CurrentSettingsResponse)
+                                                                          */
 {
 public:
     inline CurrentSettingsResponse() : CurrentSettingsResponse(nullptr) {}
@@ -12237,10 +12142,8 @@ private:
     friend struct ::TableStruct_camera_2fcamera_2eproto;
 }; // -------------------------------------------------------------------
 
-class CaptureInfoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.CaptureInfoResponse)
-                   */
+class CaptureInfoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.camera.CaptureInfoResponse)
+                                                                      */
 {
 public:
     inline CaptureInfoResponse() : CaptureInfoResponse(nullptr) {}

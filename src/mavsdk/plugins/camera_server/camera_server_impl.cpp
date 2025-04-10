@@ -886,37 +886,37 @@ void CameraServerImpl::stop_image_capture_interval()
     _image_capture_timer_interval_s = 0;
 }
 
-std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_request(
-    const MavlinkCommandReceiver::CommandLong& command)
+std::optional<mavlink_command_ack_t>
+CameraServerImpl::process_camera_request(const MavlinkCommandReceiver::CommandLong& command)
 {
     LogWarn() << "Camera request";
     auto message_id = static_cast<uint32_t>(command.params.param1);
 
     switch (message_id) {
-    case MAVLINK_MSG_ID_CAMERA_INFORMATION: {
-        return process_camera_information(command);
-    }
-    case MAVLINK_MSG_ID_CAMERA_SETTINGS: {
-        return process_camera_settings(command);
-    }
-    case MAVLINK_MSG_ID_VIDEO_STREAM_INFORMATION: {
-        auto stream_id = static_cast<uint8_t>(command.params.param2);
-        return process_video_stream_information(command, stream_id);
-    }
-    case MAVLINK_MSG_ID_VIDEO_STREAM_STATUS: {
-        auto stream_id = static_cast<uint8_t>(command.params.param2);
-        return process_video_stream_status(command, stream_id);
-    }
-    case MAVLINK_MSG_ID_STORAGE_INFORMATION: {
-        auto storage_id = static_cast<uint8_t>(command.params.param2);
-        return process_storage_information(command, storage_id);
-    }
-    default:
-        break;
+        case MAVLINK_MSG_ID_CAMERA_INFORMATION: {
+            return process_camera_information(command);
+        }
+        case MAVLINK_MSG_ID_CAMERA_SETTINGS: {
+            return process_camera_settings(command);
+        }
+        case MAVLINK_MSG_ID_VIDEO_STREAM_INFORMATION: {
+            auto stream_id = static_cast<uint8_t>(command.params.param2);
+            return process_video_stream_information(command, stream_id);
+        }
+        case MAVLINK_MSG_ID_VIDEO_STREAM_STATUS: {
+            auto stream_id = static_cast<uint8_t>(command.params.param2);
+            return process_video_stream_status(command, stream_id);
+        }
+        case MAVLINK_MSG_ID_STORAGE_INFORMATION: {
+            auto storage_id = static_cast<uint8_t>(command.params.param2);
+            return process_storage_information(command, storage_id);
+        }
+        default:
+            break;
     }
 
     return _server_component_impl->make_command_ack_message(
-                command, MAV_RESULT::MAV_RESULT_UNSUPPORTED);
+        command, MAV_RESULT::MAV_RESULT_UNSUPPORTED);
 }
 
 std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_information_request(
@@ -1365,8 +1365,8 @@ std::optional<mavlink_command_ack_t> CameraServerImpl::process_video_stream_stat
     return process_video_stream_status(command, stream_id);
 }
 
-std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_information(
-    const MavlinkCommandReceiver::CommandLong& command)
+std::optional<mavlink_command_ack_t>
+CameraServerImpl::process_camera_information(const MavlinkCommandReceiver::CommandLong& command)
 {
     LogWarn() << "Camera information request";
 
@@ -1465,8 +1465,8 @@ std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_informatio
     return std::nullopt;
 }
 
-std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_settings(
-    const MavlinkCommandReceiver::CommandLong& command)
+std::optional<mavlink_command_ack_t>
+CameraServerImpl::process_camera_settings(const MavlinkCommandReceiver::CommandLong& command)
 {
     LogWarn() << "Camera settings request";
 

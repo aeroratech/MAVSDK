@@ -196,12 +196,12 @@ private:
     process_camera_information(const MavlinkCommandReceiver::CommandLong& command);
     std::optional<mavlink_command_ack_t>
     process_camera_settings(const MavlinkCommandReceiver::CommandLong& command);
-    std::optional<mavlink_command_ack_t>
-    process_storage_information(const MavlinkCommandReceiver::CommandLong& command, uint8_t storage_id);
-    std::optional<mavlink_command_ack_t>
-    process_video_stream_information(const MavlinkCommandReceiver::CommandLong& command, uint8_t stream_id);
-    std::optional<mavlink_command_ack_t>
-    process_video_stream_status(const MavlinkCommandReceiver::CommandLong& command, uint8_t stream_id);
+    std::optional<mavlink_command_ack_t> process_storage_information(
+        const MavlinkCommandReceiver::CommandLong& command, uint8_t storage_id);
+    std::optional<mavlink_command_ack_t> process_video_stream_information(
+        const MavlinkCommandReceiver::CommandLong& command, uint8_t stream_id);
+    std::optional<mavlink_command_ack_t> process_video_stream_status(
+        const MavlinkCommandReceiver::CommandLong& command, uint8_t stream_id);
 
     void send_capture_status();
 

@@ -146,10 +146,8 @@ ManualControlResult_Result_Parse(absl::string_view name, ManualControlResult_Res
 
 // -------------------------------------------------------------------
 
-class StartPositionControlRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartPositionControlRequest)
-                          */
+class StartPositionControlRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartPositionControlRequest)
+                                                                                               */
 {
 public:
     inline StartPositionControlRequest() : StartPositionControlRequest(nullptr) {}
@@ -302,10 +300,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartAltitudeControlRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartAltitudeControlRequest)
-                          */
+class StartAltitudeControlRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartAltitudeControlRequest)
+                                                                                               */
 {
 public:
     inline StartAltitudeControlRequest() : StartAltitudeControlRequest(nullptr) {}
@@ -458,10 +454,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetManualControlInputRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.SetManualControlInputRequest)
-                   */
+class SetManualControlInputRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.SetManualControlInputRequest)
+                                                                               */
 {
 public:
     inline SetManualControlInputRequest() : SetManualControlInputRequest(nullptr) {}
@@ -694,10 +688,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class ManualControlResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.ManualControlResult)
-                   */
+class ManualControlResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.ManualControlResult)
+                                                                      */
 {
 public:
     inline ManualControlResult() : ManualControlResult(nullptr) {}
@@ -932,10 +924,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartPositionControlResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartPositionControlResponse)
-                   */
+class StartPositionControlResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartPositionControlResponse)
+                                                                               */
 {
 public:
     inline StartPositionControlResponse() : StartPositionControlResponse(nullptr) {}
@@ -1143,10 +1133,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartAltitudeControlResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartAltitudeControlResponse)
-                   */
+class StartAltitudeControlResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.StartAltitudeControlResponse)
+                                                                               */
 {
 public:
     inline StartAltitudeControlResponse() : StartAltitudeControlResponse(nullptr) {}
@@ -1354,10 +1342,8 @@ private:
     friend struct ::TableStruct_manual_5fcontrol_2fmanual_5fcontrol_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetManualControlInputResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.SetManualControlInputResponse)
-                   */
+class SetManualControlInputResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.manual_control.SetManualControlInputResponse)
+                                                                                */
 {
 public:
     inline SetManualControlInputResponse() : SetManualControlInputResponse(nullptr) {}

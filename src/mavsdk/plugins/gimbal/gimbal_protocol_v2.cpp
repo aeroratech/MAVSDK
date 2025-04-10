@@ -330,4 +330,28 @@ void GimbalProtocolV2::control_async(Gimbal::ControlCallback callback)
     }
 }
 
+Gimbal::Result
+GimbalProtocolV2::set_debug_data(uint8_t system_id, uint8_t component_id, uint32_t msg_type)
+{
+    LogDebug() << "call set debug data v2";
+    mavlink_message_t msg{};
+    int8_t debug_data[49] = {0};
+    mavlink_msg_gimbal_debugdata_pack(system_id, component_id, &msg, msg_type, debug_data);
+    if (_system_impl.send_message(msg)) {
+        return Gimbal::Result::Success;
+    } else {
+        return Gimbal::Result::Error;
+    }
+}
+
+void GimbalProtocolV2::set_debug_data_async(
+    uint8_t system_id, uint8_t component_id, uint32_t msg_type, Gimbal::ResultCallback callback)
+{
+    mavlink_message_t msg{};
+    int8_t debug_data[49] = {0};
+    mavlink_msg_gimbal_debugdata_pack(system_id, component_id, &msg, msg_type, debug_data);
+    // TODO how to make this aysnc
+    _system_impl.send_message(msg);
+}
+
 } // namespace mavsdk

@@ -177,10 +177,8 @@ inline bool FtpResult_Result_Parse(absl::string_view name, FtpResult_Result* val
 
 // -------------------------------------------------------------------
 
-class SubscribeUploadRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SubscribeUploadRequest)
-                   */
+class SubscribeUploadRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SubscribeUploadRequest)
+                                                                         */
 {
 public:
     inline SubscribeUploadRequest() : SubscribeUploadRequest(nullptr) {}
@@ -388,10 +386,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeDownloadRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SubscribeDownloadRequest)
-                   */
+class SubscribeDownloadRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SubscribeDownloadRequest)
+                                                                           */
 {
 public:
     inline SubscribeDownloadRequest() : SubscribeDownloadRequest(nullptr) {}
@@ -618,10 +614,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTargetCompidRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SetTargetCompidRequest)
-                   */
+class SetTargetCompidRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SetTargetCompidRequest)
+                                                                         */
 {
 public:
     inline SetTargetCompidRequest() : SetTargetCompidRequest(nullptr) {}
@@ -1006,10 +1000,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class RemoveFileRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveFileRequest)
-                   */
+class RemoveFileRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveFileRequest)
+                                                                    */
 {
 public:
     inline RemoveFileRequest() : RemoveFileRequest(nullptr) {}
@@ -1194,10 +1186,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class RemoveDirectoryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveDirectoryRequest)
-                   */
+class RemoveDirectoryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveDirectoryRequest)
+                                                                         */
 {
 public:
     inline RemoveDirectoryRequest() : RemoveDirectoryRequest(nullptr) {}
@@ -1577,10 +1567,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class ListDirectoryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.ListDirectoryRequest)
-                   */
+class ListDirectoryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.ListDirectoryRequest)
+                                                                       */
 {
 public:
     inline ListDirectoryRequest() : ListDirectoryRequest(nullptr) {}
@@ -1997,10 +1985,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class CreateDirectoryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.CreateDirectoryRequest)
-                   */
+class CreateDirectoryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.CreateDirectoryRequest)
+                                                                         */
 {
 public:
     inline CreateDirectoryRequest() : CreateDirectoryRequest(nullptr) {}
@@ -2191,10 +2177,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class AreFilesIdenticalRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.AreFilesIdenticalRequest)
-                   */
+class AreFilesIdenticalRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.AreFilesIdenticalRequest)
+                                                                           */
 {
 public:
     inline AreFilesIdenticalRequest() : AreFilesIdenticalRequest(nullptr) {}
@@ -2609,10 +2593,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetTargetCompidResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SetTargetCompidResponse)
-                   */
+class SetTargetCompidResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.SetTargetCompidResponse)
+                                                                          */
 {
 public:
     inline SetTargetCompidResponse() : SetTargetCompidResponse(nullptr) {}
@@ -2993,10 +2975,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class RemoveFileResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveFileResponse)
-                   */
+class RemoveFileResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveFileResponse)
+                                                                     */
 {
 public:
     inline RemoveFileResponse() : RemoveFileResponse(nullptr) {}
@@ -3182,10 +3162,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class RemoveDirectoryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveDirectoryResponse)
-                   */
+class RemoveDirectoryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.RemoveDirectoryResponse)
+                                                                          */
 {
 public:
     inline RemoveDirectoryResponse() : RemoveDirectoryResponse(nullptr) {}
@@ -3383,10 +3361,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class ListDirectoryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.ListDirectoryResponse)
-                   */
+class ListDirectoryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.ListDirectoryResponse)
+                                                                        */
 {
 public:
     inline ListDirectoryResponse() : ListDirectoryResponse(nullptr) {}
@@ -3812,10 +3788,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class CreateDirectoryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.CreateDirectoryResponse)
-                   */
+class CreateDirectoryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.CreateDirectoryResponse)
+                                                                          */
 {
 public:
     inline CreateDirectoryResponse() : CreateDirectoryResponse(nullptr) {}
@@ -4013,10 +3987,8 @@ private:
     friend struct ::TableStruct_ftp_2fftp_2eproto;
 }; // -------------------------------------------------------------------
 
-class AreFilesIdenticalResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.AreFilesIdenticalResponse)
-                   */
+class AreFilesIdenticalResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.ftp.AreFilesIdenticalResponse)
+                                                                            */
 {
 public:
     inline AreFilesIdenticalResponse() : AreFilesIdenticalResponse(nullptr) {}

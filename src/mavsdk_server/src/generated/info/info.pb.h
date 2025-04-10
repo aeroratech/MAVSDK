@@ -1192,10 +1192,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetVersionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetVersionRequest)
-                          */
+class GetVersionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetVersionRequest)
+                                                                                     */
 {
 public:
     inline GetVersionRequest() : GetVersionRequest(nullptr) {}
@@ -1337,10 +1335,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetSpeedFactorRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetSpeedFactorRequest)
-                          */
+class GetSpeedFactorRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetSpeedFactorRequest)
+                                                                                         */
 {
 public:
     inline GetSpeedFactorRequest() : GetSpeedFactorRequest(nullptr) {}
@@ -1485,10 +1481,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetProductRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetProductRequest)
-                          */
+class GetProductRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetProductRequest)
+                                                                                     */
 {
 public:
     inline GetProductRequest() : GetProductRequest(nullptr) {}
@@ -1630,10 +1624,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetIdentificationRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetIdentificationRequest)
-                          */
+class GetIdentificationRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetIdentificationRequest)
+                                                                                            */
 {
 public:
     inline GetIdentificationRequest() : GetIdentificationRequest(nullptr) {}
@@ -1785,10 +1777,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetFlightInformationRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetFlightInformationRequest)
-                          */
+class GetFlightInformationRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetFlightInformationRequest)
+                                                                                               */
 {
 public:
     inline GetFlightInformationRequest() : GetFlightInformationRequest(nullptr) {}
@@ -2130,10 +2120,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetVersionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetVersionResponse)
-                   */
+class GetVersionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetVersionResponse)
+                                                                     */
 {
 public:
     inline GetVersionResponse() : GetVersionResponse(nullptr) {}
@@ -2336,10 +2324,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetSpeedFactorResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetSpeedFactorResponse)
-                   */
+class GetSpeedFactorResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetSpeedFactorResponse)
+                                                                         */
 {
 public:
     inline GetSpeedFactorResponse() : GetSpeedFactorResponse(nullptr) {}
@@ -2546,10 +2532,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetProductResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetProductResponse)
-                   */
+class GetProductResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetProductResponse)
+                                                                     */
 {
 public:
     inline GetProductResponse() : GetProductResponse(nullptr) {}
@@ -2752,10 +2736,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetIdentificationResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetIdentificationResponse)
-                   */
+class GetIdentificationResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetIdentificationResponse)
+                                                                            */
 {
 public:
     inline GetIdentificationResponse() : GetIdentificationResponse(nullptr) {}
@@ -2972,10 +2954,8 @@ private:
     friend struct ::TableStruct_info_2finfo_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetFlightInformationResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetFlightInformationResponse)
-                   */
+class GetFlightInformationResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.info.GetFlightInformationResponse)
+                                                                               */
 {
 public:
     inline GetFlightInformationResponse() : GetFlightInformationResponse(nullptr) {}

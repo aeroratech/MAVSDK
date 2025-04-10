@@ -32,6 +32,7 @@ static const char* GimbalService_method_names[] = {
   "/mavsdk.rpc.gimbal.GimbalService/TakeControl",
   "/mavsdk.rpc.gimbal.GimbalService/ReleaseControl",
   "/mavsdk.rpc.gimbal.GimbalService/SubscribeControl",
+  "/mavsdk.rpc.gimbal.GimbalService/SetDebugData",
 };
 
 std::unique_ptr< GimbalService::Stub> GimbalService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -49,6 +50,7 @@ GimbalService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chan
   , rpcmethod_TakeControl_(GimbalService_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ReleaseControl_(GimbalService_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_SubscribeControl_(GimbalService_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_SetDebugData_(GimbalService_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status GimbalService::Stub::SetAngles(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetAnglesRequest& request, ::mavsdk::rpc::gimbal::SetAnglesResponse* response) {
@@ -228,6 +230,29 @@ void GimbalService::Stub::async::SubscribeControl(::grpc::ClientContext* context
   return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::gimbal::ControlResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeControl_, context, request, false, nullptr);
 }
 
+::grpc::Status GimbalService::Stub::SetDebugData(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request, ::mavsdk::rpc::gimbal::SetDebugDataResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::gimbal::SetDebugDataRequest, ::mavsdk::rpc::gimbal::SetDebugDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SetDebugData_, context, request, response);
+}
+
+void GimbalService::Stub::async::SetDebugData(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request, ::mavsdk::rpc::gimbal::SetDebugDataResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::gimbal::SetDebugDataRequest, ::mavsdk::rpc::gimbal::SetDebugDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetDebugData_, context, request, response, std::move(f));
+}
+
+void GimbalService::Stub::async::SetDebugData(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request, ::mavsdk::rpc::gimbal::SetDebugDataResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetDebugData_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::gimbal::SetDebugDataResponse>* GimbalService::Stub::PrepareAsyncSetDebugDataRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::gimbal::SetDebugDataResponse, ::mavsdk::rpc::gimbal::SetDebugDataRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SetDebugData_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::gimbal::SetDebugDataResponse>* GimbalService::Stub::AsyncSetDebugDataRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncSetDebugDataRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 GimbalService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       GimbalService_method_names[0],
@@ -309,6 +334,16 @@ GimbalService::Service::Service() {
              ::grpc::ServerWriter<::mavsdk::rpc::gimbal::ControlResponse>* writer) {
                return service->SubscribeControl(ctx, req, writer);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      GimbalService_method_names[8],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< GimbalService::Service, ::mavsdk::rpc::gimbal::SetDebugDataRequest, ::mavsdk::rpc::gimbal::SetDebugDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](GimbalService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::mavsdk::rpc::gimbal::SetDebugDataRequest* req,
+             ::mavsdk::rpc::gimbal::SetDebugDataResponse* resp) {
+               return service->SetDebugData(ctx, req, resp);
+             }, this)));
 }
 
 GimbalService::Service::~Service() {
@@ -367,6 +402,13 @@ GimbalService::Service::~Service() {
   (void) context;
   (void) request;
   (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status GimbalService::Service::SetDebugData(::grpc::ServerContext* context, const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request, ::mavsdk::rpc::gimbal::SetDebugDataResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 

@@ -592,10 +592,8 @@ private:
     friend struct ::TableStruct_tune_2ftune_2eproto;
 }; // -------------------------------------------------------------------
 
-class PlayTuneResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tune.PlayTuneResponse)
-                   */
+class PlayTuneResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.tune.PlayTuneResponse)
+                                                                   */
 {
 public:
     inline PlayTuneResponse() : PlayTuneResponse(nullptr) {}

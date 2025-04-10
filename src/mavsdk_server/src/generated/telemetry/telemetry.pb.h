@@ -830,10 +830,8 @@ inline bool VtolState_Parse(absl::string_view name, VtolState* value)
 
 // -------------------------------------------------------------------
 
-class VtolStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VtolStateResponse)
-                   */
+class VtolStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VtolStateResponse)
+                                                                    */
 {
 public:
     inline VtolStateResponse() : VtolStateResponse(nullptr) {}
@@ -1016,10 +1014,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class VelocityNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityNed)
-                   */
+class VelocityNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityNed)
+                                                              */
 {
 public:
     inline VelocityNed() : VelocityNed(nullptr) {}
@@ -1219,10 +1215,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class VelocityBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityBody)
-                   */
+class VelocityBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityBody)
+                                                               */
 {
 public:
     inline VelocityBody() : VelocityBody(nullptr) {}
@@ -1422,10 +1416,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class UnixEpochTimeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.UnixEpochTimeResponse)
-                   */
+class UnixEpochTimeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.UnixEpochTimeResponse)
+                                                                        */
 {
 public:
     inline UnixEpochTimeResponse() : UnixEpochTimeResponse(nullptr) {}
@@ -1614,10 +1606,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class TelemetryResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.TelemetryResult)
-                   */
+class TelemetryResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.TelemetryResult)
+                                                                  */
 {
 public:
     inline TelemetryResult() : TelemetryResult(nullptr) {}
@@ -1840,10 +1830,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeVtolStateRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeVtolStateRequest)
-                          */
+class SubscribeVtolStateRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeVtolStateRequest)
+                                                                                             */
 {
 public:
     inline SubscribeVtolStateRequest() : SubscribeVtolStateRequest(nullptr) {}
@@ -1996,10 +1984,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeVelocityNedRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeVelocityNedRequest)
-                          */
+class SubscribeVelocityNedRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeVelocityNedRequest)
+                                                                                               */
 {
 public:
     inline SubscribeVelocityNedRequest() : SubscribeVelocityNedRequest(nullptr) {}
@@ -2153,9 +2139,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeUnixEpochTimeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeUnixEpochTimeRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeUnixEpochTimeRequest)
+                                                           */
 {
 public:
     inline SubscribeUnixEpochTimeRequest() : SubscribeUnixEpochTimeRequest(nullptr) {}
@@ -2311,10 +2296,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeStatusTextRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeStatusTextRequest)
-                          */
+class SubscribeStatusTextRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeStatusTextRequest)
+                                                                                              */
 {
 public:
     inline SubscribeStatusTextRequest() : SubscribeStatusTextRequest(nullptr) {}
@@ -2468,9 +2451,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeScaledPressureRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeScaledPressureRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeScaledPressureRequest)
+                                                           */
 {
 public:
     inline SubscribeScaledPressureRequest() : SubscribeScaledPressureRequest(nullptr) {}
@@ -2626,10 +2608,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeScaledImuRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeScaledImuRequest)
-                          */
+class SubscribeScaledImuRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeScaledImuRequest)
+                                                                                             */
 {
 public:
     inline SubscribeScaledImuRequest() : SubscribeScaledImuRequest(nullptr) {}
@@ -2782,10 +2762,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeRcStatusRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRcStatusRequest)
-                          */
+class SubscribeRcStatusRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRcStatusRequest)
+                                                                                            */
 {
 public:
     inline SubscribeRcStatusRequest() : SubscribeRcStatusRequest(nullptr) {}
@@ -2937,10 +2915,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeRawImuRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRawImuRequest)
-                          */
+class SubscribeRawImuRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRawImuRequest)
+                                                                                          */
 {
 public:
     inline SubscribeRawImuRequest() : SubscribeRawImuRequest(nullptr) {}
@@ -3088,10 +3064,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeRawGpsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRawGpsRequest)
-                          */
+class SubscribeRawGpsRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeRawGpsRequest)
+                                                                                          */
 {
 public:
     inline SubscribeRawGpsRequest() : SubscribeRawGpsRequest(nullptr) {}
@@ -3240,9 +3214,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribePositionVelocityNedRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribePositionVelocityNedRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribePositionVelocityNedRequest)
+                                                           */
 {
 public:
     inline SubscribePositionVelocityNedRequest() : SubscribePositionVelocityNedRequest(nullptr) {}
@@ -3400,10 +3373,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribePositionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribePositionRequest)
-                          */
+class SubscribePositionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribePositionRequest)
+                                                                                            */
 {
 public:
     inline SubscribePositionRequest() : SubscribePositionRequest(nullptr) {}
@@ -3555,10 +3526,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeOdometryRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeOdometryRequest)
-                          */
+class SubscribeOdometryRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeOdometryRequest)
+                                                                                            */
 {
 public:
     inline SubscribeOdometryRequest() : SubscribeOdometryRequest(nullptr) {}
@@ -3710,10 +3679,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeLandedStateRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeLandedStateRequest)
-                          */
+class SubscribeLandedStateRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeLandedStateRequest)
+                                                                                               */
 {
 public:
     inline SubscribeLandedStateRequest() : SubscribeLandedStateRequest(nullptr) {}
@@ -3866,10 +3833,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeInAirRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeInAirRequest)
-                          */
+class SubscribeInAirRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeInAirRequest)
+                                                                                         */
 {
 public:
     inline SubscribeInAirRequest() : SubscribeInAirRequest(nullptr) {}
@@ -4017,10 +3982,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeImuRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeImuRequest)
-                          */
+class SubscribeImuRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeImuRequest)
+                                                                                       */
 {
 public:
     inline SubscribeImuRequest() : SubscribeImuRequest(nullptr) {}
@@ -4167,10 +4130,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeHomeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHomeRequest)
-                          */
+class SubscribeHomeRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHomeRequest)
+                                                                                        */
 {
 public:
     inline SubscribeHomeRequest() : SubscribeHomeRequest(nullptr) {}
@@ -4318,10 +4279,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeHealthRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHealthRequest)
-                          */
+class SubscribeHealthRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHealthRequest)
+                                                                                          */
 {
 public:
     inline SubscribeHealthRequest() : SubscribeHealthRequest(nullptr) {}
@@ -4469,10 +4428,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeHealthAllOkRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHealthAllOkRequest)
-                          */
+class SubscribeHealthAllOkRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHealthAllOkRequest)
+                                                                                               */
 {
 public:
     inline SubscribeHealthAllOkRequest() : SubscribeHealthAllOkRequest(nullptr) {}
@@ -4625,10 +4582,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeHeadingRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHeadingRequest)
-                          */
+class SubscribeHeadingRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeHeadingRequest)
+                                                                                           */
 {
 public:
     inline SubscribeHeadingRequest() : SubscribeHeadingRequest(nullptr) {}
@@ -4779,10 +4734,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeGroundTruthRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeGroundTruthRequest)
-                          */
+class SubscribeGroundTruthRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeGroundTruthRequest)
+                                                                                               */
 {
 public:
     inline SubscribeGroundTruthRequest() : SubscribeGroundTruthRequest(nullptr) {}
@@ -4935,10 +4888,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeGpsInfoRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeGpsInfoRequest)
-                          */
+class SubscribeGpsInfoRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeGpsInfoRequest)
+                                                                                           */
 {
 public:
     inline SubscribeGpsInfoRequest() : SubscribeGpsInfoRequest(nullptr) {}
@@ -5089,10 +5040,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeFlightModeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeFlightModeRequest)
-                          */
+class SubscribeFlightModeRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeFlightModeRequest)
+                                                                                              */
 {
 public:
     inline SubscribeFlightModeRequest() : SubscribeFlightModeRequest(nullptr) {}
@@ -5246,9 +5195,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeFixedwingMetricsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeFixedwingMetricsRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeFixedwingMetricsRequest)
+                                                           */
 {
 public:
     inline SubscribeFixedwingMetricsRequest() : SubscribeFixedwingMetricsRequest(nullptr) {}
@@ -5406,9 +5354,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeDistanceSensorRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeDistanceSensorRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeDistanceSensorRequest)
+                                                           */
 {
 public:
     inline SubscribeDistanceSensorRequest() : SubscribeDistanceSensorRequest(nullptr) {}
@@ -5565,9 +5512,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCameraAttitudeQuaternionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeCameraAttitudeQuaternionRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeCameraAttitudeQuaternionRequest)
+                                                           */
 {
 public:
     inline SubscribeCameraAttitudeQuaternionRequest() :
@@ -5732,9 +5678,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCameraAttitudeEulerRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeCameraAttitudeEulerRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeCameraAttitudeEulerRequest)
+                                                           */
 {
 public:
     inline SubscribeCameraAttitudeEulerRequest() : SubscribeCameraAttitudeEulerRequest(nullptr) {}
@@ -5892,10 +5837,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeBatteryRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeBatteryRequest)
-                          */
+class SubscribeBatteryRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeBatteryRequest)
+                                                                                           */
 {
 public:
     inline SubscribeBatteryRequest() : SubscribeBatteryRequest(nullptr) {}
@@ -6047,9 +5990,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeAttitudeQuaternionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeQuaternionRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeQuaternionRequest)
+                                                           */
 {
 public:
     inline SubscribeAttitudeQuaternionRequest() : SubscribeAttitudeQuaternionRequest(nullptr) {}
@@ -6208,9 +6150,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeAttitudeEulerRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeEulerRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeEulerRequest)
+                                                           */
 {
 public:
     inline SubscribeAttitudeEulerRequest() : SubscribeAttitudeEulerRequest(nullptr) {}
@@ -6367,9 +6308,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeAttitudeAngularVelocityBodyRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeAngularVelocityBodyRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAttitudeAngularVelocityBodyRequest)
+                                                           */
 {
 public:
     inline SubscribeAttitudeAngularVelocityBodyRequest() :
@@ -6534,10 +6474,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeArmedRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeArmedRequest)
-                          */
+class SubscribeArmedRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeArmedRequest)
+                                                                                         */
 {
 public:
     inline SubscribeArmedRequest() : SubscribeArmedRequest(nullptr) {}
@@ -6685,10 +6623,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeAltitudeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAltitudeRequest)
-                          */
+class SubscribeAltitudeRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeAltitudeRequest)
+                                                                                            */
 {
 public:
     inline SubscribeAltitudeRequest() : SubscribeAltitudeRequest(nullptr) {}
@@ -6841,9 +6777,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeActuatorOutputStatusRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeActuatorOutputStatusRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeActuatorOutputStatusRequest)
+                                                           */
 {
 public:
     inline SubscribeActuatorOutputStatusRequest() : SubscribeActuatorOutputStatusRequest(nullptr) {}
@@ -7004,9 +6939,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeActuatorControlTargetRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeActuatorControlTargetRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SubscribeActuatorControlTargetRequest)
+                                                           */
 {
 public:
     inline SubscribeActuatorControlTargetRequest() : SubscribeActuatorControlTargetRequest(nullptr)
@@ -7362,10 +7296,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateVtolStateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVtolStateRequest)
-                   */
+class SetRateVtolStateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVtolStateRequest)
+                                                                          */
 {
 public:
     inline SetRateVtolStateRequest() : SetRateVtolStateRequest(nullptr) {}
@@ -7557,10 +7489,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateVelocityNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVelocityNedRequest)
-                   */
+class SetRateVelocityNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVelocityNedRequest)
+                                                                            */
 {
 public:
     inline SetRateVelocityNedRequest() : SetRateVelocityNedRequest(nullptr) {}
@@ -7754,10 +7684,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateUnixEpochTimeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateUnixEpochTimeRequest)
-                   */
+class SetRateUnixEpochTimeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateUnixEpochTimeRequest)
+                                                                              */
 {
 public:
     inline SetRateUnixEpochTimeRequest() : SetRateUnixEpochTimeRequest(nullptr) {}
@@ -7951,10 +7879,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateScaledImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateScaledImuRequest)
-                   */
+class SetRateScaledImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateScaledImuRequest)
+                                                                          */
 {
 public:
     inline SetRateScaledImuRequest() : SetRateScaledImuRequest(nullptr) {}
@@ -8146,10 +8072,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateRcStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRcStatusRequest)
-                   */
+class SetRateRcStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRcStatusRequest)
+                                                                         */
 {
 public:
     inline SetRateRcStatusRequest() : SetRateRcStatusRequest(nullptr) {}
@@ -8338,10 +8262,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateRawImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawImuRequest)
-                   */
+class SetRateRawImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawImuRequest)
+                                                                       */
 {
 public:
     inline SetRateRawImuRequest() : SetRateRawImuRequest(nullptr) {}
@@ -8530,10 +8452,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateRawGpsRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawGpsRequest)
-                   */
+class SetRateRawGpsRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawGpsRequest)
+                                                                       */
 {
 public:
     inline SetRateRawGpsRequest() : SetRateRawGpsRequest(nullptr) {}
@@ -8722,10 +8642,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRatePositionVelocityNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionVelocityNedRequest)
-                   */
+class SetRatePositionVelocityNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionVelocityNedRequest)
+                                                                                    */
 {
 public:
     inline SetRatePositionVelocityNedRequest() : SetRatePositionVelocityNedRequest(nullptr) {}
@@ -8924,10 +8842,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRatePositionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionRequest)
-                   */
+class SetRatePositionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionRequest)
+                                                                         */
 {
 public:
     inline SetRatePositionRequest() : SetRatePositionRequest(nullptr) {}
@@ -9116,10 +9032,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateOdometryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateOdometryRequest)
-                   */
+class SetRateOdometryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateOdometryRequest)
+                                                                         */
 {
 public:
     inline SetRateOdometryRequest() : SetRateOdometryRequest(nullptr) {}
@@ -9308,10 +9222,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateLandedStateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateLandedStateRequest)
-                   */
+class SetRateLandedStateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateLandedStateRequest)
+                                                                            */
 {
 public:
     inline SetRateLandedStateRequest() : SetRateLandedStateRequest(nullptr) {}
@@ -9505,10 +9417,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateInAirRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateInAirRequest)
-                   */
+class SetRateInAirRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateInAirRequest)
+                                                                      */
 {
 public:
     inline SetRateInAirRequest() : SetRateInAirRequest(nullptr) {}
@@ -9693,10 +9603,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateImuRequest)
-                   */
+class SetRateImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateImuRequest)
+                                                                    */
 {
 public:
     inline SetRateImuRequest() : SetRateImuRequest(nullptr) {}
@@ -9879,10 +9787,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateHomeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateHomeRequest)
-                   */
+class SetRateHomeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateHomeRequest)
+                                                                     */
 {
 public:
     inline SetRateHomeRequest() : SetRateHomeRequest(nullptr) {}
@@ -10065,10 +9971,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateGroundTruthRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGroundTruthRequest)
-                   */
+class SetRateGroundTruthRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGroundTruthRequest)
+                                                                            */
 {
 public:
     inline SetRateGroundTruthRequest() : SetRateGroundTruthRequest(nullptr) {}
@@ -10262,10 +10166,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateGpsInfoRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGpsInfoRequest)
-                   */
+class SetRateGpsInfoRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGpsInfoRequest)
+                                                                        */
 {
 public:
     inline SetRateGpsInfoRequest() : SetRateGpsInfoRequest(nullptr) {}
@@ -10454,10 +10356,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateFixedwingMetricsRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateFixedwingMetricsRequest)
-                   */
+class SetRateFixedwingMetricsRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateFixedwingMetricsRequest)
+                                                                                 */
 {
 public:
     inline SetRateFixedwingMetricsRequest() : SetRateFixedwingMetricsRequest(nullptr) {}
@@ -10654,10 +10554,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateDistanceSensorRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateDistanceSensorRequest)
-                   */
+class SetRateDistanceSensorRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateDistanceSensorRequest)
+                                                                               */
 {
 public:
     inline SetRateDistanceSensorRequest() : SetRateDistanceSensorRequest(nullptr) {}
@@ -10854,10 +10752,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateCameraAttitudeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeRequest)
-                   */
+class SetRateCameraAttitudeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeRequest)
+                                                                               */
 {
 public:
     inline SetRateCameraAttitudeRequest() : SetRateCameraAttitudeRequest(nullptr) {}
@@ -11054,10 +10950,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateCameraAttitudeQuaternionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeQuaternionRequest)
-                   */
+class SetRateCameraAttitudeQuaternionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeQuaternionRequest)
+                                                                                         */
 {
 public:
     inline SetRateCameraAttitudeQuaternionRequest() :
@@ -11261,10 +11155,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateBatteryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateBatteryRequest)
-                   */
+class SetRateBatteryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateBatteryRequest)
+                                                                        */
 {
 public:
     inline SetRateBatteryRequest() : SetRateBatteryRequest(nullptr) {}
@@ -11453,10 +11345,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeQuaternionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeQuaternionRequest)
-                   */
+class SetRateAttitudeQuaternionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeQuaternionRequest)
+                                                                                   */
 {
 public:
     inline SetRateAttitudeQuaternionRequest() : SetRateAttitudeQuaternionRequest(nullptr) {}
@@ -11654,10 +11544,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeEulerRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeEulerRequest)
-                   */
+class SetRateAttitudeEulerRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeEulerRequest)
+                                                                              */
 {
 public:
     inline SetRateAttitudeEulerRequest() : SetRateAttitudeEulerRequest(nullptr) {}
@@ -11851,10 +11739,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeAngularVelocityBodyRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeAngularVelocityBodyRequest)
-                   */
+class SetRateAttitudeAngularVelocityBodyRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeAngularVelocityBodyRequest)
+                                                                                            */
 {
 public:
     inline SetRateAttitudeAngularVelocityBodyRequest() :
@@ -12059,10 +11945,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAltitudeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAltitudeRequest)
-                   */
+class SetRateAltitudeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAltitudeRequest)
+                                                                         */
 {
 public:
     inline SetRateAltitudeRequest() : SetRateAltitudeRequest(nullptr) {}
@@ -12251,10 +12135,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateActuatorOutputStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorOutputStatusRequest)
-                   */
+class SetRateActuatorOutputStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorOutputStatusRequest)
+                                                                                     */
 {
 public:
     inline SetRateActuatorOutputStatusRequest() : SetRateActuatorOutputStatusRequest(nullptr) {}
@@ -12453,10 +12335,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateActuatorControlTargetRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorControlTargetRequest)
-                   */
+class SetRateActuatorControlTargetRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorControlTargetRequest)
+                                                                                      */
 {
 public:
     inline SetRateActuatorControlTargetRequest() : SetRateActuatorControlTargetRequest(nullptr) {}
@@ -12655,10 +12535,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ScaledPressure final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledPressure)
-                   */
+class ScaledPressure final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledPressure)
+                                                                 */
 {
 public:
     inline ScaledPressure() : ScaledPressure(nullptr) {}
@@ -13641,10 +13519,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionNed)
-                   */
+class PositionNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionNed)
+                                                              */
 {
 public:
     inline PositionNed() : PositionNed(nullptr) {}
@@ -13844,10 +13720,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionBody)
-                   */
+class PositionBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionBody)
+                                                               */
 {
 public:
     inline PositionBody() : PositionBody(nullptr) {}
@@ -14260,10 +14134,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class MagneticFieldFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.MagneticFieldFrd)
-                   */
+class MagneticFieldFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.MagneticFieldFrd)
+                                                                   */
 {
 public:
     inline MagneticFieldFrd() : MagneticFieldFrd(nullptr) {}
@@ -14466,10 +14338,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class LandedStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.LandedStateResponse)
-                   */
+class LandedStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.LandedStateResponse)
+                                                                      */
 {
 public:
     inline LandedStateResponse() : LandedStateResponse(nullptr) {}
@@ -14654,10 +14524,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class InAirResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.InAirResponse)
-                   */
+class InAirResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.InAirResponse)
+                                                                */
 {
 public:
     inline InAirResponse() : InAirResponse(nullptr) {}
@@ -14833,10 +14701,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class HealthAllOkResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HealthAllOkResponse)
-                   */
+class HealthAllOkResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HealthAllOkResponse)
+                                                                      */
 {
 public:
     inline HealthAllOkResponse() : HealthAllOkResponse(nullptr) {}
@@ -15447,10 +15313,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GroundTruth final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GroundTruth)
-                   */
+class GroundTruth final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GroundTruth)
+                                                              */
 {
 public:
     inline GroundTruth() : GroundTruth(nullptr) {}
@@ -15839,10 +15703,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GpsGlobalOrigin final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GpsGlobalOrigin)
-                   */
+class GpsGlobalOrigin final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GpsGlobalOrigin)
+                                                                  */
 {
 public:
     inline GpsGlobalOrigin() : GpsGlobalOrigin(nullptr) {}
@@ -16045,10 +15907,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetGpsGlobalOriginRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GetGpsGlobalOriginRequest)
-                          */
+class GetGpsGlobalOriginRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GetGpsGlobalOriginRequest)
+                                                                                             */
 {
 public:
     inline GetGpsGlobalOriginRequest() : GetGpsGlobalOriginRequest(nullptr) {}
@@ -16201,10 +16061,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class FlightModeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FlightModeResponse)
-                   */
+class FlightModeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FlightModeResponse)
+                                                                     */
 {
 public:
     inline FlightModeResponse() : FlightModeResponse(nullptr) {}
@@ -16387,10 +16245,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class FixedwingMetrics final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FixedwingMetrics)
-                   */
+class FixedwingMetrics final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FixedwingMetrics)
+                                                                   */
 {
 public:
     inline FixedwingMetrics() : FixedwingMetrics(nullptr) {}
@@ -17229,10 +17085,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ArmedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ArmedResponse)
-                   */
+class ArmedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ArmedResponse)
+                                                                */
 {
 public:
     inline ArmedResponse() : ArmedResponse(nullptr) {}
@@ -17408,10 +17262,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AngularVelocityFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AngularVelocityFrd)
-                   */
+class AngularVelocityFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AngularVelocityFrd)
+                                                                     */
 {
 public:
     inline AngularVelocityFrd() : AngularVelocityFrd(nullptr) {}
@@ -17618,10 +17470,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AngularVelocityBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AngularVelocityBody)
-                   */
+class AngularVelocityBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AngularVelocityBody)
+                                                                      */
 {
 public:
     inline AngularVelocityBody() : AngularVelocityBody(nullptr) {}
@@ -18067,10 +17917,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorOutputStatus final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorOutputStatus)
-                   */
+class ActuatorOutputStatus final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorOutputStatus)
+                                                                       */
 {
 public:
     inline ActuatorOutputStatus() : ActuatorOutputStatus(nullptr) {}
@@ -18280,10 +18128,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorControlTarget final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorControlTarget)
-                   */
+class ActuatorControlTarget final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorControlTarget)
+                                                                        */
 {
 public:
     inline ActuatorControlTarget() : ActuatorControlTarget(nullptr) {}
@@ -18493,10 +18339,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AccelerationFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AccelerationFrd)
-                   */
+class AccelerationFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AccelerationFrd)
+                                                                  */
 {
 public:
     inline AccelerationFrd() : AccelerationFrd(nullptr) {}
@@ -18699,10 +18543,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class VelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityNedResponse)
-                   */
+class VelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.VelocityNedResponse)
+                                                                      */
 {
 public:
     inline VelocityNedResponse() : VelocityNedResponse(nullptr) {}
@@ -18893,10 +18735,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class StatusTextResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.StatusTextResponse)
-                   */
+class StatusTextResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.StatusTextResponse)
+                                                                     */
 {
 public:
     inline StatusTextResponse() : StatusTextResponse(nullptr) {}
@@ -19085,10 +18925,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateVtolStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVtolStateResponse)
-                   */
+class SetRateVtolStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVtolStateResponse)
+                                                                           */
 {
 public:
     inline SetRateVtolStateResponse() : SetRateVtolStateResponse(nullptr) {}
@@ -19288,10 +19126,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVelocityNedResponse)
-                   */
+class SetRateVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateVelocityNedResponse)
+                                                                             */
 {
 public:
     inline SetRateVelocityNedResponse() : SetRateVelocityNedResponse(nullptr) {}
@@ -19492,10 +19328,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateUnixEpochTimeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateUnixEpochTimeResponse)
-                   */
+class SetRateUnixEpochTimeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateUnixEpochTimeResponse)
+                                                                               */
 {
 public:
     inline SetRateUnixEpochTimeResponse() : SetRateUnixEpochTimeResponse(nullptr) {}
@@ -19699,10 +19533,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateScaledImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateScaledImuResponse)
-                   */
+class SetRateScaledImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateScaledImuResponse)
+                                                                           */
 {
 public:
     inline SetRateScaledImuResponse() : SetRateScaledImuResponse(nullptr) {}
@@ -19902,10 +19734,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateRcStatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRcStatusResponse)
-                   */
+class SetRateRcStatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRcStatusResponse)
+                                                                          */
 {
 public:
     inline SetRateRcStatusResponse() : SetRateRcStatusResponse(nullptr) {}
@@ -20104,10 +19934,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateRawImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawImuResponse)
-                   */
+class SetRateRawImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateRawImuResponse)
+                                                                        */
 {
 public:
     inline SetRateRawImuResponse() : SetRateRawImuResponse(nullptr) {}
@@ -20303,10 +20131,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRatePositionVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionVelocityNedResponse)
-                   */
+class SetRatePositionVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionVelocityNedResponse)
+                                                                                     */
 {
 public:
     inline SetRatePositionVelocityNedResponse() : SetRatePositionVelocityNedResponse(nullptr) {}
@@ -20512,10 +20338,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRatePositionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionResponse)
-                   */
+class SetRatePositionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRatePositionResponse)
+                                                                          */
 {
 public:
     inline SetRatePositionResponse() : SetRatePositionResponse(nullptr) {}
@@ -20714,10 +20538,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateOdometryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateOdometryResponse)
-                   */
+class SetRateOdometryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateOdometryResponse)
+                                                                          */
 {
 public:
     inline SetRateOdometryResponse() : SetRateOdometryResponse(nullptr) {}
@@ -20916,10 +20738,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateLandedStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateLandedStateResponse)
-                   */
+class SetRateLandedStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateLandedStateResponse)
+                                                                             */
 {
 public:
     inline SetRateLandedStateResponse() : SetRateLandedStateResponse(nullptr) {}
@@ -21120,10 +20940,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateInAirResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateInAirResponse)
-                   */
+class SetRateInAirResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateInAirResponse)
+                                                                       */
 {
 public:
     inline SetRateInAirResponse() : SetRateInAirResponse(nullptr) {}
@@ -21319,10 +21137,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateImuResponse)
-                   */
+class SetRateImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateImuResponse)
+                                                                     */
 {
 public:
     inline SetRateImuResponse() : SetRateImuResponse(nullptr) {}
@@ -21512,10 +21328,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateHomeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateHomeResponse)
-                   */
+class SetRateHomeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateHomeResponse)
+                                                                      */
 {
 public:
     inline SetRateHomeResponse() : SetRateHomeResponse(nullptr) {}
@@ -21707,10 +21521,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateGroundTruthResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGroundTruthResponse)
-                   */
+class SetRateGroundTruthResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGroundTruthResponse)
+                                                                             */
 {
 public:
     inline SetRateGroundTruthResponse() : SetRateGroundTruthResponse(nullptr) {}
@@ -21911,10 +21723,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateGpsInfoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGpsInfoResponse)
-                   */
+class SetRateGpsInfoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateGpsInfoResponse)
+                                                                         */
 {
 public:
     inline SetRateGpsInfoResponse() : SetRateGpsInfoResponse(nullptr) {}
@@ -22110,10 +21920,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateFixedwingMetricsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateFixedwingMetricsResponse)
-                   */
+class SetRateFixedwingMetricsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateFixedwingMetricsResponse)
+                                                                                  */
 {
 public:
     inline SetRateFixedwingMetricsResponse() : SetRateFixedwingMetricsResponse(nullptr) {}
@@ -22318,10 +22126,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateDistanceSensorResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateDistanceSensorResponse)
-                   */
+class SetRateDistanceSensorResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateDistanceSensorResponse)
+                                                                                */
 {
 public:
     inline SetRateDistanceSensorResponse() : SetRateDistanceSensorResponse(nullptr) {}
@@ -22525,10 +22331,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateCameraAttitudeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeResponse)
-                   */
+class SetRateCameraAttitudeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeResponse)
+                                                                                */
 {
 public:
     inline SetRateCameraAttitudeResponse() : SetRateCameraAttitudeResponse(nullptr) {}
@@ -22732,10 +22536,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateCameraAttitudeQuaternionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeQuaternionResponse)
-                   */
+class SetRateCameraAttitudeQuaternionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateCameraAttitudeQuaternionResponse)
+                                                                                          */
 {
 public:
     inline SetRateCameraAttitudeQuaternionResponse() :
@@ -22947,10 +22749,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateBatteryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateBatteryResponse)
-                   */
+class SetRateBatteryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateBatteryResponse)
+                                                                         */
 {
 public:
     inline SetRateBatteryResponse() : SetRateBatteryResponse(nullptr) {}
@@ -23146,10 +22946,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeQuaternionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeQuaternionResponse)
-                   */
+class SetRateAttitudeQuaternionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeQuaternionResponse)
+                                                                                    */
 {
 public:
     inline SetRateAttitudeQuaternionResponse() : SetRateAttitudeQuaternionResponse(nullptr) {}
@@ -23355,10 +23153,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeEulerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeEulerResponse)
-                   */
+class SetRateAttitudeEulerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeEulerResponse)
+                                                                               */
 {
 public:
     inline SetRateAttitudeEulerResponse() : SetRateAttitudeEulerResponse(nullptr) {}
@@ -23562,10 +23358,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAttitudeAngularVelocityBodyResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeAngularVelocityBodyResponse)
-                   */
+class SetRateAttitudeAngularVelocityBodyResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAttitudeAngularVelocityBodyResponse)
+                                                                                             */
 {
 public:
     inline SetRateAttitudeAngularVelocityBodyResponse() :
@@ -23778,10 +23572,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateAltitudeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAltitudeResponse)
-                   */
+class SetRateAltitudeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateAltitudeResponse)
+                                                                          */
 {
 public:
     inline SetRateAltitudeResponse() : SetRateAltitudeResponse(nullptr) {}
@@ -23980,10 +23772,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateActuatorOutputStatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorOutputStatusResponse)
-                   */
+class SetRateActuatorOutputStatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorOutputStatusResponse)
+                                                                                      */
 {
 public:
     inline SetRateActuatorOutputStatusResponse() : SetRateActuatorOutputStatusResponse(nullptr) {}
@@ -24189,10 +23979,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetRateActuatorControlTargetResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorControlTargetResponse)
-                   */
+class SetRateActuatorControlTargetResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.SetRateActuatorControlTargetResponse)
+                                                                                       */
 {
 public:
     inline SetRateActuatorControlTargetResponse() : SetRateActuatorControlTargetResponse(nullptr) {}
@@ -24400,10 +24188,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ScaledPressureResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledPressureResponse)
-                   */
+class ScaledPressureResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledPressureResponse)
+                                                                         */
 {
 public:
     inline ScaledPressureResponse() : ScaledPressureResponse(nullptr) {}
@@ -24599,10 +24385,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class RcStatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RcStatusResponse)
-                   */
+class RcStatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RcStatusResponse)
+                                                                   */
 {
 public:
     inline RcStatusResponse() : RcStatusResponse(nullptr) {}
@@ -24787,10 +24571,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class RawGpsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RawGpsResponse)
-                   */
+class RawGpsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RawGpsResponse)
+                                                                 */
 {
 public:
     inline RawGpsResponse() : RawGpsResponse(nullptr) {}
@@ -24972,10 +24754,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionVelocityNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionVelocityNed)
-                   */
+class PositionVelocityNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionVelocityNed)
+                                                                      */
 {
 public:
     inline PositionVelocityNed() : PositionVelocityNed(nullptr) {}
@@ -25183,10 +24963,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionResponse)
-                   */
+class PositionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionResponse)
+                                                                   */
 {
 public:
     inline PositionResponse() : PositionResponse(nullptr) {}
@@ -25944,10 +25722,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class HomeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HomeResponse)
-                   */
+class HomeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HomeResponse)
+                                                               */
 {
 public:
     inline HomeResponse() : HomeResponse(nullptr) {}
@@ -26129,10 +25905,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class HealthResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HealthResponse)
-                   */
+class HealthResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HealthResponse)
+                                                                 */
 {
 public:
     inline HealthResponse() : HealthResponse(nullptr) {}
@@ -26314,10 +26088,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class HeadingResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HeadingResponse)
-                   */
+class HeadingResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.HeadingResponse)
+                                                                  */
 {
 public:
     inline HeadingResponse() : HeadingResponse(nullptr) {}
@@ -26502,10 +26274,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GroundTruthResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GroundTruthResponse)
-                   */
+class GroundTruthResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GroundTruthResponse)
+                                                                      */
 {
 public:
     inline GroundTruthResponse() : GroundTruthResponse(nullptr) {}
@@ -26696,10 +26466,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GpsInfoResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GpsInfoResponse)
-                   */
+class GpsInfoResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GpsInfoResponse)
+                                                                  */
 {
 public:
     inline GpsInfoResponse() : GpsInfoResponse(nullptr) {}
@@ -26884,10 +26652,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetGpsGlobalOriginResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GetGpsGlobalOriginResponse)
-                   */
+class GetGpsGlobalOriginResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.GetGpsGlobalOriginResponse)
+                                                                             */
 {
 public:
     inline GetGpsGlobalOriginResponse() : GetGpsGlobalOriginResponse(nullptr) {}
@@ -27106,10 +26872,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class FixedwingMetricsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FixedwingMetricsResponse)
-                   */
+class FixedwingMetricsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.FixedwingMetricsResponse)
+                                                                           */
 {
 public:
     inline FixedwingMetricsResponse() : FixedwingMetricsResponse(nullptr) {}
@@ -27309,10 +27073,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class DistanceSensor final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.DistanceSensor)
-                   */
+class DistanceSensor final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.DistanceSensor)
+                                                                 */
 {
 public:
     inline DistanceSensor() : DistanceSensor(nullptr) {}
@@ -27530,10 +27292,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class CameraAttitudeQuaternionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.CameraAttitudeQuaternionResponse)
-                   */
+class CameraAttitudeQuaternionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.CameraAttitudeQuaternionResponse)
+                                                                                   */
 {
 public:
     inline CameraAttitudeQuaternionResponse() : CameraAttitudeQuaternionResponse(nullptr) {}
@@ -27738,10 +27498,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class CameraAttitudeEulerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.CameraAttitudeEulerResponse)
-                   */
+class CameraAttitudeEulerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.CameraAttitudeEulerResponse)
+                                                                              */
 {
 public:
     inline CameraAttitudeEulerResponse() : CameraAttitudeEulerResponse(nullptr) {}
@@ -27941,10 +27699,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class BatteryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.BatteryResponse)
-                   */
+class BatteryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.BatteryResponse)
+                                                                  */
 {
 public:
     inline BatteryResponse() : BatteryResponse(nullptr) {}
@@ -28129,10 +27885,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AttitudeQuaternionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeQuaternionResponse)
-                   */
+class AttitudeQuaternionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeQuaternionResponse)
+                                                                             */
 {
 public:
     inline AttitudeQuaternionResponse() : AttitudeQuaternionResponse(nullptr) {}
@@ -28333,10 +28087,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AttitudeEulerResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeEulerResponse)
-                   */
+class AttitudeEulerResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeEulerResponse)
+                                                                        */
 {
 public:
     inline AttitudeEulerResponse() : AttitudeEulerResponse(nullptr) {}
@@ -28531,10 +28283,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AttitudeAngularVelocityBodyResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeAngularVelocityBodyResponse)
-                   */
+class AttitudeAngularVelocityBodyResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AttitudeAngularVelocityBodyResponse)
+                                                                                      */
 {
 public:
     inline AttitudeAngularVelocityBodyResponse() : AttitudeAngularVelocityBodyResponse(nullptr) {}
@@ -28745,10 +28495,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class AltitudeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AltitudeResponse)
-                   */
+class AltitudeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.AltitudeResponse)
+                                                                   */
 {
 public:
     inline AltitudeResponse() : AltitudeResponse(nullptr) {}
@@ -28933,10 +28681,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorOutputStatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorOutputStatusResponse)
-                   */
+class ActuatorOutputStatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorOutputStatusResponse)
+                                                                               */
 {
 public:
     inline ActuatorOutputStatusResponse() : ActuatorOutputStatusResponse(nullptr) {}
@@ -29142,10 +28888,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorControlTargetResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorControlTargetResponse)
-                   */
+class ActuatorControlTargetResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ActuatorControlTargetResponse)
+                                                                                */
 {
 public:
     inline ActuatorControlTargetResponse() : ActuatorControlTargetResponse(nullptr) {}
@@ -29352,10 +29096,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ScaledImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledImuResponse)
-                   */
+class ScaledImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ScaledImuResponse)
+                                                                    */
 {
 public:
     inline ScaledImuResponse() : ScaledImuResponse(nullptr) {}
@@ -29544,10 +29286,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class RawImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RawImuResponse)
-                   */
+class RawImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.RawImuResponse)
+                                                                 */
 {
 public:
     inline RawImuResponse() : RawImuResponse(nullptr) {}
@@ -29729,10 +29469,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionVelocityNedResponse)
-                   */
+class PositionVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.PositionVelocityNedResponse)
+                                                                              */
 {
 public:
     inline PositionVelocityNedResponse() : PositionVelocityNedResponse(nullptr) {}
@@ -29934,10 +29672,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class OdometryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.OdometryResponse)
-                   */
+class OdometryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.OdometryResponse)
+                                                                   */
 {
 public:
     inline OdometryResponse() : OdometryResponse(nullptr) {}
@@ -30122,10 +29858,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class ImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ImuResponse)
-                   */
+class ImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.ImuResponse)
+                                                              */
 {
 public:
     inline ImuResponse() : ImuResponse(nullptr) {}
@@ -30307,10 +30041,8 @@ private:
     friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 }; // -------------------------------------------------------------------
 
-class DistanceSensorResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.DistanceSensorResponse)
-                   */
+class DistanceSensorResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry.DistanceSensorResponse)
+                                                                         */
 {
 public:
     inline DistanceSensorResponse() : DistanceSensorResponse(nullptr) {}

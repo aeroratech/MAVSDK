@@ -266,10 +266,8 @@ inline bool OffboardResult_Result_Parse(absl::string_view name, OffboardResult_R
 
 // -------------------------------------------------------------------
 
-class VelocityNedYaw final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.VelocityNedYaw)
-                   */
+class VelocityNedYaw final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.VelocityNedYaw)
+                                                                 */
 {
 public:
     inline VelocityNedYaw() : VelocityNedYaw(nullptr) {}
@@ -481,10 +479,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class VelocityBodyYawspeed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.VelocityBodyYawspeed)
-                   */
+class VelocityBodyYawspeed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.VelocityBodyYawspeed)
+                                                                       */
 {
 public:
     inline VelocityBodyYawspeed() : VelocityBodyYawspeed(nullptr) {}
@@ -709,10 +705,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StopRequest)
-                          */
+class StopRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StopRequest)
+                                                                               */
 {
 public:
     inline StopRequest() : StopRequest(nullptr) {}
@@ -850,10 +844,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StartRequest)
-                          */
+class StartRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StartRequest)
+                                                                                */
 {
 public:
     inline StartRequest() : StartRequest(nullptr) {}
@@ -991,10 +983,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionNedYaw final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.PositionNedYaw)
-                   */
+class PositionNedYaw final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.PositionNedYaw)
+                                                                 */
 {
 public:
     inline PositionNedYaw() : PositionNedYaw(nullptr) {}
@@ -1206,10 +1196,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionGlobalYaw final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.PositionGlobalYaw)
-                   */
+class PositionGlobalYaw final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.PositionGlobalYaw)
+                                                                    */
 {
 public:
     inline PositionGlobalYaw() : PositionGlobalYaw(nullptr) {}
@@ -1467,10 +1455,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class OffboardResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.OffboardResult)
-                   */
+class OffboardResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.OffboardResult)
+                                                                 */
 {
 public:
     inline OffboardResult() : OffboardResult(nullptr) {}
@@ -1690,10 +1676,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class IsActiveResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.IsActiveResponse)
-                   */
+class IsActiveResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.IsActiveResponse)
+                                                                   */
 {
 public:
     inline IsActiveResponse() : IsActiveResponse(nullptr) {}
@@ -1872,10 +1856,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class IsActiveRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.IsActiveRequest)
-                          */
+class IsActiveRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.IsActiveRequest)
+                                                                                   */
 {
 public:
     inline IsActiveRequest() : IsActiveRequest(nullptr) {}
@@ -2016,10 +1998,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class AttitudeRate final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.AttitudeRate)
-                   */
+class AttitudeRate final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.AttitudeRate)
+                                                               */
 {
 public:
     inline AttitudeRate() : AttitudeRate(nullptr) {}
@@ -2444,10 +2424,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorControlGroup final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.ActuatorControlGroup)
-                   */
+class ActuatorControlGroup final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.ActuatorControlGroup)
+                                                                       */
 {
 public:
     inline ActuatorControlGroup() : ActuatorControlGroup(nullptr) {}
@@ -2645,10 +2623,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class AccelerationNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.AccelerationNed)
-                   */
+class AccelerationNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.AccelerationNed)
+                                                                  */
 {
 public:
     inline AccelerationNed() : AccelerationNed(nullptr) {}
@@ -2851,10 +2827,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class StopResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StopResponse)
-                   */
+class StopResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StopResponse)
+                                                               */
 {
 public:
     inline StopResponse() : StopResponse(nullptr) {}
@@ -3036,10 +3010,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StartResponse)
-                   */
+class StartResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.StartResponse)
+                                                                */
 {
 public:
     inline StartResponse() : StartResponse(nullptr) {}
@@ -3221,10 +3193,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityNedResponse)
-                   */
+class SetVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityNedResponse)
+                                                                         */
 {
 public:
     inline SetVelocityNedResponse() : SetVelocityNedResponse(nullptr) {}
@@ -3419,10 +3389,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVelocityNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityNedRequest)
-                   */
+class SetVelocityNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityNedRequest)
+                                                                        */
 {
 public:
     inline SetVelocityNedRequest() : SetVelocityNedRequest(nullptr) {}
@@ -3618,10 +3586,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVelocityBodyResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityBodyResponse)
-                   */
+class SetVelocityBodyResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityBodyResponse)
+                                                                          */
 {
 public:
     inline SetVelocityBodyResponse() : SetVelocityBodyResponse(nullptr) {}
@@ -3819,10 +3785,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVelocityBodyRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityBodyRequest)
-                   */
+class SetVelocityBodyRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetVelocityBodyRequest)
+                                                                         */
 {
 public:
     inline SetVelocityBodyRequest() : SetVelocityBodyRequest(nullptr) {}
@@ -4019,10 +3983,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityNedResponse)
-                   */
+class SetPositionVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityNedResponse)
+                                                                                 */
 {
 public:
     inline SetPositionVelocityNedResponse() : SetPositionVelocityNedResponse(nullptr) {}
@@ -4225,10 +4187,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionVelocityNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityNedRequest)
-                   */
+class SetPositionVelocityNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityNedRequest)
+                                                                                */
 {
 public:
     inline SetPositionVelocityNedRequest() : SetPositionVelocityNedRequest(nullptr) {}
@@ -4450,10 +4410,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionVelocityAccelerationNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityAccelerationNedResponse)
-                   */
+class SetPositionVelocityAccelerationNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityAccelerationNedResponse)
+                                                                                             */
 {
 public:
     inline SetPositionVelocityAccelerationNedResponse() :
@@ -4665,10 +4623,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionVelocityAccelerationNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityAccelerationNedRequest)
-                   */
+class SetPositionVelocityAccelerationNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionVelocityAccelerationNedRequest)
+                                                                                            */
 {
 public:
     inline SetPositionVelocityAccelerationNedRequest() :
@@ -4916,10 +4872,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionNedResponse)
-                   */
+class SetPositionNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionNedResponse)
+                                                                         */
 {
 public:
     inline SetPositionNedResponse() : SetPositionNedResponse(nullptr) {}
@@ -5114,10 +5068,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionNedRequest)
-                   */
+class SetPositionNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionNedRequest)
+                                                                        */
 {
 public:
     inline SetPositionNedRequest() : SetPositionNedRequest(nullptr) {}
@@ -5313,10 +5265,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionGlobalResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionGlobalResponse)
-                   */
+class SetPositionGlobalResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionGlobalResponse)
+                                                                            */
 {
 public:
     inline SetPositionGlobalResponse() : SetPositionGlobalResponse(nullptr) {}
@@ -5516,10 +5466,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetPositionGlobalRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionGlobalRequest)
-                   */
+class SetPositionGlobalRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetPositionGlobalRequest)
+                                                                           */
 {
 public:
     inline SetPositionGlobalRequest() : SetPositionGlobalRequest(nullptr) {}
@@ -5719,10 +5667,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeResponse)
-                   */
+class SetAttitudeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeResponse)
+                                                                      */
 {
 public:
     inline SetAttitudeResponse() : SetAttitudeResponse(nullptr) {}
@@ -5913,10 +5859,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRequest)
-                   */
+class SetAttitudeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRequest)
+                                                                     */
 {
 public:
     inline SetAttitudeRequest() : SetAttitudeRequest(nullptr) {}
@@ -6105,10 +6049,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudeRateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRateResponse)
-                   */
+class SetAttitudeRateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRateResponse)
+                                                                          */
 {
 public:
     inline SetAttitudeRateResponse() : SetAttitudeRateResponse(nullptr) {}
@@ -6306,10 +6248,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudeRateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRateRequest)
-                   */
+class SetAttitudeRateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAttitudeRateRequest)
+                                                                         */
 {
 public:
     inline SetAttitudeRateRequest() : SetAttitudeRateRequest(nullptr) {}
@@ -6504,10 +6444,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetActuatorControlResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetActuatorControlResponse)
-                   */
+class SetActuatorControlResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetActuatorControlResponse)
+                                                                             */
 {
 public:
     inline SetActuatorControlResponse() : SetActuatorControlResponse(nullptr) {}
@@ -6707,10 +6645,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAccelerationNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAccelerationNedResponse)
-                   */
+class SetAccelerationNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAccelerationNedResponse)
+                                                                             */
 {
 public:
     inline SetAccelerationNedResponse() : SetAccelerationNedResponse(nullptr) {}
@@ -6910,10 +6846,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAccelerationNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAccelerationNedRequest)
-                   */
+class SetAccelerationNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetAccelerationNedRequest)
+                                                                            */
 {
 public:
     inline SetAccelerationNedRequest() : SetAccelerationNedRequest(nullptr) {}
@@ -7114,10 +7048,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorControl final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.ActuatorControl)
-                   */
+class ActuatorControl final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.ActuatorControl)
+                                                                  */
 {
 public:
     inline ActuatorControl() : ActuatorControl(nullptr) {}
@@ -7309,10 +7241,8 @@ private:
     friend struct ::TableStruct_offboard_2foffboard_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetActuatorControlRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetActuatorControlRequest)
-                   */
+class SetActuatorControlRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.offboard.SetActuatorControlRequest)
+                                                                            */
 {
 public:
     inline SetActuatorControlRequest() : SetActuatorControlRequest(nullptr) {}

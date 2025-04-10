@@ -137,10 +137,8 @@ inline bool ComponentInformationResult_Result_Parse(
 
 // -------------------------------------------------------------------
 
-class SubscribeFloatParamRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.SubscribeFloatParamRequest)
-                          */
+class SubscribeFloatParamRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.SubscribeFloatParamRequest)
+                                                                                              */
 {
 public:
     inline SubscribeFloatParamRequest() : SubscribeFloatParamRequest(nullptr) {}
@@ -293,10 +291,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class FloatParamUpdate final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParamUpdate)
-                   */
+class FloatParamUpdate final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParamUpdate)
+                                                                   */
 {
 public:
     inline FloatParamUpdate() : FloatParamUpdate(nullptr) {}
@@ -495,10 +491,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class FloatParam final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParam)
-                   */
+class FloatParam final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParam)
+                                                             */
 {
 public:
     inline FloatParam() : FloatParam(nullptr) {}
@@ -793,10 +787,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class ComponentInformationResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.ComponentInformationResult)
-                   */
+class ComponentInformationResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.ComponentInformationResult)
+                                                                             */
 {
 public:
     inline ComponentInformationResult() : ComponentInformationResult(nullptr) {}
@@ -1033,10 +1025,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class AccessFloatParamsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.AccessFloatParamsRequest)
-                          */
+class AccessFloatParamsRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.AccessFloatParamsRequest)
+                                                                                            */
 {
 public:
     inline AccessFloatParamsRequest() : AccessFloatParamsRequest(nullptr) {}
@@ -1188,10 +1178,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class FloatParamResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParamResponse)
-                   */
+class FloatParamResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.FloatParamResponse)
+                                                                     */
 {
 public:
     inline FloatParamResponse() : FloatParamResponse(nullptr) {}
@@ -1382,10 +1370,8 @@ private:
     friend struct ::TableStruct_component_5finformation_2fcomponent_5finformation_2eproto;
 }; // -------------------------------------------------------------------
 
-class AccessFloatParamsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.AccessFloatParamsResponse)
-                   */
+class AccessFloatParamsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.component_information.AccessFloatParamsResponse)
+                                                                            */
 {
 public:
     inline AccessFloatParamsResponse() : AccessFloatParamsResponse(nullptr) {}

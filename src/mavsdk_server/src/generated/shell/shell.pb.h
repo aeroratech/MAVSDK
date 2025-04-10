@@ -126,10 +126,8 @@ inline bool ShellResult_Result_Parse(absl::string_view name, ShellResult_Result*
 
 // -------------------------------------------------------------------
 
-class SubscribeReceiveRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.shell.SubscribeReceiveRequest)
-                          */
+class SubscribeReceiveRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.shell.SubscribeReceiveRequest)
+                                                                                           */
 {
 public:
     inline SubscribeReceiveRequest() : SubscribeReceiveRequest(nullptr) {}
@@ -680,10 +678,8 @@ private:
     friend struct ::TableStruct_shell_2fshell_2eproto;
 }; // -------------------------------------------------------------------
 
-class ReceiveResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.shell.ReceiveResponse)
-                   */
+class ReceiveResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.shell.ReceiveResponse)
+                                                                  */
 {
 public:
     inline ReceiveResponse() : ReceiveResponse(nullptr) {}

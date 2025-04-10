@@ -235,9 +235,8 @@ inline bool MissionRawResult_Result_Parse(absl::string_view name, MissionRawResu
 // -------------------------------------------------------------------
 
 class SubscribeMissionProgressRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SubscribeMissionProgressRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SubscribeMissionProgressRequest)
+                                                           */
 {
 public:
     inline SubscribeMissionProgressRequest() : SubscribeMissionProgressRequest(nullptr) {}
@@ -395,9 +394,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeMissionChangedRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SubscribeMissionChangedRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SubscribeMissionChangedRequest)
+                                                           */
 {
 public:
     inline SubscribeMissionChangedRequest() : SubscribeMissionChangedRequest(nullptr) {}
@@ -553,10 +551,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartMissionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.StartMissionRequest)
-                          */
+class StartMissionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.StartMissionRequest)
+                                                                                       */
 {
 public:
     inline StartMissionRequest() : StartMissionRequest(nullptr) {}
@@ -703,10 +699,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetCurrentMissionItemRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SetCurrentMissionItemRequest)
-                   */
+class SetCurrentMissionItemRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SetCurrentMissionItemRequest)
+                                                                               */
 {
 public:
     inline SetCurrentMissionItemRequest() : SetCurrentMissionItemRequest(nullptr) {}
@@ -903,10 +897,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class PauseMissionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.PauseMissionRequest)
-                          */
+class PauseMissionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.PauseMissionRequest)
+                                                                                       */
 {
 public:
     inline PauseMissionRequest() : PauseMissionRequest(nullptr) {}
@@ -1053,10 +1045,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionRawResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionRawResult)
-                   */
+class MissionRawResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionRawResult)
+                                                                   */
 {
 public:
     inline MissionRawResult() : MissionRawResult(nullptr) {}
@@ -1301,10 +1291,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionProgress final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionProgress)
-                   */
+class MissionProgress final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionProgress)
+                                                                  */
 {
 public:
     inline MissionProgress() : MissionProgress(nullptr) {}
@@ -1498,10 +1486,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionItem final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionItem)
-                   */
+class MissionItem final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionItem)
+                                                              */
 {
 public:
     inline MissionItem() : MissionItem(nullptr) {}
@@ -1821,10 +1807,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionChangedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionChangedResponse)
-                   */
+class MissionChangedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionChangedResponse)
+                                                                         */
 {
 public:
     inline MissionChangedResponse() : MissionChangedResponse(nullptr) {}
@@ -2013,10 +1997,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ImportQgroundcontrolMissionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionRequest)
-                   */
+class ImportQgroundcontrolMissionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionRequest)
+                                                                                     */
 {
 public:
     inline ImportQgroundcontrolMissionRequest() : ImportQgroundcontrolMissionRequest(nullptr) {}
@@ -2220,10 +2202,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ImportQgroundcontrolMissionFromStringRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionFromStringRequest)
-                   */
+class ImportQgroundcontrolMissionFromStringRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionFromStringRequest)
+                                                                                               */
 {
 public:
     inline ImportQgroundcontrolMissionFromStringRequest() :
@@ -2434,10 +2414,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class DownloadMissionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.DownloadMissionRequest)
-                          */
+class DownloadMissionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.DownloadMissionRequest)
+                                                                                          */
 {
 public:
     inline DownloadMissionRequest() : DownloadMissionRequest(nullptr) {}
@@ -2585,10 +2563,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ClearMissionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ClearMissionRequest)
-                          */
+class ClearMissionRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ClearMissionRequest)
+                                                                                       */
 {
 public:
     inline ClearMissionRequest() : ClearMissionRequest(nullptr) {}
@@ -2735,10 +2711,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelMissionUploadRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionUploadRequest)
-                          */
+class CancelMissionUploadRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionUploadRequest)
+                                                                                              */
 {
 public:
     inline CancelMissionUploadRequest() : CancelMissionUploadRequest(nullptr) {}
@@ -2891,10 +2865,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelMissionDownloadRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionDownloadRequest)
-                          */
+class CancelMissionDownloadRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionDownloadRequest)
+                                                                                                */
 {
 public:
     inline CancelMissionDownloadRequest() : CancelMissionDownloadRequest(nullptr) {}
@@ -3050,10 +3022,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadRallyPointsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadRallyPointsResponse)
-                   */
+class UploadRallyPointsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadRallyPointsResponse)
+                                                                            */
 {
 public:
     inline UploadRallyPointsResponse() : UploadRallyPointsResponse(nullptr) {}
@@ -3254,10 +3224,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadRallyPointsRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadRallyPointsRequest)
-                   */
+class UploadRallyPointsRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadRallyPointsRequest)
+                                                                           */
 {
 public:
     inline UploadRallyPointsRequest() : UploadRallyPointsRequest(nullptr) {}
@@ -3464,10 +3432,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadMissionResponse)
-                   */
+class UploadMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadMissionResponse)
+                                                                        */
 {
 public:
     inline UploadMissionResponse() : UploadMissionResponse(nullptr) {}
@@ -3663,10 +3629,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadMissionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadMissionRequest)
-                   */
+class UploadMissionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadMissionRequest)
+                                                                       */
 {
 public:
     inline UploadMissionRequest() : UploadMissionRequest(nullptr) {}
@@ -3869,10 +3833,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadGeofenceResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadGeofenceResponse)
-                   */
+class UploadGeofenceResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadGeofenceResponse)
+                                                                         */
 {
 public:
     inline UploadGeofenceResponse() : UploadGeofenceResponse(nullptr) {}
@@ -4068,10 +4030,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadGeofenceRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadGeofenceRequest)
-                   */
+class UploadGeofenceRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.UploadGeofenceRequest)
+                                                                        */
 {
 public:
     inline UploadGeofenceRequest() : UploadGeofenceRequest(nullptr) {}
@@ -4274,10 +4234,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class StartMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.StartMissionResponse)
-                   */
+class StartMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.StartMissionResponse)
+                                                                       */
 {
 public:
     inline StartMissionResponse() : StartMissionResponse(nullptr) {}
@@ -4473,10 +4431,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetCurrentMissionItemResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SetCurrentMissionItemResponse)
-                   */
+class SetCurrentMissionItemResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.SetCurrentMissionItemResponse)
+                                                                                */
 {
 public:
     inline SetCurrentMissionItemResponse() : SetCurrentMissionItemResponse(nullptr) {}
@@ -4680,10 +4636,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class PauseMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.PauseMissionResponse)
-                   */
+class PauseMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.PauseMissionResponse)
+                                                                       */
 {
 public:
     inline PauseMissionResponse() : PauseMissionResponse(nullptr) {}
@@ -4879,10 +4833,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionProgressResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionProgressResponse)
-                   */
+class MissionProgressResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionProgressResponse)
+                                                                          */
 {
 public:
     inline MissionProgressResponse() : MissionProgressResponse(nullptr) {}
@@ -5081,10 +5033,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionImportData final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionImportData)
-                   */
+class MissionImportData final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.MissionImportData)
+                                                                    */
 {
 public:
     inline MissionImportData() : MissionImportData(nullptr) {}
@@ -5332,10 +5282,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class DownloadMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.DownloadMissionResponse)
-                   */
+class DownloadMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.DownloadMissionResponse)
+                                                                          */
 {
 public:
     inline DownloadMissionResponse() : DownloadMissionResponse(nullptr) {}
@@ -5560,10 +5508,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ClearMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ClearMissionResponse)
-                   */
+class ClearMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ClearMissionResponse)
+                                                                       */
 {
 public:
     inline ClearMissionResponse() : ClearMissionResponse(nullptr) {}
@@ -5759,10 +5705,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelMissionUploadResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionUploadResponse)
-                   */
+class CancelMissionUploadResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionUploadResponse)
+                                                                              */
 {
 public:
     inline CancelMissionUploadResponse() : CancelMissionUploadResponse(nullptr) {}
@@ -5963,10 +5907,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class CancelMissionDownloadResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionDownloadResponse)
-                   */
+class CancelMissionDownloadResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.CancelMissionDownloadResponse)
+                                                                                */
 {
 public:
     inline CancelMissionDownloadResponse() : CancelMissionDownloadResponse(nullptr) {}
@@ -6170,10 +6112,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ImportQgroundcontrolMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionResponse)
-                   */
+class ImportQgroundcontrolMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionResponse)
+                                                                                      */
 {
 public:
     inline ImportQgroundcontrolMissionResponse() : ImportQgroundcontrolMissionResponse(nullptr) {}
@@ -6397,10 +6337,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_2fmission_5fraw_2eproto;
 }; // -------------------------------------------------------------------
 
-class ImportQgroundcontrolMissionFromStringResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionFromStringResponse)
-                   */
+class ImportQgroundcontrolMissionFromStringResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw.ImportQgroundcontrolMissionFromStringResponse)
+                                                                                                */
 {
 public:
     inline ImportQgroundcontrolMissionFromStringResponse() :

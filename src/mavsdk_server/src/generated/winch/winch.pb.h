@@ -446,10 +446,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeStatusRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.SubscribeStatusRequest)
-                          */
+class SubscribeStatusRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.SubscribeStatusRequest)
+                                                                                          */
 {
 public:
     inline SubscribeStatusRequest() : SubscribeStatusRequest(nullptr) {}
@@ -1284,10 +1282,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class RelativeLengthControlRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlRequest)
-                   */
+class RelativeLengthControlRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlRequest)
+                                                                               */
 {
 public:
     inline RelativeLengthControlRequest() : RelativeLengthControlRequest(nullptr) {}
@@ -1508,10 +1504,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class RateControlRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlRequest)
-                   */
+class RateControlRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlRequest)
+                                                                     */
 {
 public:
     inline RateControlRequest() : RateControlRequest(nullptr) {}
@@ -1880,10 +1874,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class LoadPayloadRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadRequest)
-                   */
+class LoadPayloadRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadRequest)
+                                                                     */
 {
 public:
     inline LoadPayloadRequest() : LoadPayloadRequest(nullptr) {}
@@ -2063,10 +2055,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class LoadLineRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineRequest)
-                   */
+class LoadLineRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineRequest)
+                                                                  */
 {
 public:
     inline LoadLineRequest() : LoadLineRequest(nullptr) {}
@@ -2599,10 +2589,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class AbandonLineRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineRequest)
-                   */
+class AbandonLineRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineRequest)
+                                                                     */
 {
 public:
     inline AbandonLineRequest() : AbandonLineRequest(nullptr) {}
@@ -3049,10 +3037,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class RetractResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RetractResponse)
-                   */
+class RetractResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RetractResponse)
+                                                                  */
 {
 public:
     inline RetractResponse() : RetractResponse(nullptr) {}
@@ -3420,10 +3406,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class RelativeLengthControlResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlResponse)
-                   */
+class RelativeLengthControlResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlResponse)
+                                                                                */
 {
 public:
     inline RelativeLengthControlResponse() : RelativeLengthControlResponse(nullptr) {}
@@ -3626,10 +3610,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class RateControlResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlResponse)
-                   */
+class RateControlResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlResponse)
+                                                                      */
 {
 public:
     inline RateControlResponse() : RateControlResponse(nullptr) {}
@@ -4000,10 +3982,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class LoadPayloadResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadResponse)
-                   */
+class LoadPayloadResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadResponse)
+                                                                      */
 {
 public:
     inline LoadPayloadResponse() : LoadPayloadResponse(nullptr) {}
@@ -4191,10 +4171,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class LoadLineResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineResponse)
-                   */
+class LoadLineResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineResponse)
+                                                                   */
 {
 public:
     inline LoadLineResponse() : LoadLineResponse(nullptr) {}
@@ -4562,10 +4540,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class DeliverResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.DeliverResponse)
-                   */
+class DeliverResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.DeliverResponse)
+                                                                  */
 {
 public:
     inline DeliverResponse() : DeliverResponse(nullptr) {}
@@ -4750,10 +4726,8 @@ private:
     friend struct ::TableStruct_winch_2fwinch_2eproto;
 }; // -------------------------------------------------------------------
 
-class AbandonLineResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineResponse)
-                   */
+class AbandonLineResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineResponse)
+                                                                      */
 {
 public:
     inline AbandonLineResponse() : AbandonLineResponse(nullptr) {}

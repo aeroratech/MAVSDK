@@ -356,6 +356,26 @@ public:
     ControlStatus control() const;
 
     /**
+     * @brief Set gimbal debug data
+     *
+     * Custom definition debug data
+     *
+     * This function is non-blocking. See 'set_debug_data' for the blocking counterpart.
+     */
+    void set_debug_data_async(uint32_t msg_type, const ResultCallback callback);
+
+    /**
+     * @brief Set gimbal debug data
+     *
+     * Custom definition debug data
+     *
+     * This function is blocking. See 'set_debug_data_async' for the non-blocking counterpart.
+     *
+     * @return Result of request.
+     */
+    Result set_debug_data(uint32_t msg_type) const;
+
+    /**
      * @brief Copy constructor.
      */
     Gimbal(const Gimbal& other);

@@ -32,6 +32,10 @@ void GimbalImpl::init()
         MAVLINK_MSG_ID_GIMBAL_MANAGER_INFORMATION,
         [this](const mavlink_message_t& message) { process_gimbal_manager_information(message); },
         this);
+    _system_impl->register_mavlink_message_handler(
+        MAVLINK_MSG_ID_GIMBAL_DEBUGDATA,
+        [this](const mavlink_message_t& message) { process_gimbal_debugdata(message); },
+        this);
 }
 
 void GimbalImpl::deinit() {}
@@ -76,6 +80,19 @@ void GimbalImpl::process_gimbal_manager_information(const mavlink_message_t& mes
         _protocol_cookie = nullptr;
         _gimbal_protocol.reset(new GimbalProtocolV2(
             *_system_impl, gimbal_manager_information, message.sysid, message.compid));
+    }
+}
+
+void GimbalImpl::process_gimbal_debugdata(const mavlink_message_t& message)
+{
+    mavlink_gimbal_debugdata_t gimbal_debugdata;
+    mavlink_msg_gimbal_debugdata_decode(&message, &gimbal_debugdata);
+
+    if (gimbal_debugdata.msg_type == 0xfe) {
+        std::string message = reinterpret_cast<char*>(gimbal_debugdata.debug_data);
+        if (message.find("GPS") != std::string::npos) {
+            LogDebug() << message;
+        }
     }
 }
 
@@ -208,7 +225,25 @@ void GimbalImpl::unsubscribe_control(Gimbal::ControlHandle handle)
     }
 }
 
-void GimbalImpl::wait_for_protocol()
+void GimbalImpl::set_debug_data_async(uint32_t msg_type, const Gimbal::ResultCallback callback)
+{
+    wait_for_protocol_async([=]() {
+        _gimbal_protocol->set_debug_data_async(
+            _system_impl->get_own_system_id(),
+            _system_impl->get_own_component_id(),
+            msg_type,
+            callback);
+    });
+}
+
+Gimbal::Result GimbalImpl::set_debug_data(uint32_t msg_type) const
+{
+    wait_for_protocol();
+    return _gimbal_protocol->set_debug_data(
+        _system_impl->get_own_system_id(), _system_impl->get_own_component_id(), msg_type);
+}
+
+void GimbalImpl::wait_for_protocol() const
 {
     while (_gimbal_protocol == nullptr) {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));

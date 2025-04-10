@@ -43,29 +43,53 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    auto system = mavsdk.first_autopilot(3.0);
-    if (!system) {
-        std::cerr << "Timed out waiting for system\n";
+    std::cout << "Waiting to discover system...\n";
+    auto prom = std::promise<std::shared_ptr<System>>{};
+    auto fut = prom.get_future();
+    mavsdk::Mavsdk::NewSystemHandle handle =
+        mavsdk.subscribe_on_new_system([&mavsdk, &prom, &handle]() {
+            auto system = mavsdk.systems().back();
+            if (system->has_gimbal()) {
+                std::cout << "Discovered gimbal" << std::endl;
+
+                // Unsubscribe again as we only want to find one system.
+                mavsdk.unsubscribe_on_new_system(handle);
+                prom.set_value(system);
+            }
+        });
+
+    // We usually receive heartbeats at 1Hz, therefore we should find a
+    // system after around 3 seconds max, surely.
+    if (fut.wait_for(seconds(3)) == std::future_status::timeout) {
+        std::cerr << "No gimbal found, exiting.\n";
         return 1;
     }
+
+    auto system = fut.get();
 
     // Instantiate plugins.
-    auto telemetry = Telemetry{system.value()};
-    auto gimbal = Gimbal{system.value()};
+    auto telemetry = Telemetry{system};
+    auto gimbal = Gimbal{system};
 
     // We want to listen to the camera/gimbal angle of the drone at 5 Hz.
-    const Telemetry::Result set_rate_result = telemetry.set_rate_camera_attitude(5.0);
-    if (set_rate_result != Telemetry::Result::Success) {
-        std::cerr << "Setting rate failed:" << set_rate_result << '\n';
-        return 1;
-    }
+    // const Telemetry::Result set_rate_result = telemetry.set_rate_camera_attitude(5.0);
+    // if (set_rate_result != Telemetry::Result::Success) {
+    //     std::cerr << "Setting rate failed:" << set_rate_result << '\n';
+    //     return 1;
+    // }
 
     // Set up callback to monitor camera/gimbal angle
     telemetry.subscribe_camera_attitude_euler([](Telemetry::EulerAngle angle) {
-        std::cout << "Gimbal angle pitch: " << angle.pitch_deg << " deg, yaw: " << angle.yaw_deg
-                  << " yaw\n";
+        // std::cout << "Gimbal angle pitch: " << angle.pitch_deg << " deg, yaw: " << angle.yaw_deg
+        //           << " yaw\n";
     });
 
+    int32_t debug_msg_type = 54;
+    while (true) {
+        gimbal.set_debug_data(debug_msg_type);
+        std::cout << "send debug data with " << debug_msg_type << std::endl;
+        sleep_for(seconds(3));
+    }
     std::cout << "Start controlling gimbal...\n";
     Gimbal::Result gimbal_result = gimbal.take_control(Gimbal::ControlMode::Primary);
     if (gimbal_result != Gimbal::Result::Success) {

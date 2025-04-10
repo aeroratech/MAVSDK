@@ -1214,10 +1214,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class AngularVelocityBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.AngularVelocityBody)
-                   */
+class AngularVelocityBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.AngularVelocityBody)
+                                                                      */
 {
 public:
     inline AngularVelocityBody() : AngularVelocityBody(nullptr) {}
@@ -1624,10 +1622,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class VisionPositionEstimate final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.VisionPositionEstimate)
-                   */
+class VisionPositionEstimate final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.VisionPositionEstimate)
+                                                                         */
 {
 public:
     inline VisionPositionEstimate() : VisionPositionEstimate(nullptr) {}
@@ -1868,10 +1864,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVisionPositionEstimateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetVisionPositionEstimateResponse)
-                   */
+class SetVisionPositionEstimateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetVisionPositionEstimateResponse)
+                                                                                    */
 {
 public:
     inline SetVisionPositionEstimateResponse() : SetVisionPositionEstimateResponse(nullptr) {}
@@ -2076,10 +2070,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetOdometryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetOdometryResponse)
-                   */
+class SetOdometryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetOdometryResponse)
+                                                                      */
 {
 public:
     inline SetOdometryResponse() : SetOdometryResponse(nullptr) {}
@@ -2267,10 +2259,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudePositionMocapResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetAttitudePositionMocapResponse)
-                   */
+class SetAttitudePositionMocapResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetAttitudePositionMocapResponse)
+                                                                                   */
 {
 public:
     inline SetAttitudePositionMocapResponse() : SetAttitudePositionMocapResponse(nullptr) {}
@@ -2787,10 +2777,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class AttitudePositionMocap final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.AttitudePositionMocap)
-                   */
+class AttitudePositionMocap final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.AttitudePositionMocap)
+                                                                        */
 {
 public:
     inline AttitudePositionMocap() : AttitudePositionMocap(nullptr) {}
@@ -3031,10 +3019,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetVisionPositionEstimateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetVisionPositionEstimateRequest)
-                   */
+class SetVisionPositionEstimateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetVisionPositionEstimateRequest)
+                                                                                   */
 {
 public:
     inline SetVisionPositionEstimateRequest() : SetVisionPositionEstimateRequest(nullptr) {}
@@ -3241,10 +3227,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetOdometryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetOdometryRequest)
-                   */
+class SetOdometryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetOdometryRequest)
+                                                                     */
 {
 public:
     inline SetOdometryRequest() : SetOdometryRequest(nullptr) {}
@@ -3430,10 +3414,8 @@ private:
     friend struct ::TableStruct_mocap_2fmocap_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAttitudePositionMocapRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetAttitudePositionMocapRequest)
-                   */
+class SetAttitudePositionMocapRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mocap.SetAttitudePositionMocapRequest)
+                                                                                  */
 {
 public:
     inline SetAttitudePositionMocapRequest() : SetAttitudePositionMocapRequest(nullptr) {}

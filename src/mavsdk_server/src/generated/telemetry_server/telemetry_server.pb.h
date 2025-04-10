@@ -473,10 +473,8 @@ inline bool LandedState_Parse(absl::string_view name, LandedState* value)
 
 // -------------------------------------------------------------------
 
-class VelocityNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.VelocityNed)
-                   */
+class VelocityNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.VelocityNed)
+                                                              */
 {
 public:
     inline VelocityNed() : VelocityNed(nullptr) {}
@@ -679,10 +677,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class VelocityBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.VelocityBody)
-                   */
+class VelocityBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.VelocityBody)
+                                                               */
 {
 public:
     inline VelocityBody() : VelocityBody(nullptr) {}
@@ -885,10 +881,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TelemetryServerResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.TelemetryServerResult)
-                   */
+class TelemetryServerResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.TelemetryServerResult)
+                                                                        */
 {
 public:
     inline TelemetryServerResult() : TelemetryServerResult(nullptr) {}
@@ -1125,10 +1119,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class StatusText final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.StatusText)
-                   */
+class StatusText final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.StatusText)
+                                                             */
 {
 public:
     inline StatusText() : StatusText(nullptr) {}
@@ -1324,10 +1316,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ScaledPressure final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ScaledPressure)
-                   */
+class ScaledPressure final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ScaledPressure)
+                                                                 */
 {
 public:
     inline ScaledPressure() : ScaledPressure(nullptr) {}
@@ -1554,10 +1544,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RcStatus final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.RcStatus)
-                   */
+class RcStatus final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.RcStatus)
+                                                           */
 {
 public:
     inline RcStatus() : RcStatus(nullptr) {}
@@ -1757,10 +1745,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RawGps final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.RawGps)
-                   */
+class RawGps final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.RawGps)
+                                                         */
 {
 public:
     inline RawGps() : RawGps(nullptr) {}
@@ -2092,10 +2078,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Quaternion final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Quaternion)
-                   */
+class Quaternion final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Quaternion)
+                                                             */
 {
 public:
     inline Quaternion() : Quaternion(nullptr) {}
@@ -2322,10 +2306,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishUnixEpochTimeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishUnixEpochTimeRequest)
-                   */
+class PublishUnixEpochTimeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishUnixEpochTimeRequest)
+                                                                              */
 {
 public:
     inline PublishUnixEpochTimeRequest() : PublishUnixEpochTimeRequest(nullptr) {}
@@ -2519,10 +2501,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishLandedStateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishLandedStateRequest)
-                   */
+class PublishLandedStateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishLandedStateRequest)
+                                                                            */
 {
 public:
     inline PublishLandedStateRequest() : PublishLandedStateRequest(nullptr) {}
@@ -2716,10 +2696,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishInAirRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishInAirRequest)
-                   */
+class PublishInAirRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishInAirRequest)
+                                                                      */
 {
 public:
     inline PublishInAirRequest() : PublishInAirRequest(nullptr) {}
@@ -2904,10 +2882,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishExtendedSysStateRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishExtendedSysStateRequest)
-                   */
+class PublishExtendedSysStateRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishExtendedSysStateRequest)
+                                                                                 */
 {
 public:
     inline PublishExtendedSysStateRequest() : PublishExtendedSysStateRequest(nullptr) {}
@@ -3116,10 +3092,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionNed)
-                   */
+class PositionNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionNed)
+                                                              */
 {
 public:
     inline PositionNed() : PositionNed(nullptr) {}
@@ -3322,10 +3296,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionBody)
-                   */
+class PositionBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionBody)
+                                                               */
 {
 public:
     inline PositionBody() : PositionBody(nullptr) {}
@@ -3528,10 +3500,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Position final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Position)
-                   */
+class Position final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Position)
+                                                           */
 {
 public:
     inline Position() : Position(nullptr) {}
@@ -3743,10 +3713,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class MagneticFieldFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.MagneticFieldFrd)
-                   */
+class MagneticFieldFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.MagneticFieldFrd)
+                                                                   */
 {
 public:
     inline MagneticFieldFrd() : MagneticFieldFrd(nullptr) {}
@@ -3952,10 +3920,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Heading final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Heading)
-                   */
+class Heading final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Heading)
+                                                          */
 {
 public:
     inline Heading() : Heading(nullptr) {}
@@ -4131,10 +4097,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class GroundTruth final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.GroundTruth)
-                   */
+class GroundTruth final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.GroundTruth)
+                                                              */
 {
 public:
     inline GroundTruth() : GroundTruth(nullptr) {}
@@ -4337,10 +4301,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class GpsInfo final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.GpsInfo)
-                   */
+class GpsInfo final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.GpsInfo)
+                                                          */
 {
 public:
     inline GpsInfo() : GpsInfo(nullptr) {}
@@ -4528,10 +4490,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class FixedwingMetrics final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.FixedwingMetrics)
-                   */
+class FixedwingMetrics final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.FixedwingMetrics)
+                                                                   */
 {
 public:
     inline FixedwingMetrics() : FixedwingMetrics(nullptr) {}
@@ -4737,10 +4697,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class EulerAngle final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.EulerAngle)
-                   */
+class EulerAngle final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.EulerAngle)
+                                                             */
 {
 public:
     inline EulerAngle() : EulerAngle(nullptr) {}
@@ -4955,10 +4913,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class DistanceSensor final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.DistanceSensor)
-                   */
+class DistanceSensor final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.DistanceSensor)
+                                                                 */
 {
 public:
     inline DistanceSensor() : DistanceSensor(nullptr) {}
@@ -5161,10 +5117,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Covariance final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Covariance)
-                   */
+class Covariance final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Covariance)
+                                                             */
 {
 public:
     inline Covariance() : Covariance(nullptr) {}
@@ -5352,10 +5306,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Battery final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Battery)
-                   */
+class Battery final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Battery)
+                                                          */
 {
 public:
     inline Battery() : Battery(nullptr) {}
@@ -5543,10 +5495,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class AngularVelocityFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AngularVelocityFrd)
-                   */
+class AngularVelocityFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AngularVelocityFrd)
+                                                                     */
 {
 public:
     inline AngularVelocityFrd() : AngularVelocityFrd(nullptr) {}
@@ -5753,10 +5703,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class AngularVelocityBody final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AngularVelocityBody)
-                   */
+class AngularVelocityBody final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AngularVelocityBody)
+                                                                      */
 {
 public:
     inline AngularVelocityBody() : AngularVelocityBody(nullptr) {}
@@ -5965,10 +5913,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorOutputStatus final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ActuatorOutputStatus)
-                   */
+class ActuatorOutputStatus final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ActuatorOutputStatus)
+                                                                       */
 {
 public:
     inline ActuatorOutputStatus() : ActuatorOutputStatus(nullptr) {}
@@ -6178,10 +6124,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActuatorControlTarget final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ActuatorControlTarget)
-                   */
+class ActuatorControlTarget final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.ActuatorControlTarget)
+                                                                        */
 {
 public:
     inline ActuatorControlTarget() : ActuatorControlTarget(nullptr) {}
@@ -6391,10 +6335,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class AccelerationFrd final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AccelerationFrd)
-                   */
+class AccelerationFrd final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.AccelerationFrd)
+                                                                  */
 {
 public:
     inline AccelerationFrd() : AccelerationFrd(nullptr) {}
@@ -6600,10 +6542,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishUnixEpochTimeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishUnixEpochTimeResponse)
-                   */
+class PublishUnixEpochTimeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishUnixEpochTimeResponse)
+                                                                               */
 {
 public:
     inline PublishUnixEpochTimeResponse() : PublishUnixEpochTimeResponse(nullptr) {}
@@ -6812,10 +6752,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishSysStatusResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishSysStatusResponse)
-                   */
+class PublishSysStatusResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishSysStatusResponse)
+                                                                           */
 {
 public:
     inline PublishSysStatusResponse() : PublishSysStatusResponse(nullptr) {}
@@ -7020,10 +6958,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishSysStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishSysStatusRequest)
-                   */
+class PublishSysStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishSysStatusRequest)
+                                                                          */
 {
 public:
     inline PublishSysStatusRequest() : PublishSysStatusRequest(nullptr) {}
@@ -7281,10 +7217,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishStatusTextResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishStatusTextResponse)
-                   */
+class PublishStatusTextResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishStatusTextResponse)
+                                                                            */
 {
 public:
     inline PublishStatusTextResponse() : PublishStatusTextResponse(nullptr) {}
@@ -7490,10 +7424,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishStatusTextRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishStatusTextRequest)
-                   */
+class PublishStatusTextRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishStatusTextRequest)
+                                                                           */
 {
 public:
     inline PublishStatusTextRequest() : PublishStatusTextRequest(nullptr) {}
@@ -7692,10 +7624,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishScaledImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishScaledImuResponse)
-                   */
+class PublishScaledImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishScaledImuResponse)
+                                                                           */
 {
 public:
     inline PublishScaledImuResponse() : PublishScaledImuResponse(nullptr) {}
@@ -7900,10 +7830,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishRcStatusRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRcStatusRequest)
-                   */
+class PublishRcStatusRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRcStatusRequest)
+                                                                         */
 {
 public:
     inline PublishRcStatusRequest() : PublishRcStatusRequest(nullptr) {}
@@ -8098,10 +8026,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishRawImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawImuResponse)
-                   */
+class PublishRawImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawImuResponse)
+                                                                        */
 {
 public:
     inline PublishRawImuResponse() : PublishRawImuResponse(nullptr) {}
@@ -8302,10 +8228,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishRawGpsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawGpsResponse)
-                   */
+class PublishRawGpsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawGpsResponse)
+                                                                        */
 {
 public:
     inline PublishRawGpsResponse() : PublishRawGpsResponse(nullptr) {}
@@ -8506,10 +8430,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishRawGpsRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawGpsRequest)
-                   */
+class PublishRawGpsRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawGpsRequest)
+                                                                       */
 {
 public:
     inline PublishRawGpsRequest() : PublishRawGpsRequest(nullptr) {}
@@ -8721,10 +8643,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishPositionVelocityNedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionVelocityNedResponse)
-                   */
+class PublishPositionVelocityNedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionVelocityNedResponse)
+                                                                                     */
 {
 public:
     inline PublishPositionVelocityNedResponse() : PublishPositionVelocityNedResponse(nullptr) {}
@@ -8935,10 +8855,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishPositionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionResponse)
-                   */
+class PublishPositionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionResponse)
+                                                                          */
 {
 public:
     inline PublishPositionResponse() : PublishPositionResponse(nullptr) {}
@@ -9142,10 +9060,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishPositionRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionRequest)
-                   */
+class PublishPositionRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionRequest)
+                                                                         */
 {
 public:
     inline PublishPositionRequest() : PublishPositionRequest(nullptr) {}
@@ -9375,10 +9291,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishOdometryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishOdometryResponse)
-                   */
+class PublishOdometryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishOdometryResponse)
+                                                                          */
 {
 public:
     inline PublishOdometryResponse() : PublishOdometryResponse(nullptr) {}
@@ -9582,10 +9496,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishImuResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishImuResponse)
-                   */
+class PublishImuResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishImuResponse)
+                                                                     */
 {
 public:
     inline PublishImuResponse() : PublishImuResponse(nullptr) {}
@@ -9780,10 +9692,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishHomeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishHomeResponse)
-                   */
+class PublishHomeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishHomeResponse)
+                                                                      */
 {
 public:
     inline PublishHomeResponse() : PublishHomeResponse(nullptr) {}
@@ -9980,10 +9890,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishHomeRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishHomeRequest)
-                   */
+class PublishHomeRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishHomeRequest)
+                                                                     */
 {
 public:
     inline PublishHomeRequest() : PublishHomeRequest(nullptr) {}
@@ -10172,10 +10080,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishGroundTruthResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishGroundTruthResponse)
-                   */
+class PublishGroundTruthResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishGroundTruthResponse)
+                                                                             */
 {
 public:
     inline PublishGroundTruthResponse() : PublishGroundTruthResponse(nullptr) {}
@@ -10381,10 +10287,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishGroundTruthRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishGroundTruthRequest)
-                   */
+class PublishGroundTruthRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishGroundTruthRequest)
+                                                                            */
 {
 public:
     inline PublishGroundTruthRequest() : PublishGroundTruthRequest(nullptr) {}
@@ -10585,10 +10489,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishExtendedSysStateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishExtendedSysStateResponse)
-                   */
+class PublishExtendedSysStateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishExtendedSysStateResponse)
+                                                                                  */
 {
 public:
     inline PublishExtendedSysStateResponse() : PublishExtendedSysStateResponse(nullptr) {}
@@ -10798,10 +10700,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishDistanceSensorResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishDistanceSensorResponse)
-                   */
+class PublishDistanceSensorResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishDistanceSensorResponse)
+                                                                                */
 {
 public:
     inline PublishDistanceSensorResponse() : PublishDistanceSensorResponse(nullptr) {}
@@ -11010,10 +10910,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishDistanceSensorRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishDistanceSensorRequest)
-                   */
+class PublishDistanceSensorRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishDistanceSensorRequest)
+                                                                               */
 {
 public:
     inline PublishDistanceSensorRequest() : PublishDistanceSensorRequest(nullptr) {}
@@ -11217,10 +11115,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishBatteryResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishBatteryResponse)
-                   */
+class PublishBatteryResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishBatteryResponse)
+                                                                         */
 {
 public:
     inline PublishBatteryResponse() : PublishBatteryResponse(nullptr) {}
@@ -11421,10 +11317,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishBatteryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishBatteryRequest)
-                   */
+class PublishBatteryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishBatteryRequest)
+                                                                        */
 {
 public:
     inline PublishBatteryRequest() : PublishBatteryRequest(nullptr) {}
@@ -11619,10 +11513,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PositionVelocityNed final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionVelocityNed)
-                   */
+class PositionVelocityNed final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PositionVelocityNed)
+                                                                      */
 {
 public:
     inline PositionVelocityNed() : PositionVelocityNed(nullptr) {}
@@ -11830,10 +11722,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class Odometry final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Odometry)
-                   */
+class Odometry final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.Odometry)
+                                                           */
 {
 public:
     inline Odometry() : Odometry(nullptr) {}
@@ -12416,10 +12306,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishScaledImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishScaledImuRequest)
-                   */
+class PublishScaledImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishScaledImuRequest)
+                                                                          */
 {
 public:
     inline PublishScaledImuRequest() : PublishScaledImuRequest(nullptr) {}
@@ -12617,10 +12505,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishRawImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawImuRequest)
-                   */
+class PublishRawImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishRawImuRequest)
+                                                                       */
 {
 public:
     inline PublishRawImuRequest() : PublishRawImuRequest(nullptr) {}
@@ -12815,10 +12701,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishPositionVelocityNedRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionVelocityNedRequest)
-                   */
+class PublishPositionVelocityNedRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishPositionVelocityNedRequest)
+                                                                                    */
 {
 public:
     inline PublishPositionVelocityNedRequest() : PublishPositionVelocityNedRequest(nullptr) {}
@@ -13028,10 +12912,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishOdometryRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishOdometryRequest)
-                   */
+class PublishOdometryRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishOdometryRequest)
+                                                                         */
 {
 public:
     inline PublishOdometryRequest() : PublishOdometryRequest(nullptr) {}
@@ -13226,10 +13108,8 @@ private:
     friend struct ::TableStruct_telemetry_5fserver_2ftelemetry_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class PublishImuRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishImuRequest)
-                   */
+class PublishImuRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.telemetry_server.PublishImuRequest)
+                                                                    */
 {
 public:
     inline PublishImuRequest() : PublishImuRequest(nullptr) {}

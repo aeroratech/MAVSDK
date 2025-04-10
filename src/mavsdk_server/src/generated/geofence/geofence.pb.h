@@ -362,10 +362,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class GeofenceResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.GeofenceResult)
-                   */
+class GeofenceResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.GeofenceResult)
+                                                                 */
 {
 public:
     inline GeofenceResult() : GeofenceResult(nullptr) {}
@@ -585,10 +583,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class ClearGeofenceRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.ClearGeofenceRequest)
-                          */
+class ClearGeofenceRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.ClearGeofenceRequest)
+                                                                                        */
 {
 public:
     inline ClearGeofenceRequest() : ClearGeofenceRequest(nullptr) {}
@@ -736,10 +732,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadGeofenceResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.UploadGeofenceResponse)
-                   */
+class UploadGeofenceResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.UploadGeofenceResponse)
+                                                                         */
 {
 public:
     inline UploadGeofenceResponse() : UploadGeofenceResponse(nullptr) {}
@@ -1134,10 +1128,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class ClearGeofenceResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.ClearGeofenceResponse)
-                   */
+class ClearGeofenceResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.ClearGeofenceResponse)
+                                                                        */
 {
 public:
     inline ClearGeofenceResponse() : ClearGeofenceResponse(nullptr) {}
@@ -1539,10 +1531,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class GeofenceData final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.GeofenceData)
-                   */
+class GeofenceData final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.GeofenceData)
+                                                               */
 {
 public:
     inline GeofenceData() : GeofenceData(nullptr) {}
@@ -1752,10 +1742,8 @@ private:
     friend struct ::TableStruct_geofence_2fgeofence_2eproto;
 }; // -------------------------------------------------------------------
 
-class UploadGeofenceRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.UploadGeofenceRequest)
-                   */
+class UploadGeofenceRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.geofence.UploadGeofenceRequest)
+                                                                        */
 {
 public:
     inline UploadGeofenceRequest() : UploadGeofenceRequest(nullptr) {}

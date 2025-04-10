@@ -207,10 +207,8 @@ inline bool ProtocolVersion_Parse(absl::string_view name, ProtocolVersion* value
 
 // -------------------------------------------------------------------
 
-class SetParamIntRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamIntRequest)
-                   */
+class SetParamIntRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamIntRequest)
+                                                                     */
 {
 public:
     inline SetParamIntRequest() : SetParamIntRequest(nullptr) {}
@@ -407,10 +405,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetParamFloatRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamFloatRequest)
-                   */
+class SetParamFloatRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamFloatRequest)
+                                                                       */
 {
 public:
     inline SetParamFloatRequest() : SetParamFloatRequest(nullptr) {}
@@ -613,10 +609,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetParamCustomRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamCustomRequest)
-                   */
+class SetParamCustomRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamCustomRequest)
+                                                                        */
 {
 public:
     inline SetParamCustomRequest() : SetParamCustomRequest(nullptr) {}
@@ -827,10 +821,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SelectComponentRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SelectComponentRequest)
-                   */
+class SelectComponentRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SelectComponentRequest)
+                                                                         */
 {
 public:
     inline SelectComponentRequest() : SelectComponentRequest(nullptr) {}
@@ -1448,10 +1440,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamIntRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamIntRequest)
-                   */
+class GetParamIntRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamIntRequest)
+                                                                     */
 {
 public:
     inline GetParamIntRequest() : GetParamIntRequest(nullptr) {}
@@ -1636,10 +1626,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamFloatRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamFloatRequest)
-                   */
+class GetParamFloatRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamFloatRequest)
+                                                                       */
 {
 public:
     inline GetParamFloatRequest() : GetParamFloatRequest(nullptr) {}
@@ -1830,10 +1818,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamCustomRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamCustomRequest)
-                   */
+class GetParamCustomRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamCustomRequest)
+                                                                        */
 {
 public:
     inline GetParamCustomRequest() : GetParamCustomRequest(nullptr) {}
@@ -2027,10 +2013,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetAllParamsRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetAllParamsRequest)
-                          */
+class GetAllParamsRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetAllParamsRequest)
+                                                                                       */
 {
 public:
     inline GetAllParamsRequest() : GetAllParamsRequest(nullptr) {}
@@ -2567,10 +2551,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetParamIntResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamIntResponse)
-                   */
+class SetParamIntResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamIntResponse)
+                                                                      */
 {
 public:
     inline SetParamIntResponse() : SetParamIntResponse(nullptr) {}
@@ -2758,10 +2740,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetParamFloatResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamFloatResponse)
-                   */
+class SetParamFloatResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamFloatResponse)
+                                                                        */
 {
 public:
     inline SetParamFloatResponse() : SetParamFloatResponse(nullptr) {}
@@ -2956,10 +2936,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetParamCustomResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamCustomResponse)
-                   */
+class SetParamCustomResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SetParamCustomResponse)
+                                                                         */
 {
 public:
     inline SetParamCustomResponse() : SetParamCustomResponse(nullptr) {}
@@ -3154,10 +3132,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class SelectComponentResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SelectComponentResponse)
-                   */
+class SelectComponentResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.SelectComponentResponse)
+                                                                          */
 {
 public:
     inline SelectComponentResponse() : SelectComponentResponse(nullptr) {}
@@ -3355,10 +3331,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamIntResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamIntResponse)
-                   */
+class GetParamIntResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamIntResponse)
+                                                                      */
 {
 public:
     inline GetParamIntResponse() : GetParamIntResponse(nullptr) {}
@@ -3558,10 +3532,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamFloatResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamFloatResponse)
-                   */
+class GetParamFloatResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamFloatResponse)
+                                                                        */
 {
 public:
     inline GetParamFloatResponse() : GetParamFloatResponse(nullptr) {}
@@ -3768,10 +3740,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetParamCustomResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamCustomResponse)
-                   */
+class GetParamCustomResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetParamCustomResponse)
+                                                                         */
 {
 public:
     inline GetParamCustomResponse() : GetParamCustomResponse(nullptr) {}
@@ -4220,10 +4190,8 @@ private:
     friend struct ::TableStruct_param_2fparam_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetAllParamsResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetAllParamsResponse)
-                   */
+class GetAllParamsResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.param.GetAllParamsResponse)
+                                                                       */
 {
 public:
     inline GetAllParamsResponse() : GetAllParamsResponse(nullptr) {}

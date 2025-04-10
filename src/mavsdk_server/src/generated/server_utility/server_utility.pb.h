@@ -159,10 +159,8 @@ inline bool StatusTextType_Parse(absl::string_view name, StatusTextType* value)
 
 // -------------------------------------------------------------------
 
-class ServerUtilityResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.ServerUtilityResult)
-                   */
+class ServerUtilityResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.ServerUtilityResult)
+                                                                      */
 {
 public:
     inline ServerUtilityResult() : ServerUtilityResult(nullptr) {}
@@ -392,10 +390,8 @@ private:
     friend struct ::TableStruct_server_5futility_2fserver_5futility_2eproto;
 }; // -------------------------------------------------------------------
 
-class SendStatusTextRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.SendStatusTextRequest)
-                   */
+class SendStatusTextRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.SendStatusTextRequest)
+                                                                        */
 {
 public:
     inline SendStatusTextRequest() : SendStatusTextRequest(nullptr) {}
@@ -601,10 +597,8 @@ private:
     friend struct ::TableStruct_server_5futility_2fserver_5futility_2eproto;
 }; // -------------------------------------------------------------------
 
-class SendStatusTextResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.SendStatusTextResponse)
-                   */
+class SendStatusTextResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.server_utility.SendStatusTextResponse)
+                                                                         */
 {
 public:
     inline SendStatusTextResponse() : SendStatusTextResponse(nullptr) {}

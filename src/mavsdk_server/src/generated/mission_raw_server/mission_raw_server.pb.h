@@ -164,9 +164,8 @@ MissionRawServerResult_Result_Parse(absl::string_view name, MissionRawServerResu
 // -------------------------------------------------------------------
 
 class SubscribeIncomingMissionRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeIncomingMissionRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeIncomingMissionRequest)
+                                                           */
 {
 public:
     inline SubscribeIncomingMissionRequest() : SubscribeIncomingMissionRequest(nullptr) {}
@@ -324,9 +323,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeCurrentItemChangedRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeCurrentItemChangedRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeCurrentItemChangedRequest)
+                                                           */
 {
 public:
     inline SubscribeCurrentItemChangedRequest() : SubscribeCurrentItemChangedRequest(nullptr) {}
@@ -484,10 +482,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeClearAllRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeClearAllRequest)
-                          */
+class SubscribeClearAllRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SubscribeClearAllRequest)
+                                                                                            */
 {
 public:
     inline SubscribeClearAllRequest() : SubscribeClearAllRequest(nullptr) {}
@@ -640,9 +636,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SetCurrentItemCompleteResponse final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SetCurrentItemCompleteResponse)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SetCurrentItemCompleteResponse)
+                                                           */
 {
 public:
     inline SetCurrentItemCompleteResponse() : SetCurrentItemCompleteResponse(nullptr) {}
@@ -799,9 +794,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SetCurrentItemCompleteRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SetCurrentItemCompleteRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.SetCurrentItemCompleteRequest)
+                                                           */
 {
 public:
     inline SetCurrentItemCompleteRequest() : SetCurrentItemCompleteRequest(nullptr) {}
@@ -957,10 +951,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionRawServerResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionRawServerResult)
-                   */
+class MissionRawServerResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionRawServerResult)
+                                                                         */
 {
 public:
     inline MissionRawServerResult() : MissionRawServerResult(nullptr) {}
@@ -1206,10 +1198,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionProgress final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionProgress)
-                   */
+class MissionProgress final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionProgress)
+                                                                  */
 {
 public:
     inline MissionProgress() : MissionProgress(nullptr) {}
@@ -1403,10 +1393,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionItem final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionItem)
-                   */
+class MissionItem final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionItem)
+                                                              */
 {
 public:
     inline MissionItem() : MissionItem(nullptr) {}
@@ -1729,10 +1717,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ClearAllResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.ClearAllResponse)
-                   */
+class ClearAllResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.ClearAllResponse)
+                                                                   */
 {
 public:
     inline ClearAllResponse() : ClearAllResponse(nullptr) {}
@@ -1914,10 +1900,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class MissionPlan final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionPlan)
-                   */
+class MissionPlan final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.MissionPlan)
+                                                              */
 {
 public:
     inline MissionPlan() : MissionPlan(nullptr) {}
@@ -2110,10 +2094,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class CurrentItemChangedResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.CurrentItemChangedResponse)
-                   */
+class CurrentItemChangedResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.CurrentItemChangedResponse)
+                                                                             */
 {
 public:
     inline CurrentItemChangedResponse() : CurrentItemChangedResponse(nullptr) {}
@@ -2314,10 +2296,8 @@ private:
     friend struct ::TableStruct_mission_5fraw_5fserver_2fmission_5fraw_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class IncomingMissionResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.IncomingMissionResponse)
-                   */
+class IncomingMissionResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.mission_raw_server.IncomingMissionResponse)
+                                                                          */
 {
 public:
     inline IncomingMissionResponse() : IncomingMissionResponse(nullptr) {}

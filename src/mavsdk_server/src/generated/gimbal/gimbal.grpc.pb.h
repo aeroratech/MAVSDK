@@ -302,6 +302,37 @@ public:
                 ::grpc::ClientAsyncReaderInterface<::mavsdk::rpc::gimbal::ControlResponse>>(
                 PrepareAsyncSubscribeControlRaw(context, request, cq));
         }
+        //
+        //
+        // Set gimbal debug data
+        //
+        // Custom definition debug data
+        virtual ::grpc::Status SetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* response) = 0;
+        std::unique_ptr<
+            ::grpc::ClientAsyncResponseReaderInterface<::mavsdk::rpc::gimbal::SetDebugDataResponse>>
+        AsyncSetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq)
+        {
+            return std::unique_ptr<::grpc::ClientAsyncResponseReaderInterface<
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse>>(
+                AsyncSetDebugDataRaw(context, request, cq));
+        }
+        std::unique_ptr<
+            ::grpc::ClientAsyncResponseReaderInterface<::mavsdk::rpc::gimbal::SetDebugDataResponse>>
+        PrepareAsyncSetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq)
+        {
+            return std::unique_ptr<::grpc::ClientAsyncResponseReaderInterface<
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse>>(
+                PrepareAsyncSetDebugDataRaw(context, request, cq));
+        }
         class async_interface {
         public:
             virtual ~async_interface() {}
@@ -434,6 +465,21 @@ public:
                 ::grpc::ClientContext* context,
                 const ::mavsdk::rpc::gimbal::SubscribeControlRequest* request,
                 ::grpc::ClientReadReactor<::mavsdk::rpc::gimbal::ControlResponse>* reactor) = 0;
+            //
+            //
+            // Set gimbal debug data
+            //
+            // Custom definition debug data
+            virtual void SetDebugData(
+                ::grpc::ClientContext* context,
+                const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse* response,
+                std::function<void(::grpc::Status)>) = 0;
+            virtual void SetDebugData(
+                ::grpc::ClientContext* context,
+                const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse* response,
+                ::grpc::ClientUnaryReactor* reactor) = 0;
         };
         typedef class async_interface experimental_async_interface;
         virtual class async_interface* async() { return nullptr; }
@@ -536,6 +582,18 @@ public:
         PrepareAsyncSubscribeControlRaw(
             ::grpc::ClientContext* context,
             const ::mavsdk::rpc::gimbal::SubscribeControlRequest& request,
+            ::grpc::CompletionQueue* cq) = 0;
+        virtual ::grpc::ClientAsyncResponseReaderInterface<
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse>*
+        AsyncSetDebugDataRaw(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq) = 0;
+        virtual ::grpc::ClientAsyncResponseReaderInterface<
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse>*
+        PrepareAsyncSetDebugDataRaw(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
             ::grpc::CompletionQueue* cq) = 0;
     };
     class Stub final : public StubInterface {
@@ -750,6 +808,32 @@ public:
                 ::grpc::ClientAsyncReader<::mavsdk::rpc::gimbal::ControlResponse>>(
                 PrepareAsyncSubscribeControlRaw(context, request, cq));
         }
+        ::grpc::Status SetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* response) override;
+        std::unique_ptr<
+            ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>>
+        AsyncSetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq)
+        {
+            return std::unique_ptr<
+                ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>>(
+                AsyncSetDebugDataRaw(context, request, cq));
+        }
+        std::unique_ptr<
+            ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>>
+        PrepareAsyncSetDebugData(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq)
+        {
+            return std::unique_ptr<
+                ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>>(
+                PrepareAsyncSetDebugDataRaw(context, request, cq));
+        }
         class async final : public StubInterface::async_interface {
         public:
             void SetAngles(
@@ -827,6 +911,16 @@ public:
                 const ::mavsdk::rpc::gimbal::SubscribeControlRequest* request,
                 ::grpc::ClientReadReactor<::mavsdk::rpc::gimbal::ControlResponse>* reactor)
                 override;
+            void SetDebugData(
+                ::grpc::ClientContext* context,
+                const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse* response,
+                std::function<void(::grpc::Status)>) override;
+            void SetDebugData(
+                ::grpc::ClientContext* context,
+                const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse* response,
+                ::grpc::ClientUnaryReactor* reactor) override;
 
         private:
             friend class Stub;
@@ -923,6 +1017,16 @@ public:
             ::grpc::ClientContext* context,
             const ::mavsdk::rpc::gimbal::SubscribeControlRequest& request,
             ::grpc::CompletionQueue* cq) override;
+        ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>*
+        AsyncSetDebugDataRaw(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq) override;
+        ::grpc::ClientAsyncResponseReader<::mavsdk::rpc::gimbal::SetDebugDataResponse>*
+        PrepareAsyncSetDebugDataRaw(
+            ::grpc::ClientContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest& request,
+            ::grpc::CompletionQueue* cq) override;
         const ::grpc::internal::RpcMethod rpcmethod_SetAngles_;
         const ::grpc::internal::RpcMethod rpcmethod_SetPitchAndYaw_;
         const ::grpc::internal::RpcMethod rpcmethod_SetPitchRateAndYawRate_;
@@ -931,6 +1035,7 @@ public:
         const ::grpc::internal::RpcMethod rpcmethod_TakeControl_;
         const ::grpc::internal::RpcMethod rpcmethod_ReleaseControl_;
         const ::grpc::internal::RpcMethod rpcmethod_SubscribeControl_;
+        const ::grpc::internal::RpcMethod rpcmethod_SetDebugData_;
     };
     static std::unique_ptr<Stub> NewStub(
         const std::shared_ptr<::grpc::ChannelInterface>& channel,
@@ -1027,6 +1132,15 @@ public:
             ::grpc::ServerContext* context,
             const ::mavsdk::rpc::gimbal::SubscribeControlRequest* request,
             ::grpc::ServerWriter<::mavsdk::rpc::gimbal::ControlResponse>* writer);
+        //
+        //
+        // Set gimbal debug data
+        //
+        // Custom definition debug data
+        virtual ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* context,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* response);
     };
     template<class BaseClass> class WithAsyncMethod_SetAngles : public BaseClass {
     private:
@@ -1259,10 +1373,40 @@ public:
                 7, context, request, writer, new_call_cq, notification_cq, tag);
         }
     };
+    template<class BaseClass> class WithAsyncMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithAsyncMethod_SetDebugData() { ::grpc::Service::MarkMethodAsync(8); }
+        ~WithAsyncMethod_SetDebugData() override { BaseClassMustBeDerivedFromService(this); }
+        // disable synchronous version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+        void RequestSetDebugData(
+            ::grpc::ServerContext* context,
+            ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+            ::grpc::ServerAsyncResponseWriter<::mavsdk::rpc::gimbal::SetDebugDataResponse>*
+                response,
+            ::grpc::CompletionQueue* new_call_cq,
+            ::grpc::ServerCompletionQueue* notification_cq,
+            void* tag)
+        {
+            ::grpc::Service::RequestAsyncUnary(
+                8, context, request, response, new_call_cq, notification_cq, tag);
+        }
+    };
     typedef WithAsyncMethod_SetAngles<
         WithAsyncMethod_SetPitchAndYaw<WithAsyncMethod_SetPitchRateAndYawRate<
-            WithAsyncMethod_SetMode<WithAsyncMethod_SetRoiLocation<WithAsyncMethod_TakeControl<
-                WithAsyncMethod_ReleaseControl<WithAsyncMethod_SubscribeControl<Service>>>>>>>>
+            WithAsyncMethod_SetMode<WithAsyncMethod_SetRoiLocation<
+                WithAsyncMethod_TakeControl<WithAsyncMethod_ReleaseControl<
+                    WithAsyncMethod_SubscribeControl<WithAsyncMethod_SetDebugData<Service>>>>>>>>>
         AsyncService;
     template<class BaseClass> class WithCallbackMethod_SetAngles : public BaseClass {
     private:
@@ -1637,11 +1781,59 @@ public:
             return nullptr;
         }
     };
-    typedef WithCallbackMethod_SetAngles<
-        WithCallbackMethod_SetPitchAndYaw<WithCallbackMethod_SetPitchRateAndYawRate<
-            WithCallbackMethod_SetMode<WithCallbackMethod_SetRoiLocation<
-                WithCallbackMethod_TakeControl<WithCallbackMethod_ReleaseControl<
-                    WithCallbackMethod_SubscribeControl<Service>>>>>>>>
+    template<class BaseClass> class WithCallbackMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithCallbackMethod_SetDebugData()
+        {
+            ::grpc::Service::MarkMethodCallback(
+                8,
+                new ::grpc::internal::CallbackUnaryHandler<
+                    ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                    ::mavsdk::rpc::gimbal::SetDebugDataResponse>(
+                    [this](
+                        ::grpc::CallbackServerContext* context,
+                        const ::mavsdk::rpc::gimbal::SetDebugDataRequest* request,
+                        ::mavsdk::rpc::gimbal::SetDebugDataResponse* response) {
+                        return this->SetDebugData(context, request, response);
+                    }));
+        }
+        void
+        SetMessageAllocatorFor_SetDebugData(::grpc::MessageAllocator<
+                                            ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                                            ::mavsdk::rpc::gimbal::SetDebugDataResponse>* allocator)
+        {
+            ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+            static_cast<::grpc::internal::CallbackUnaryHandler<
+                ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse>*>(handler)
+                ->SetMessageAllocator(allocator);
+        }
+        ~WithCallbackMethod_SetDebugData() override { BaseClassMustBeDerivedFromService(this); }
+        // disable synchronous version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+        virtual ::grpc::ServerUnaryReactor* SetDebugData(
+            ::grpc::CallbackServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/)
+        {
+            return nullptr;
+        }
+    };
+    typedef WithCallbackMethod_SetAngles<WithCallbackMethod_SetPitchAndYaw<
+        WithCallbackMethod_SetPitchRateAndYawRate<WithCallbackMethod_SetMode<
+            WithCallbackMethod_SetRoiLocation<WithCallbackMethod_TakeControl<
+                WithCallbackMethod_ReleaseControl<WithCallbackMethod_SubscribeControl<
+                    WithCallbackMethod_SetDebugData<Service>>>>>>>>>
         CallbackService;
     typedef CallbackService ExperimentalCallbackService;
     template<class BaseClass> class WithGenericMethod_SetAngles : public BaseClass {
@@ -1778,6 +1970,23 @@ public:
             ::grpc::ServerContext* /*context*/,
             const ::mavsdk::rpc::gimbal::SubscribeControlRequest* /*request*/,
             ::grpc::ServerWriter<::mavsdk::rpc::gimbal::ControlResponse>* /*writer*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+    };
+    template<class BaseClass> class WithGenericMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithGenericMethod_SetDebugData() { ::grpc::Service::MarkMethodGeneric(8); }
+        ~WithGenericMethod_SetDebugData() override { BaseClassMustBeDerivedFromService(this); }
+        // disable synchronous version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
         {
             abort();
             return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
@@ -2008,6 +2217,34 @@ public:
         {
             ::grpc::Service::RequestAsyncServerStreaming(
                 7, context, request, writer, new_call_cq, notification_cq, tag);
+        }
+    };
+    template<class BaseClass> class WithRawMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithRawMethod_SetDebugData() { ::grpc::Service::MarkMethodRaw(8); }
+        ~WithRawMethod_SetDebugData() override { BaseClassMustBeDerivedFromService(this); }
+        // disable synchronous version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+        void RequestSetDebugData(
+            ::grpc::ServerContext* context,
+            ::grpc::ByteBuffer* request,
+            ::grpc::ServerAsyncResponseWriter<::grpc::ByteBuffer>* response,
+            ::grpc::CompletionQueue* new_call_cq,
+            ::grpc::ServerCompletionQueue* notification_cq,
+            void* tag)
+        {
+            ::grpc::Service::RequestAsyncUnary(
+                8, context, request, response, new_call_cq, notification_cq, tag);
         }
     };
     template<class BaseClass> class WithRawCallbackMethod_SetAngles : public BaseClass {
@@ -2304,6 +2541,41 @@ public:
             return nullptr;
         }
     };
+    template<class BaseClass> class WithRawCallbackMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithRawCallbackMethod_SetDebugData()
+        {
+            ::grpc::Service::MarkMethodRawCallback(
+                8,
+                new ::grpc::internal::CallbackUnaryHandler<::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+                    [this](
+                        ::grpc::CallbackServerContext* context,
+                        const ::grpc::ByteBuffer* request,
+                        ::grpc::ByteBuffer* response) {
+                        return this->SetDebugData(context, request, response);
+                    }));
+        }
+        ~WithRawCallbackMethod_SetDebugData() override { BaseClassMustBeDerivedFromService(this); }
+        // disable synchronous version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+        virtual ::grpc::ServerUnaryReactor* SetDebugData(
+            ::grpc::CallbackServerContext* /*context*/,
+            const ::grpc::ByteBuffer* /*request*/,
+            ::grpc::ByteBuffer* /*response*/)
+        {
+            return nullptr;
+        }
+    };
     template<class BaseClass> class WithStreamedUnaryMethod_SetAngles : public BaseClass {
     private:
         void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -2576,10 +2848,51 @@ public:
                 ::mavsdk::rpc::gimbal::ReleaseControlRequest,
                 ::mavsdk::rpc::gimbal::ReleaseControlResponse>* server_unary_streamer) = 0;
     };
-    typedef WithStreamedUnaryMethod_SetAngles<WithStreamedUnaryMethod_SetPitchAndYaw<
-        WithStreamedUnaryMethod_SetPitchRateAndYawRate<WithStreamedUnaryMethod_SetMode<
-            WithStreamedUnaryMethod_SetRoiLocation<WithStreamedUnaryMethod_TakeControl<
-                WithStreamedUnaryMethod_ReleaseControl<Service>>>>>>>
+    template<class BaseClass> class WithStreamedUnaryMethod_SetDebugData : public BaseClass {
+    private:
+        void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+
+    public:
+        WithStreamedUnaryMethod_SetDebugData()
+        {
+            ::grpc::Service::MarkMethodStreamed(
+                8,
+                new ::grpc::internal::StreamedUnaryHandler<
+                    ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                    ::mavsdk::rpc::gimbal::SetDebugDataResponse>(
+                    [this](
+                        ::grpc::ServerContext* context,
+                        ::grpc::ServerUnaryStreamer<
+                            ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                            ::mavsdk::rpc::gimbal::SetDebugDataResponse>* streamer) {
+                        return this->StreamedSetDebugData(context, streamer);
+                    }));
+        }
+        ~WithStreamedUnaryMethod_SetDebugData() override
+        {
+            BaseClassMustBeDerivedFromService(this);
+        }
+        // disable regular version of this method
+        ::grpc::Status SetDebugData(
+            ::grpc::ServerContext* /*context*/,
+            const ::mavsdk::rpc::gimbal::SetDebugDataRequest* /*request*/,
+            ::mavsdk::rpc::gimbal::SetDebugDataResponse* /*response*/) override
+        {
+            abort();
+            return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+        }
+        // replace default version of method with streamed unary
+        virtual ::grpc::Status StreamedSetDebugData(
+            ::grpc::ServerContext* context,
+            ::grpc::ServerUnaryStreamer<
+                ::mavsdk::rpc::gimbal::SetDebugDataRequest,
+                ::mavsdk::rpc::gimbal::SetDebugDataResponse>* server_unary_streamer) = 0;
+    };
+    typedef WithStreamedUnaryMethod_SetAngles<
+        WithStreamedUnaryMethod_SetPitchAndYaw<WithStreamedUnaryMethod_SetPitchRateAndYawRate<
+            WithStreamedUnaryMethod_SetMode<WithStreamedUnaryMethod_SetRoiLocation<
+                WithStreamedUnaryMethod_TakeControl<WithStreamedUnaryMethod_ReleaseControl<
+                    WithStreamedUnaryMethod_SetDebugData<Service>>>>>>>>
         StreamedUnaryService;
     template<class BaseClass> class WithSplitStreamingMethod_SubscribeControl : public BaseClass {
     private:
@@ -2622,11 +2935,11 @@ public:
                 ::mavsdk::rpc::gimbal::ControlResponse>* server_split_streamer) = 0;
     };
     typedef WithSplitStreamingMethod_SubscribeControl<Service> SplitStreamedService;
-    typedef WithStreamedUnaryMethod_SetAngles<
-        WithStreamedUnaryMethod_SetPitchAndYaw<WithStreamedUnaryMethod_SetPitchRateAndYawRate<
-            WithStreamedUnaryMethod_SetMode<WithStreamedUnaryMethod_SetRoiLocation<
-                WithStreamedUnaryMethod_TakeControl<WithStreamedUnaryMethod_ReleaseControl<
-                    WithSplitStreamingMethod_SubscribeControl<Service>>>>>>>>
+    typedef WithStreamedUnaryMethod_SetAngles<WithStreamedUnaryMethod_SetPitchAndYaw<
+        WithStreamedUnaryMethod_SetPitchRateAndYawRate<WithStreamedUnaryMethod_SetMode<
+            WithStreamedUnaryMethod_SetRoiLocation<WithStreamedUnaryMethod_TakeControl<
+                WithStreamedUnaryMethod_ReleaseControl<WithSplitStreamingMethod_SubscribeControl<
+                    WithStreamedUnaryMethod_SetDebugData<Service>>>>>>>>>
         StreamedService;
 };
 

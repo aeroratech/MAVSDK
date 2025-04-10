@@ -110,6 +110,16 @@ Gimbal::ControlStatus Gimbal::control() const
     return _impl->control();
 }
 
+void Gimbal::set_debug_data_async(uint32_t msg_type, const ResultCallback callback)
+{
+    _impl->set_debug_data_async(msg_type, callback);
+}
+
+Gimbal::Result Gimbal::set_debug_data(uint32_t msg_type) const
+{
+    return _impl->set_debug_data(msg_type);
+}
+
 bool operator==(const Gimbal::ControlStatus& lhs, const Gimbal::ControlStatus& rhs)
 {
     return (rhs.control_mode == lhs.control_mode) &&

@@ -250,10 +250,8 @@ inline bool FlightMode_Parse(absl::string_view name, FlightMode* value)
 
 // -------------------------------------------------------------------
 
-class SubscribeTerminateRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeTerminateRequest)
-                          */
+class SubscribeTerminateRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeTerminateRequest)
+                                                                                             */
 {
 public:
     inline SubscribeTerminateRequest() : SubscribeTerminateRequest(nullptr) {}
@@ -406,10 +404,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeTakeoffRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeTakeoffRequest)
-                          */
+class SubscribeTakeoffRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeTakeoffRequest)
+                                                                                           */
 {
 public:
     inline SubscribeTakeoffRequest() : SubscribeTakeoffRequest(nullptr) {}
@@ -560,10 +556,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeShutdownRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeShutdownRequest)
-                          */
+class SubscribeShutdownRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeShutdownRequest)
+                                                                                            */
 {
 public:
     inline SubscribeShutdownRequest() : SubscribeShutdownRequest(nullptr) {}
@@ -715,10 +709,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeRebootRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeRebootRequest)
-                          */
+class SubscribeRebootRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeRebootRequest)
+                                                                                          */
 {
 public:
     inline SubscribeRebootRequest() : SubscribeRebootRequest(nullptr) {}
@@ -866,10 +858,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeLandRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeLandRequest)
-                          */
+class SubscribeLandRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeLandRequest)
+                                                                                        */
 {
 public:
     inline SubscribeLandRequest() : SubscribeLandRequest(nullptr) {}
@@ -1018,9 +1008,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class SubscribeFlightModeChangeRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeFlightModeChangeRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeFlightModeChangeRequest)
+                                                           */
 {
 public:
     inline SubscribeFlightModeChangeRequest() : SubscribeFlightModeChangeRequest(nullptr) {}
@@ -1177,10 +1166,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SubscribeArmDisarmRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeArmDisarmRequest)
-                          */
+class SubscribeArmDisarmRequest final : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SubscribeArmDisarmRequest)
+                                                                                             */
 {
 public:
     inline SubscribeArmDisarmRequest() : SubscribeArmDisarmRequest(nullptr) {}
@@ -1333,10 +1320,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetDisarmableRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetDisarmableRequest)
-                   */
+class SetDisarmableRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetDisarmableRequest)
+                                                                       */
 {
 public:
     inline SetDisarmableRequest() : SetDisarmableRequest(nullptr) {}
@@ -1537,10 +1522,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetArmableRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetArmableRequest)
-                   */
+class SetArmableRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetArmableRequest)
+                                                                    */
 {
 public:
     inline SetArmableRequest() : SetArmableRequest(nullptr) {}
@@ -1735,10 +1718,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAllowTakeoffRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowTakeoffRequest)
-                   */
+class SetAllowTakeoffRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowTakeoffRequest)
+                                                                         */
 {
 public:
     inline SetAllowTakeoffRequest() : SetAllowTakeoffRequest(nullptr) {}
@@ -1928,9 +1909,8 @@ private:
 }; // -------------------------------------------------------------------
 
 class GetAllowableFlightModesRequest final
-    : public ::google::protobuf::internal::
-          ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.GetAllowableFlightModesRequest)
-                          */
+    : public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.GetAllowableFlightModesRequest)
+                                                           */
 {
 public:
     inline GetAllowableFlightModesRequest() : GetAllowableFlightModesRequest(nullptr) {}
@@ -2086,10 +2066,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ArmDisarm final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ArmDisarm)
-                   */
+class ArmDisarm final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ArmDisarm)
+                                                            */
 {
 public:
     inline ArmDisarm() : ArmDisarm(nullptr) {}
@@ -2277,10 +2255,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class AllowableFlightModes final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.AllowableFlightModes)
-                   */
+class AllowableFlightModes final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.AllowableFlightModes)
+                                                                       */
 {
 public:
     inline AllowableFlightModes() : AllowableFlightModes(nullptr) {}
@@ -2493,10 +2469,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ActionServerResult final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ActionServerResult)
-                   */
+class ActionServerResult final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ActionServerResult)
+                                                                     */
 {
 public:
     inline ActionServerResult() : ActionServerResult(nullptr) {}
@@ -2736,10 +2710,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TerminateResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.TerminateResponse)
-                   */
+class TerminateResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.TerminateResponse)
+                                                                    */
 {
 public:
     inline TerminateResponse() : TerminateResponse(nullptr) {}
@@ -2943,10 +2915,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class TakeoffResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.TakeoffResponse)
-                   */
+class TakeoffResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.TakeoffResponse)
+                                                                  */
 {
 public:
     inline TakeoffResponse() : TakeoffResponse(nullptr) {}
@@ -3149,10 +3119,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ShutdownResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ShutdownResponse)
-                   */
+class ShutdownResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ShutdownResponse)
+                                                                   */
 {
 public:
     inline ShutdownResponse() : ShutdownResponse(nullptr) {}
@@ -3355,10 +3323,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetDisarmableResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetDisarmableResponse)
-                   */
+class SetDisarmableResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetDisarmableResponse)
+                                                                        */
 {
 public:
     inline SetDisarmableResponse() : SetDisarmableResponse(nullptr) {}
@@ -3556,10 +3522,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetArmableResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetArmableResponse)
-                   */
+class SetArmableResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetArmableResponse)
+                                                                     */
 {
 public:
     inline SetArmableResponse() : SetArmableResponse(nullptr) {}
@@ -3751,10 +3715,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAllowableFlightModesResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowableFlightModesResponse)
-                   */
+class SetAllowableFlightModesResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowableFlightModesResponse)
+                                                                                  */
 {
 public:
     inline SetAllowableFlightModesResponse() : SetAllowableFlightModesResponse(nullptr) {}
@@ -3961,10 +3923,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAllowableFlightModesRequest final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowableFlightModesRequest)
-                   */
+class SetAllowableFlightModesRequest final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowableFlightModesRequest)
+                                                                                 */
 {
 public:
     inline SetAllowableFlightModesRequest() : SetAllowableFlightModesRequest(nullptr) {}
@@ -4168,10 +4128,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class SetAllowTakeoffResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowTakeoffResponse)
-                   */
+class SetAllowTakeoffResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.SetAllowTakeoffResponse)
+                                                                          */
 {
 public:
     inline SetAllowTakeoffResponse() : SetAllowTakeoffResponse(nullptr) {}
@@ -4372,10 +4330,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class RebootResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.RebootResponse)
-                   */
+class RebootResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.RebootResponse)
+                                                                 */
 {
 public:
     inline RebootResponse() : RebootResponse(nullptr) {}
@@ -4575,10 +4531,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class LandResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.LandResponse)
-                   */
+class LandResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.LandResponse)
+                                                               */
 {
 public:
     inline LandResponse() : LandResponse(nullptr) {}
@@ -4775,10 +4729,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class GetAllowableFlightModesResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.GetAllowableFlightModesResponse)
-                   */
+class GetAllowableFlightModesResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.GetAllowableFlightModesResponse)
+                                                                                  */
 {
 public:
     inline GetAllowableFlightModesResponse() : GetAllowableFlightModesResponse(nullptr) {}
@@ -4983,10 +4935,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class FlightModeChangeResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.FlightModeChangeResponse)
-                   */
+class FlightModeChangeResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.FlightModeChangeResponse)
+                                                                           */
 {
 public:
     inline FlightModeChangeResponse() : FlightModeChangeResponse(nullptr) {}
@@ -5200,10 +5150,8 @@ private:
     friend struct ::TableStruct_action_5fserver_2faction_5fserver_2eproto;
 }; // -------------------------------------------------------------------
 
-class ArmDisarmResponse final
-    : public ::google::protobuf::
-          Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ArmDisarmResponse)
-                   */
+class ArmDisarmResponse final : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.action_server.ArmDisarmResponse)
+                                                                    */
 {
 public:
     inline ArmDisarmResponse() : ArmDisarmResponse(nullptr) {}
