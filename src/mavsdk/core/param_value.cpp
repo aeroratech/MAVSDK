@@ -581,7 +581,8 @@ std::array<char, 128> ParamValue::get_128_bytes() const
         (std::get_if<std::string>(&_value) && std::get_if<std::string>(&rhs._value))) {
         return true;
     } else {
-        LogWarn() << "Comparison type mismatch between " << typestr() << " and " << rhs.typestr();
+        // TODO (thomas): temp remove this warnning log
+        // LogWarn() << "Comparison type mismatch between " << typestr() << " and " << rhs.typestr();
         return false;
     }
 }
