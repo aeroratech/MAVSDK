@@ -84,6 +84,11 @@ int main(int argc, char** argv)
         //           << " yaw\n";
     });
 
+    telemetry.subscribe_raw_gps([](mavsdk::Telemetry::RawGps raw_gps) {
+        std::cout << "Trigger gps latitude: " << raw_gps.latitude_deg
+                  << ", longitude: " << raw_gps.longitude_deg << std::endl;
+    });
+
     int32_t debug_msg_type = 54;
     while (true) {
         gimbal.set_debug_data(debug_msg_type);
