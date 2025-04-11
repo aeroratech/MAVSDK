@@ -101,6 +101,11 @@ void TelemetryImpl::init()
         this);
 
     _system_impl->register_mavlink_message_handler(
+        MAVLINK_MSG_ID_GPS_GLOBAL_ORIGIN,
+        [this](const mavlink_message_t& message) { process_gps_global_origin(message); },
+        this);
+
+    _system_impl->register_mavlink_message_handler(
         MAVLINK_MSG_ID_EXTENDED_SYS_STATE,
         [this](const mavlink_message_t& message) { process_extended_sys_state(message); },
         this);
@@ -1051,6 +1056,24 @@ void TelemetryImpl::process_gps_raw_int(const mavlink_message_t& message)
     }
 
     _system_impl->refresh_timeout_handler(_gps_raw_timeout_cookie);
+}
+
+void TelemetryImpl::process_gps_global_origin(const mavlink_message_t& message)
+{
+    mavlink_gps_global_origin_t gps_global_origin;
+    mavlink_msg_gps_global_origin_decode(&message, &gps_global_origin);
+
+    Telemetry::RawGps raw_gps_info;
+    raw_gps_info.latitude_deg = gps_global_origin.latitude * 1e-7;
+    raw_gps_info.longitude_deg = gps_global_origin.longitude * 1e-7;
+    raw_gps_info.absolute_altitude_m = gps_global_origin.altitude * 1e-3f;
+    set_raw_gps(raw_gps_info);
+
+    {
+        std::lock_guard<std::mutex> lock(_subscription_mutex);
+        _raw_gps_subscriptions.queue(
+            raw_gps(), [this](const auto& func) { _system_impl->call_user_callback(func); });
+    }
 }
 
 void TelemetryImpl::process_ground_truth(const mavlink_message_t& message)
