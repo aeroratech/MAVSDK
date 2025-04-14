@@ -280,8 +280,9 @@ void MavlinkCommandSender::receive_command_ack(mavlink_message_t message)
                    << " for not-existing command: " << static_cast<int>(command_ack.command)
                    << "! Ignoring...";
     } else {
-        LogWarn() << "Received ack for not-existing command: "
-                  << static_cast<int>(command_ack.command) << "! Ignoring...";
+        // TODO (thomas) : temp remove this warning message
+        // LogWarn() << "Received ack for not-existing command: "
+        //           << static_cast<int>(command_ack.command) << "! Ignoring...";
     }
 }
 
