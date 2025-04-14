@@ -90,8 +90,13 @@ void GimbalImpl::process_gimbal_debugdata(const mavlink_message_t& message)
 
     if (gimbal_debugdata.msg_type == 0xfe) {
         std::string message = reinterpret_cast<char*>(gimbal_debugdata.debug_data);
-        if (message.find("GPS") != std::string::npos) {
-            LogDebug() << message;
+        if (true || message.find("GPS") != std::string::npos) {
+            std::string clean_message = message;
+            clean_message.erase(
+                std::remove(clean_message.begin(), clean_message.end(), '\n'), clean_message.end());
+            clean_message.erase(
+                std::remove(clean_message.begin(), clean_message.end(), '\r'), clean_message.end());
+            LogDebug() << "Gimbal Debug : " << clean_message;
         }
     }
 }
