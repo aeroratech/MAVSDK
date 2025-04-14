@@ -2,6 +2,8 @@
 
 #include <mutex>
 #include <sstream>
+#include <iomanip>
+#include <chrono>
 #include "log_callback.h"
 
 #if defined(ANDROID)
@@ -97,14 +99,15 @@ public:
                 break;
         }
 
-        // Time output taken from:
-        // https://stackoverflow.com/questions/16357999#answer-16358264
-        time_t rawtime;
-        time(&rawtime);
-        struct tm* timeinfo = localtime(&rawtime);
-        char time_buffer[10]{}; // We need 8 characters + \0
-        strftime(time_buffer, sizeof(time_buffer), "%I:%M:%S", timeinfo);
-        std::cout << "[" << time_buffer;
+        auto now = std::chrono::system_clock::now();
+        std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+        std::tm* local_tm = std::localtime(&now_c);
+        char time_buffer[10]{};
+        std::strftime(time_buffer, sizeof(time_buffer), "%H:%M:%S", local_tm);
+        auto ms =
+            std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % 1000;
+
+        std::cout << "[" << time_buffer << "." << std::setw(3) << std::setfill('0') << ms.count();
 
         switch (_log_level) {
             case log::Level::Debug:
