@@ -889,7 +889,7 @@ void CameraServerImpl::stop_image_capture_interval()
 std::optional<mavlink_command_ack_t>
 CameraServerImpl::process_camera_request(const MavlinkCommandReceiver::CommandLong& command)
 {
-    LogWarn() << "Camera request";
+    LogDebug() << "Camera request";
     auto message_id = static_cast<uint32_t>(command.params.param1);
 
     switch (message_id) {
@@ -922,7 +922,7 @@ CameraServerImpl::process_camera_request(const MavlinkCommandReceiver::CommandLo
 std::optional<mavlink_command_ack_t> CameraServerImpl::process_camera_information_request(
     const MavlinkCommandReceiver::CommandLong& command)
 {
-    LogWarn() << "Camera info request";
+    LogDebug() << "Camera info request";
     auto capabilities = static_cast<bool>(command.params.param1);
 
     if (!capabilities) {
@@ -1368,7 +1368,7 @@ std::optional<mavlink_command_ack_t> CameraServerImpl::process_video_stream_stat
 std::optional<mavlink_command_ack_t>
 CameraServerImpl::process_camera_information(const MavlinkCommandReceiver::CommandLong& command)
 {
-    LogWarn() << "Camera information request";
+    LogDebug() << "Camera information request";
 
     if (!_is_information_set) {
         return _server_component_impl->make_command_ack_message(
@@ -1468,7 +1468,7 @@ CameraServerImpl::process_camera_information(const MavlinkCommandReceiver::Comma
 std::optional<mavlink_command_ack_t>
 CameraServerImpl::process_camera_settings(const MavlinkCommandReceiver::CommandLong& command)
 {
-    LogWarn() << "Camera settings request";
+    LogDebug() << "Camera settings request";
 
     if (_settings_callbacks.empty()) {
         LogDebug() << "camera settings with no settings subscriber";
@@ -1490,7 +1490,7 @@ CameraServerImpl::process_camera_settings(const MavlinkCommandReceiver::CommandL
 std::optional<mavlink_command_ack_t> CameraServerImpl::process_storage_information(
     const MavlinkCommandReceiver::CommandLong& command, uint8_t storage_id)
 {
-    LogWarn() << "Camera storage information request for ID: " << storage_id;
+    LogDebug() << "Camera storage information request for ID: " << int32_t(storage_id);
 
     if (_storage_information_callbacks.empty()) {
         LogDebug()
