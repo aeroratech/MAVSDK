@@ -106,6 +106,11 @@ void TelemetryImpl::init()
         this);
 
     _system_impl->register_mavlink_message_handler(
+        MAVLINK_MSG_ID_GPS_INPUT,
+        [this](const mavlink_message_t& message) { process_gps_input(message); },
+        this);
+
+    _system_impl->register_mavlink_message_handler(
         MAVLINK_MSG_ID_EXTENDED_SYS_STATE,
         [this](const mavlink_message_t& message) { process_extended_sys_state(message); },
         this);
@@ -1069,6 +1074,37 @@ void TelemetryImpl::process_gps_global_origin(const mavlink_message_t& message)
     raw_gps_info.absolute_altitude_m = gps_global_origin.altitude * 1e-3f;
     set_raw_gps(raw_gps_info);
 
+    {
+        std::lock_guard<std::mutex> lock(_subscription_mutex);
+        _raw_gps_subscriptions.queue(
+            raw_gps(), [this](const auto& func) { _system_impl->call_user_callback(func); });
+    }
+}
+
+void TelemetryImpl::process_gps_input(const mavlink_message_t& message)
+{
+    mavlink_gps_input_t gps_input;
+    mavlink_msg_gps_input_decode(&message, &gps_input);
+    Telemetry::RawGps raw_gps_info;
+    raw_gps_info.latitude_deg = gps_input.lat * 1e-7;
+    raw_gps_info.longitude_deg = gps_input.lon * 1e-7;
+    raw_gps_info.absolute_altitude_m = gps_input.alt * 1e-3f;
+
+    auto gps_to_unix_us = [](uint16_t time_week, uint32_t time_week_ms) -> uint64_t {
+        constexpr int64_t SECONDS_PER_WEEK = 604800;
+        constexpr int64_t UNIX_GPS_EPOCH_DIFF_SEC = 315964800; // 1980-01-06 UTC
+        constexpr int64_t LEAP_SECONDS = 18; // Current leap second offset
+
+        int64_t gps_sec = time_week * SECONDS_PER_WEEK + (time_week_ms / 1000);
+        int64_t unix_sec = gps_sec + UNIX_GPS_EPOCH_DIFF_SEC - LEAP_SECONDS;
+
+        return unix_sec * 1000000ULL + (time_week_ms % 1000) * 1000ULL;
+    };
+
+    raw_gps_info.timestamp_us = gps_to_unix_us(gps_input.time_week, gps_input.time_week_ms);
+    raw_gps_info.status = gps_input.fix_type;
+
+    set_raw_gps(raw_gps_info);
     {
         std::lock_guard<std::mutex> lock(_subscription_mutex);
         _raw_gps_subscriptions.queue(

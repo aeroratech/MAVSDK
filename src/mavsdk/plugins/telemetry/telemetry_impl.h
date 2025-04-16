@@ -258,6 +258,7 @@ private:
     void process_raw_imu(const mavlink_message_t& message);
     void process_gps_raw_int(const mavlink_message_t& message);
     void process_gps_global_origin(const mavlink_message_t& message);
+    void process_gps_input(const mavlink_message_t& message);
     void process_ground_truth(const mavlink_message_t& message);
     void process_extended_sys_state(const mavlink_message_t& message);
     void process_fixedwing_metrics(const mavlink_message_t& message);
