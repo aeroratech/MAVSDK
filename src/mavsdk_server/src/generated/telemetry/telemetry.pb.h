@@ -13110,6 +13110,7 @@ public:
         kVelocityUncertaintyMSFieldNumber = 12,
         kHeadingUncertaintyDegFieldNumber = 13,
         kYawDegFieldNumber = 14,
+        kStatusFieldNumber = 15,
     };
     // uint64 timestamp_us = 1;
     void clear_timestamp_us();
@@ -13251,12 +13252,22 @@ private:
     void _internal_set_yaw_deg(float value);
 
 public:
+    // int32 status = 15;
+    void clear_status();
+    ::int32_t status() const;
+    void set_status(::int32_t value);
+
+private:
+    ::int32_t _internal_status() const;
+    void _internal_set_status(::int32_t value);
+
+public:
     // @@protoc_insertion_point(class_scope:mavsdk.rpc.telemetry.RawGps)
 private:
     class _Internal;
 
     friend class ::google::protobuf::internal::TcParser;
-    static const ::google::protobuf::internal::TcParseTable<4, 14, 0, 0, 2> _table_;
+    static const ::google::protobuf::internal::TcParseTable<4, 15, 0, 0, 2> _table_;
     friend class ::google::protobuf::MessageLite;
     friend class ::google::protobuf::Arena;
     template<typename T> friend class ::google::protobuf::Arena::InternalHelper;
@@ -13285,6 +13296,7 @@ private:
         float velocity_uncertainty_m_s_;
         float heading_uncertainty_deg_;
         float yaw_deg_;
+        ::int32_t status_;
         mutable ::google::protobuf::internal::CachedSize _cached_size_;
         PROTOBUF_TSAN_DECLARE_MEMBER
     };
@@ -39152,6 +39164,34 @@ inline void RawGps::_internal_set_yaw_deg(float value)
     PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
     ;
     _impl_.yaw_deg_ = value;
+}
+
+// int32 status = 15;
+inline void RawGps::clear_status()
+{
+    PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+    _impl_.status_ = 0;
+}
+inline ::int32_t RawGps::status() const
+{
+    // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.RawGps.status)
+    return _internal_status();
+}
+inline void RawGps::set_status(::int32_t value)
+{
+    _internal_set_status(value);
+    // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.RawGps.status)
+}
+inline ::int32_t RawGps::_internal_status() const
+{
+    PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+    return _impl_.status_;
+}
+inline void RawGps::_internal_set_status(::int32_t value)
+{
+    PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+    ;
+    _impl_.status_ = value;
 }
 
 // -------------------------------------------------------------------

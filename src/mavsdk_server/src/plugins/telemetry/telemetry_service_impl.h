@@ -507,6 +507,8 @@ public:
 
         rpc_obj->set_yaw_deg(raw_gps.yaw_deg);
 
+        rpc_obj->set_status(raw_gps.status);
+
         return rpc_obj;
     }
 
@@ -541,6 +543,8 @@ public:
         obj.heading_uncertainty_deg = raw_gps.heading_uncertainty_deg();
 
         obj.yaw_deg = raw_gps.yaw_deg();
+
+        obj.status = raw_gps.status();
 
         return obj;
     }

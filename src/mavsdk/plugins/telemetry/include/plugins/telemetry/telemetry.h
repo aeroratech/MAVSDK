@@ -352,6 +352,7 @@ public:
         float velocity_uncertainty_m_s{}; /**< @brief Velocity uncertainty in metres per second */
         float heading_uncertainty_deg{}; /**< @brief Heading uncertainty in degrees */
         float yaw_deg{}; /**< @brief Yaw in earth frame from north. */
+        int32_t status{}; /**< @brief GPS status */
     };
 
     /**

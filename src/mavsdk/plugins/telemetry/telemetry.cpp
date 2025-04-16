@@ -971,7 +971,8 @@ bool operator==(const Telemetry::RawGps& lhs, const Telemetry::RawGps& rhs)
             rhs.velocity_uncertainty_m_s == lhs.velocity_uncertainty_m_s) &&
            ((std::isnan(rhs.heading_uncertainty_deg) && std::isnan(lhs.heading_uncertainty_deg)) ||
             rhs.heading_uncertainty_deg == lhs.heading_uncertainty_deg) &&
-           ((std::isnan(rhs.yaw_deg) && std::isnan(lhs.yaw_deg)) || rhs.yaw_deg == lhs.yaw_deg);
+           ((std::isnan(rhs.yaw_deg) && std::isnan(lhs.yaw_deg)) || rhs.yaw_deg == lhs.yaw_deg) &&
+           (rhs.status == lhs.status);
 }
 
 std::ostream& operator<<(std::ostream& str, Telemetry::RawGps const& raw_gps)
@@ -992,6 +993,7 @@ std::ostream& operator<<(std::ostream& str, Telemetry::RawGps const& raw_gps)
     str << "    velocity_uncertainty_m_s: " << raw_gps.velocity_uncertainty_m_s << '\n';
     str << "    heading_uncertainty_deg: " << raw_gps.heading_uncertainty_deg << '\n';
     str << "    yaw_deg: " << raw_gps.yaw_deg << '\n';
+    str << "    status: " << raw_gps.status << '\n';
     str << '}';
     return str;
 }
