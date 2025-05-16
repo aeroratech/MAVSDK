@@ -335,9 +335,9 @@ void MavlinkParameterServer::process_param_request_read(const mavlink_message_t&
 
 void MavlinkParameterServer::process_param_ext_request_read(const mavlink_message_t& message)
 {
-    LogDebug() << "process param_ext_request_read";
     mavlink_param_ext_request_read_t read_request{};
     mavlink_msg_param_ext_request_read_decode(&message, &read_request);
+    LogDebug() << "process param_ext_request_read for " << read_request.param_id;
     if (!target_matches(read_request.target_system, read_request.target_component, true)) {
         log_target_mismatch(read_request.target_system, read_request.target_component);
         return;
