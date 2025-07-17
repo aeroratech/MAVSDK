@@ -225,6 +225,17 @@ ConnectionResult SerialConnection::setup_port()
 void SerialConnection::start_recv_thread()
 {
     _recv_thread = std::make_unique<std::thread>(&SerialConnection::receive, this);
+    pthread_t tid = _recv_thread->native_handle();
+
+#if defined(LINUX) || defined(APPLE)
+    sched_param param{};
+    param.sched_priority = 10;
+    int policy = SCHED_RR;
+    int ret = pthread_setschedparam(tid, policy, &param);
+    if (ret != 0) {
+        LogErr() << "pthread_setschedparam failed: " << strerror(ret);
+    }
+#endif
 }
 
 ConnectionResult SerialConnection::stop()
@@ -285,7 +296,7 @@ bool SerialConnection::send_message(const mavlink_message_t& message)
 void SerialConnection::receive()
 {
     // Enough for MTU 1500 bytes.
-    char buffer[2048];
+    char buffer[8192];
 
 #if defined(LINUX) || defined(APPLE)
     struct pollfd fds[1];
@@ -296,7 +307,7 @@ void SerialConnection::receive()
     while (!_should_exit) {
         int recv_len;
 #if defined(LINUX) || defined(APPLE)
-        int pollrc = poll(fds, 1, 1000);
+        int pollrc = poll(fds, 1, 100);
         if (pollrc == 0 || !(fds[0].revents & POLLIN)) {
             continue;
         } else if (pollrc == -1) {
@@ -304,7 +315,7 @@ void SerialConnection::receive()
         }
         // We enter here if (fds[0].revents & POLLIN) == true
         recv_len = static_cast<int>(read(_fd, buffer, sizeof(buffer)));
-        if (recv_len < -1) {
+        if (recv_len < 0) {
             LogErr() << "read failure: " << GET_ERROR();
         }
 #else
