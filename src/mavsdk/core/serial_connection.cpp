@@ -226,16 +226,6 @@ void SerialConnection::start_recv_thread()
 {
     _recv_thread = std::make_unique<std::thread>(&SerialConnection::receive, this);
     pthread_t tid = _recv_thread->native_handle();
-
-#if defined(LINUX) || defined(APPLE)
-    sched_param param{};
-    param.sched_priority = 10;
-    int policy = SCHED_RR;
-    int ret = pthread_setschedparam(tid, policy, &param);
-    if (ret != 0) {
-        LogErr() << "pthread_setschedparam failed: " << strerror(ret);
-    }
-#endif
 }
 
 ConnectionResult SerialConnection::stop()
@@ -307,7 +297,7 @@ void SerialConnection::receive()
     while (!_should_exit) {
         int recv_len;
 #if defined(LINUX) || defined(APPLE)
-        int pollrc = poll(fds, 1, 100);
+        int pollrc = poll(fds, 1, 150);
         if (pollrc == 0 || !(fds[0].revents & POLLIN)) {
             continue;
         } else if (pollrc == -1) {
