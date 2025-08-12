@@ -180,7 +180,7 @@ private:
 
     std::atomic<double> _timeout_s{Mavsdk::DEFAULT_TIMEOUT_S};
 
-    static constexpr double HEARTBEAT_SEND_INTERVAL_S = 0.2;
+    static constexpr double HEARTBEAT_SEND_INTERVAL_S = 0.08;
     void* _heartbeat_send_cookie{nullptr};
 
     std::atomic<bool> _should_exit = {false};
