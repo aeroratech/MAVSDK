@@ -173,6 +173,7 @@ private:
 
     void refresh_params();
     void invalidate_params();
+    void refresh_all_params();
 
     void save_camera_mode(const float mavlink_camera_mode);
     float to_mavlink_camera_mode(const Camera::Mode mode) const;

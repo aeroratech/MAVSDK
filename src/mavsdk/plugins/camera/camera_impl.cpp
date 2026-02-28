@@ -1981,6 +1981,47 @@ void CameraImpl::invalidate_params()
     _camera_definition->set_all_params_unknown();
 }
 
+void CameraImpl::refresh_all_params() {
+    if (!_camera_definition) {
+        return;
+    }
+
+    std::unordered_map<std::string, ParamValue> params;
+    _camera_definition->get_all_settings(params);
+
+    unsigned count = 0;
+    for (const auto& param : params) {
+        const std::string& param_name = param.first;
+        const ParamValue& param_value_type = param.second;
+        const bool is_last = (count == params.size() - 1);
+        _system_impl->get_param_async(
+            param_name,
+            param_value_type,
+            [param_name, is_last, this](MavlinkParameterClient::Result result, ParamValue value) {
+                if (result != MavlinkParameterClient::Result::Success) {
+                    return;
+                }
+                // We need to check again by the time this callback runs
+                if (!this->_camera_definition) {
+                    return;
+                }
+
+                if (!this->_camera_definition->set_setting(param_name, value)) {
+                    return;
+                }
+
+                if (is_last) {
+                    notify_current_settings();
+                    notify_possible_setting_options();
+                }
+            },
+            this,
+            static_cast<uint8_t>(_camera_id + MAV_COMP_ID_CAMERA),
+            true);
+        ++count;
+    }
+}
+
 bool CameraImpl::get_setting_str(const std::string& setting_id, std::string& description)
 {
     if (!_camera_definition) {
@@ -2077,6 +2118,12 @@ void CameraImpl::reset_settings_async(const Camera::ResultCallback callback)
             receive_command_result(result, [this, callback](Camera::Result camera_result) {
                 callback(camera_result);
             });
+
+            // delay 300ms and then refresh all params
+            std::thread([this]() {
+                std::this_thread::sleep_for(std::chrono::milliseconds(300));
+                this->refresh_all_params();
+            }).detach();
         });
 }
 
