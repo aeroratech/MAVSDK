@@ -2075,12 +2075,6 @@ void CameraImpl::reset_settings_async(const Camera::ResultCallback callback)
             UNUSED(progress);
 
             receive_command_result(result, [this, callback](Camera::Result camera_result) {
-                // reset camera mode to default mode (Photo)
-                // We have no way to get camera mode for now
-                if (camera_result == Camera::Result::Success) {
-                    std::lock_guard<std::mutex> lock(_mode.mutex);
-                    _mode.data = Camera::Mode::Photo;
-                }
                 callback(camera_result);
             });
         });
