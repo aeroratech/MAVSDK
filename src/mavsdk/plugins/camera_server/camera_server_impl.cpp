@@ -560,7 +560,7 @@ CameraServer::Result CameraServerImpl::respond_storage_information(
     auto status = STORAGE_STATUS::STORAGE_STATUS_NOT_SUPPORTED;
     switch (storage_information.storage_status) {
         case CameraServer::StorageInformation::StorageStatus::NotAvailable:
-            status = STORAGE_STATUS::STORAGE_STATUS_NOT_SUPPORTED;
+            status = STORAGE_STATUS::STORAGE_STATUS_EMPTY;
             break;
         case CameraServer::StorageInformation::StorageStatus::Unformatted:
             status = STORAGE_STATUS::STORAGE_STATUS_UNFORMATTED;
